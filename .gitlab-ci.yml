@@ -4,6 +4,7 @@
 # TODO health-check
 
 pages:
+  image: node:7.3.0
   only:
     - master
   before_script:
