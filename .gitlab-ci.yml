@@ -6,8 +6,11 @@
 pages:
   only:
     - master
+  before_script:
+    - npm update
+    - npm install
   script:
-    - echo "nothing to do :-)"
+    - npm run build
   artifacts:
     paths:
       - public

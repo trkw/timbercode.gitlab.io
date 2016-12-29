@@ -1,6 +1,16 @@
+# Build directory
+/public/
+
+# Node.JS
+/node_modules/
+/npm-debug.log
+
 # IntelliJ IDEA
 /*.iml
 /.idea/
 
 # macOS
 .DS_Store
+
+# playground
+/tmp/
