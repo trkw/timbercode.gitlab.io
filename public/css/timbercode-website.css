@@ -1,0 +1,43 @@
+.main-page {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  .logo-367 {
+    display: none;
+  }
+
+  .logo-184 {
+    display: none;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+  .logo-535 {
+    display: none;
+  }
+
+  .logo-184 {
+    display: none;
+  }
+}
+
+@media (max-width: 399px) {
+  .logo-535 {
+    display: none;
+  }
+
+  .logo-367 {
+    display: none;
+  }
+}

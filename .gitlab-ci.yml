@@ -1,0 +1,13 @@
+# GitLab variables are described here: http://docs.gitlab.com/ce/ci/variables/README.html
+# Linter for this file is available here: https://gitlab.com/ci/lint
+
+# TODO health-check
+
+pages:
+  only:
+    - master
+  script:
+    - echo "nothing to do :-)"
+  artifacts:
+    paths:
+      - public
