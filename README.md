@@ -5,15 +5,37 @@ Website of Timbercode company:
 
 ## How to build?
 
-1. `npm install`
-2. `npm run build`
+### Prerequisites
 
-`--bail` is present in `webpack` calls in npm scripts because
- [there is an issue with 0 returned as exit code in case of errors]( https://github.com/webpack/webpack/issues/1193 )
+Timbercode website is built on top of
+ [Jekyll]( https://jekyllrb.com/ ) which means that for
+ development you need Ruby v2 or above.
+ 
+To install Ruby gems required to start, run:
+* `./setup.sh`
+ 
+Sample working versions of them are:
+* bundler `1.13.7`
+* gem `2.6.8`
+* html-proofer `3.4.0`
+* jekyll `3.3.1`
+* ruby `2.4.0`
 
-## Special thanks
+### Development
 
-I've started this website from scratches thanks to
- [React.js fundamentals course]( https://online.reacttraining.com/courses/enrolled/reactjsfundamentals)
- created by [Tyler McGinnis]( https://twitter.com/tylermcginnis33 ).
- Kudos, Tyler!
+1. `./serve.sh` - build site into `public/` directory,
+   serve it on [127.0.0.1:4321]( http://127.0.0.1:4321/ ),
+   and open in a default browser, then watch for changes
+
+### Build
+
+1. `./build.sh` - build site into `public/` directory
+2. `./test.sh` - test built site
+
+## TODO
+
+* favicon
+* first post :-P
+* excerpt separator ( https://jekyllrb.com/docs/posts/#post-excerpts )
+* specific author ( https://jekyllrb.com/docs/datafiles/#example-accessing-a-specific-author )
+* config clean-up

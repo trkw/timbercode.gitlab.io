@@ -1,9 +1,8 @@
 # Build directory
 /public/
 
-# Node.JS
-/node_modules/
-/npm-debug.log
+# Jekyll
+/.sass-cache/
 
 # IntelliJ IDEA
 /*.iml

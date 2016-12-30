@@ -3,15 +3,27 @@
 
 # TODO health-check
 
+test:
+  stage: test
+  tags:
+    - docker
+  image: ruby:2.4.0
+  before_script:
+    - ./setup.sh
+  script:
+    - ./build.sh
+    - ./test.sh
+
 pages:
-  image: node:7.3.0
   only:
     - master
+  tags:
+    - docker
+  image: ruby:2.4.0
   before_script:
-    - npm update
-    - npm install
+    - ./setup.sh
   script:
-    - npm run build
+    - ./build.sh
   artifacts:
     paths:
       - public
