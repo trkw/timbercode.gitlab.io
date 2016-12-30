@@ -9,6 +9,7 @@ layout: compress
 
 <body style="background-color: rgb(255, 255, 255)">
 <script src="{{site.baseurl}}/js/theme.min.js"></script>
+
 <header>
     <a href="{{site.baseurl}}/">
         <div class="home"></div>
@@ -17,15 +18,11 @@ layout: compress
 
 {{ content }}
 
-<footer>
+{% include footer.html %}
 
-    <div class="links">
-        <a href="{{site.baseurl}}/about/">About</a>
-        <a href="{{site.baseurl}}/contact/">Contact</a>
-    </div>
-    <div class="theme" onclick="theme()" style="    background-image: url({{site.baseurl}}/images/theme.svg)"></div>
-</footer>
-{% include analytics.html %}
+{% if site.google_analytics.account_id %}
+{% include google-analytics.html %}
+{% endif %}
 
 </body>
 </html>

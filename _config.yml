@@ -37,10 +37,12 @@ defaults:
       listed: true
 
 # Google Analytics
-analytics: UA-89623087-1
+google_analytics:
+  account_id: UA-89623087-1
 
 # Disqus
-disqus-shortname: timbercode
+disqus:
+  shortname: timbercode
 
 #
 # Build settings

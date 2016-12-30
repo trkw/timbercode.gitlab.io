@@ -52,3 +52,5 @@ This site is based on [Hagura theme]( https://github.com/sharu725/hagura )
 * static pages and menu
 * remove theme mode switcher
 * google verificatin in SEO tag properties
+* update google analytics code, if needed
+* update disqus code, if needed
