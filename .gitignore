@@ -6,7 +6,9 @@
 
 # IntelliJ IDEA
 /*.iml
-/.idea/
+/.idea/*
+!/.idea/codeStyleSettings.xml
+!/.idea/inspectionProfiles/
 
 # macOS
 .DS_Store
