@@ -49,3 +49,5 @@ This site is based on [Hagura theme]( https://github.com/sharu725/hagura )
 * do I need jekyll-paginate plugin?
 * read and apply official Disqus instruction for Jekyll
   https://timbercode.disqus.com/admin/install/platforms/jekyll/
+* post urls without html suffix
+* remove BACK arrow from main page
