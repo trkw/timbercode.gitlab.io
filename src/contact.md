@@ -1,7 +1,7 @@
 ---
 title: Contact
-layout: post
-permalink: /contact/
+layout: page
+permalink: /contact
 ---
 
 May be a contact form.

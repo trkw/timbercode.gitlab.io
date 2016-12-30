@@ -12,12 +12,4 @@ layout: default
     {{page.title}}
 </h1>
 
-<div class="meta">
-    <span>{{page.date | date: '%B %d, %Y'}}</span>
-</div>
-
 {{content}}
-
-{% if site.disqus.shortname %}
-{% include disqus.html %}
-{% endif %}
