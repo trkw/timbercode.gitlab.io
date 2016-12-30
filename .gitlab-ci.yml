@@ -1,14 +1,7 @@
 # GitLab variables are described here: http://docs.gitlab.com/ce/ci/variables/README.html
 # Linter for this file is available here: https://gitlab.com/ci/lint
 
-# TODO health-check
-
-stages:
-  - test
-  - deploy
-
-test:
-  stage: test
+.template_build_and_test_website: &build_and_test_website
   tags:
     - docker
   image: ruby:2.4.0
@@ -18,17 +11,15 @@ test:
     - ./build.sh
     - ./test.sh
 
+test:
+  except:
+    - master
+  <<: *build_and_test_website
+
 pages:
-  stage: deploy
   only:
     - master
-  tags:
-    - docker
-  image: ruby:2.4.0
-  before_script:
-    - ./setup.sh
-  script:
-    - ./build.sh
+  <<: *build_and_test_website
   artifacts:
     paths:
       - public
