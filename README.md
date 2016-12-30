@@ -45,9 +45,10 @@ This site is based on [Hagura theme]( https://github.com/sharu725/hagura )
 * specific author ( https://jekyllrb.com/docs/datafiles/#example-accessing-a-specific-author )
 * config clean-up
 * clean-up after applying Hagura theme
-* do I need jekyll-seo-tag plugin?
 * do I need jekyll-paginate plugin?
 * read and apply official Disqus instruction for Jekyll
   https://timbercode.disqus.com/admin/install/platforms/jekyll/
-* post urls without html suffix
 * remove BACK arrow from main page
+* static pages and menu
+* remove theme mode switcher
+* google verificatin in SEO tag properties

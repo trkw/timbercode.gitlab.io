@@ -16,12 +16,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Timbercode
-email: timbercodepl@gmail.com
-description: >
-  Website of Timbercode company
+description: Timbercode
 url: "http://timbercode.pl" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: nkoder
-github_username:  nkoder
+
+email: timbercodepl@gmail.com
+
+# Additional parameters for jekyll-seo-tag plugin
+twitter:
+  username: timbercodepl
+facebook:
+  publisher: "https://www.facebook.com/timbercode"
+logo: "/images/timbercode_sygnet_v1_512x512.png"
 
 # Defaults
 defaults:
