@@ -47,3 +47,5 @@ This site is based on [Hagura theme]( https://github.com/sharu725/hagura )
 * clean-up after applying Hagura theme
 * do I need jekyll-seo-tag plugin?
 * do I need jekyll-paginate plugin?
+* read and apply official Disqus instruction for Jekyll
+  https://timbercode.disqus.com/admin/install/platforms/jekyll/

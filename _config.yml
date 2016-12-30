@@ -27,7 +27,7 @@ github_username:  nkoder
 #analytics: UA-12345678-9
 
 # Disqus
-#disqus-shortname: abc-def
+disqus-shortname: timbercode
 
 #
 # Build settings
