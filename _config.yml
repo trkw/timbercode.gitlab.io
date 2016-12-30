@@ -23,6 +23,12 @@ url: "http://timbercode.pl" # the base hostname & protocol for your site, e.g. h
 twitter_username: nkoder
 github_username:  nkoder
 
+# Google Analytics
+#analytics: UA-12345678-9
+
+# Disqus
+#disqus-shortname: abc-def
+
 #
 # Build settings
 #
@@ -65,7 +71,7 @@ unpublished: false
 
 # Plugins
 #whitelist: []
-#gems:      []
+gems:      [jekyll-seo-tag, jekyll-paginate]
 
 # Conversion
 markdown:    kramdown

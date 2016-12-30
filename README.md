@@ -32,6 +32,11 @@ Sample working versions of them are:
 1. `./build.sh` - build site into `public/` directory
 2. `./test.sh` - test built site
 
+## Acknowledgement
+
+This site is based on [Hagura theme]( https://github.com/sharu725/hagura )
+ from [Webjeda]( https://blog.webjeda.com/ ).
+
 ## TODO
 
 * favicon
@@ -39,3 +44,6 @@ Sample working versions of them are:
 * excerpt separator ( https://jekyllrb.com/docs/posts/#post-excerpts )
 * specific author ( https://jekyllrb.com/docs/datafiles/#example-accessing-a-specific-author )
 * config clean-up
+* clean-up after applying Hagura theme
+* do I need jekyll-seo-tag plugin?
+* do I need jekyll-paginate plugin?

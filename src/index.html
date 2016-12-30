@@ -2,8 +2,14 @@
 layout: default
 ---
 
-<div class="main-page">
-    <img class="logo-535" src="images/timbercode_logo_v1_535x75.png" alt="Timbercode logo"/>
-    <img class="logo-367" src="images/timbercode_logo_v1_367x50.png" alt="Timbercode logo"/>
-    <img class="logo-184" src="images/timbercode_logo_v1_184x25.png" alt="Timbercode logo"/>
-</div>
+<h1 class="headline">
+    {{ site.title }}
+</h1>
+
+{% for post in site.posts %}
+<h3>
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        {{post.title}}
+    </a>
+</h3>
+{% endfor %}
