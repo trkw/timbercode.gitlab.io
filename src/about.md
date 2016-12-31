@@ -1,7 +1,7 @@
 ---
 title: About Timbercode
 layout: page
-permalink: /about
+permalink: /about/
 ---
 
 For more themes, visit [https://blog.webjeda.com](https://blog.webjeda.com)
