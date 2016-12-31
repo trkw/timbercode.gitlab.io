@@ -28,7 +28,7 @@ Sample working versions of them are:
    and open in a default browser, then watch for changes
 2. Go to [/admin]( http://127.0.0.1:4321/admin ) to access
    admin panel for easy posts edition.
-
+   
 ### Build
 
 1. `./build.sh` - build site into `public/` directory

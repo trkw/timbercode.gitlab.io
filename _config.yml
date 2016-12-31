@@ -78,12 +78,6 @@ destination:  public
 encoding:     "utf-8"
 #markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-# Filtering Content
-show_drafts: true
-#limit_posts: 0
-#future:      false
-#unpublished: false
-
 # Plugins
 #whitelist: []
 gems:      [
