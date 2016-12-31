@@ -100,7 +100,7 @@ highlighter: rouge
 show_dir_listing: false
 
 # Outputting
-permalink:     "/:year/:month/:day/:title/" # Do not remove last backslash: it turns on creation of posts as directories with index.html inside.
+permalink:     "/blog/:year/:month/:day/:title/" # Do not remove last backslash: it turns on creation of posts as directories with index.html inside.
 #paginate_path: /page:num
 timezone:      Europe/Warsaw
 
