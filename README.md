@@ -26,6 +26,8 @@ Sample working versions of them are:
 1. `./serve.sh` - build site into `public/` directory,
    serve it on [127.0.0.1:4321]( http://127.0.0.1:4321/ ),
    and open in a default browser, then watch for changes
+2. Go to [/admin]( http://127.0.0.1:4321/admin ) to access
+   admin panel for easy posts edition.
 
 ### Build
 

@@ -86,7 +86,10 @@ show_drafts: true
 
 # Plugins
 #whitelist: []
-gems:      [jekyll-seo-tag, jekyll-paginate]
+gems:      [
+  jekyll-seo-tag,
+  jekyll-paginate
+  ]
 
 # Conversion
 markdown:    kramdown
