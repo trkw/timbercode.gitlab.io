@@ -33,8 +33,10 @@ defaults:
   -
     scope:
       path: ""
+      type: "posts"
     values:
-      listed: true
+      author:
+        twitter: "nkoder"
 
 # Google Analytics
 google_analytics:
