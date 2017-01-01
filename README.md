@@ -42,7 +42,6 @@ This site is based on [Hagura theme]( https://github.com/sharu725/hagura )
 ## TODO
 
 * favicon
-* first post :-P
 * excerpt separator ( https://jekyllrb.com/docs/posts/#post-excerpts )
 * specific author ( https://jekyllrb.com/docs/datafiles/#example-accessing-a-specific-author )
 * config clean-up
@@ -52,6 +51,12 @@ This site is based on [Hagura theme]( https://github.com/sharu725/hagura )
   https://timbercode.disqus.com/admin/install/platforms/jekyll/
 * static pages and menu
 * remove theme mode switcher
-* google verificatin in SEO tag properties
+* google verification in SEO tag properties
 * update google analytics code, if needed
 * update disqus code, if needed
+* tags/categories
+* replacement of `...` to `&hellip;`, `--` to `&mdash'` etc.
+* extracts from posts
+* syntax highlighting
+* polish publication dates in posts
+* add link to image used in cover of yargs post

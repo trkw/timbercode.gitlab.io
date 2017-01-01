@@ -117,12 +117,12 @@ quiet:    false
 #redcarpet:
 #  extensions: []
 
-#kramdown:
+kramdown:
 #  auto_ids:       true
 #  footnote_nr:    1
 #  entity_output:  as_char
 #  toc_levels:     1..6
-#  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  smart_quotes:   sbquo,rsquo,bdquo,rdquo # polish quotes
 #  input:          GFM
 #  hard_wrap:      false
 #  footnote_nr:    1
