@@ -36,6 +36,7 @@ defaults:
       type: "posts"
     values:
       author:
+        name: "Paweł Barszcz"
         twitter: "nkoder"
 
 # Google Analytics

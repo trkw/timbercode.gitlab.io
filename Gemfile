@@ -10,7 +10,6 @@ gem "jekyll", "3.3.1"
 
 group :jekyll_plugins do
   gem "jekyll-admin", "0.2.0"
-  gem "jekyll-feed", "~> 0.6"
   gem "jekyll-seo-tag", "2.1.0"
   # TODO Needed? Used?
   gem "jekyll-paginate", "1.1.0"
