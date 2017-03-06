@@ -5,7 +5,7 @@ description: >
     Dwie sztuczki w .gitignore, które stosuję w każdym projekcie.
 image:      "/images/covers/gitignore-2-sztuczki.png"
 categories: ["tips-and-tricks"]
-tags:       ["jvm-bloggers", git", "intellij", "gradle", "java"]
+tags:       ["jvm-bloggers", git", "intellij-idea", "gradle", "java"]
 ---
 
 ![Obrazek wpisu "{{page.title}}"]( /images/covers/gitignore-2-sztuczki.png )
