@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "IntelliJ IDEA: jak uruchomić testy ze wszystkich modułów"
+title:      "IntelliJ IDEA &mdash; jak uruchomić testy ze wszystkich modułów"
 description: >
     Jak uruchomić testy ze wszystkich modułów projektu Gradle z poziomu
     IntelliJ IDEA.
