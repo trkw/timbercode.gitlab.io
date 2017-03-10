@@ -23,6 +23,8 @@ jest konieczny już od samego początku. A skoro w ramach Daj Się Poznać 2017
 chcę zdefiniować na nowo [timbercode.pl]( http://timbercode.pl ), to i ja
 powinienem coś zaprojektować.
 
+* TODO zrzut ekranu aktualnego designu i info, skąd pochodzi motyw
+
 # Przygotowanie
  
 * TODO że postanowiłem zacząć na kartce
@@ -67,9 +69,11 @@ powinienem coś zaprojektować.
 
 ![Czwarta wersja projektu strony]( /images/content/dsp17-zmagania-z-designem/concept4.jpeg )
 
+* TODO wiele pytań nieodpowiedzianych, wiele niezadanych
+* TODO akapit cały czy nawet sekcja o tym, czego nie wiem lub na co nie znam odpowiedzi
+
 # Co dalej?
 
 * TODO ciężkie jak cholera
-* TODO wiele pytań nieodpowiedzianych, wiele niezadanych
 * TODO brak: inne podstrony, przejścia, responsive
 * TODO kolejnych wersji nie będzie już na papierze, dość rozkminy, teraz czas na statyczne HTMLe
