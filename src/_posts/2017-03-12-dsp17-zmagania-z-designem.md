@@ -17,7 +17,8 @@ Dodawanie designu do gotowej apki czy strony to prosta droga do porażki.
 Tak słyszałem. Widziałem też projekty, w których jakikolwiek UX/design nie mógł
 zagościć ze względu na podjęte dawno temu decyzje, zabetonowane w kodzie po wsze
 czasy. *Ogólny zarys wyglądu i działania strony jest konieczny już od samego początku.*
-A skoro w ramach Daj Się Poznać 2017 chcę zdefiniować na nowo
+A skoro w ramach [Daj Się Poznać 2017]( http://devstyle.pl/daj-sie-poznac/ ){:target="blank"}
+chcę zdefiniować na nowo
 [timbercode.pl]( http://timbercode.pl ){:target="blank"}, to i ja powinienem
 coś zaprojektować.
 
