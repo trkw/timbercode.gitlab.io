@@ -44,18 +44,18 @@ społecznościowych.
  
 Podobno **najlepiej zacząć od czystej kartki papieru**. Podobno tak jest taniej,
 niż od razu zaprzęgać do pracy ciężkie (lub lżejsze, bo w chmurze&hellip; 🍞 )
-oprogramowani. Tak też zrobiłem! A do tej kartki coś do rysowania:
+oprogramowanie. Tak też zrobiłem! A do tej kartki coś do rysowania:
 
 * dopiero co kupione w tym celu dwa **markery
   [Winsor & Newton ProMarker]( http://www.winsornewton.com/row/shop/graphic-markers/promarker ){:target="blank"}
   w kolorach XB Black oraz R866 Orange** (miał być O547 Honeycomb, ale dopiero teraz
   przy okazji pisania tego wpisu zorientowałem się, że zbyt mocny odcień pomarańczu
-  wynika z pomyłki sprzedawcy ☹️ )
+  wynika z pomyłki sprzedawcy 🙁 )
 * zawsze wierne i niezawodne **cienkopisy
   [Stabilo point 88]( https://www.stabilo.com/uk/product/1560/writing/stabilo-point-88 ){:target="blank"}**
 
 Kolor Honeycomb (tzn. Orange, wrrr) ma być drugim (po czerni) kolorem na stronie.
-Ni to brązowy nie to pomarańczowy: coś pomiędzy drewnem z nazwy firmy a moją żywą
+Ni to brązowy ni to pomarańczowy: coś pomiędzy drewnem z nazwy firmy a moją żywą
 naturą. Kolor zielony mnie odpychał, niebieski wydawał się zbyt oklepany, odcienie
 różu są zbyt modne, a fiolet... nie, zbyt wzniośle i profesjonalnie (w patetycznym
 tego słowa znaczeniu).
@@ -76,7 +76,7 @@ to oba linki będą bardzo rozstrzelone w poziomie.
 
 **Wpisy ułożyłem "klasycznie", jeden po drugim**, jednakże nie zdecydowałem się na
 umieszczanie zajawki: wystarczy cover photo i tytuł. Ale co jest pierwsze, zdjęcie czy
-tytuł? Na rym rysunku nie widać wyraźnie tego, który obrazek jest do pary do którego 
+tytuł? Na tym rysunku nie widać wyraźnie tego, który obrazek jest do pary do którego 
 tekstu.
 
 Pomarańczowe podkreślenie jednego z tytułów wpisów to przykład wyróżnienia go
@@ -107,8 +107,8 @@ całą szerokość strony.
 
 **Przeniosłem oś czasu na lewą stronę** i wyrównałem jej treść do prawej. Chciałem w ten
 sposób uzyskać wizualny pion z przyklejonymi z lewej strony datami a z prawej wpisami.
-Nawet jeśli poprawiło to ogólną estetykę osi, to nie usnęło innego problemu, które
-dostrzegłem: duże numery dni miesiąca mogą wprowadzać w zdziwienie, jeśli nazwa miesiąca
+Nawet jeśli poprawiło to ogólną estetykę osi, to nie usunęło innego problemu, które
+dostrzegłem: duże numery dni miesiąca mogą wywoływać zdziwienie, jeśli nazwa miesiąca
 jest gdzieś tam powyżej i mniejszym fontem. Skąd wiedzieć, że to w ogóle data, a nie,
 przykładowo, liczba polubień? 😜
 
@@ -183,6 +183,7 @@ wpisów działały w podobny sposób:
 * wyszukiwanie,
 * wybór taga,
 * wybór kategorii.
+
 To oznacza, że kategorie nie mogą być nadrzędnym wyborem nawigacji, w ramach którego
 będziesz szukał odpowiedniego wpisu. Wolę, abyś albo wyszukiwał albo wybrał "zdefiniowane
 wyszukiwanie", jakim jest kategoria.
@@ -206,7 +207,7 @@ w prawej kolumnie, ale nie usuwa jej wystarczająco.
 # Co dalej?
 
 Przede wszystkim **te cztery próby pokazały mi, jak trudną pracą jest projektowanie!**
-Designerzy, UX-owcy, czapki z głów!
+Designerzy, UX-owcy, chylę czoła!
 
 **W trackie pracy nad projektem strony zadałem sobie wiele pytań.** Część z nich spróbowałem
 zaadresować, jednak wiele z nich zostało bez odpowiedzi. Nie mam żadnego pomysłu
