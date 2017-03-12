@@ -25,6 +25,12 @@ powinienem coś zaprojektować.
 
 * TODO zrzut ekranu aktualnego designu i info, skąd pochodzi motyw
 
+![Aktualny design - strona główna]( /images/content/dsp17-zmagania-z-designem/current_design_home.png ){: .post__image }
+
+* TODO This site is based on [Hagura theme]( https://github.com/sharu725/hagura ) from [Webjeda]( https://blog.webjeda.com/ ).
+
+![Aktualny design - wpis na blogu]( /images/content/dsp17-zmagania-z-designem/current_design_post.png ){: .post__image }
+
 # Przygotowanie
  
 * TODO że postanowiłem zacząć na kartce
@@ -36,7 +42,7 @@ powinienem coś zaprojektować.
 * TODO nawigacja blog/firma beznadziejna
 * TODO oś czasu po prawej
 
-![Pierwsza wersja projektu strony]( /images/content/dsp17-zmagania-z-designem/concept1.jpeg )
+![Pierwsza wersja projektu strony]( /images/content/dsp17-zmagania-z-designem/concept1.jpeg ){: .post__image }
 
 # Podejście drugie
 
@@ -46,7 +52,7 @@ powinienem coś zaprojektować.
 * TODO fota do górnego tytułu czy dolnego? separatory. Ale one tak mocno wydzielają...
 * TODO cień pod headerem, wypukłość
 
-![Druga wersja projektu strony]( /images/content/dsp17-zmagania-z-designem/concept2.jpeg )
+![Druga wersja projektu strony]( /images/content/dsp17-zmagania-z-designem/concept2.jpeg ){: .post__image }
 
 # Podejście trzecie
 
@@ -58,7 +64,7 @@ powinienem coś zaprojektować.
 * TODO daty spójnie
 * TODO brak cienia pod headerem
 
-![Trzecia wersja projektu strony]( /images/content/dsp17-zmagania-z-designem/concept3.jpeg )
+![Trzecia wersja projektu strony]( /images/content/dsp17-zmagania-z-designem/concept3.jpeg ){: .post__image }
 
 # Podejście czwarte
 
@@ -67,7 +73,7 @@ powinienem coś zaprojektować.
 * TODO tagi inaczej wyglądają
 * TODO nawigacja older/newer
 
-![Czwarta wersja projektu strony]( /images/content/dsp17-zmagania-z-designem/concept4.jpeg )
+![Czwarta wersja projektu strony]( /images/content/dsp17-zmagania-z-designem/concept4.jpeg ){: .post__image }
 
 * TODO wiele pytań nieodpowiedzianych, wiele niezadanych
 * TODO akapit cały czy nawet sekcja o tym, czego nie wiem lub na co nie znam odpowiedzi
