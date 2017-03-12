@@ -22,7 +22,7 @@ Przyjmuję następujące założenia dotyczące projektu i sposobu pracy:
 
 * projekt posiada wiele modułów &ndash; są to na przykład podprojekty Gradle,
 * więcej niż jeden z tych modułów posiada testy, które da się łatwo uruchomić
-  w IntelliJ IDE
+  w IntelliJ IDEA
 * uruchomienie testów w IntelliJ IDEA oznacza integrację IDE z testami, np. możliwość
   przejścia od informacji o niespełnionym teście bezpośrednio do kodu tego testu,
   a nie jedynie podgląd logu wywołania `./gradlew test` .
