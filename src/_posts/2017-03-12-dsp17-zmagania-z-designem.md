@@ -18,14 +18,15 @@ Tak słyszałem. Widziałem też projekty, w których jakikolwiek UX/design nie 
 zagościć ze względu na podjęte dawno temu decyzje, zabetonowane w kodzie po wsze
 czasy. **Ogólny zarys wyglądu i działania strony jest konieczny już od samego początku.**
 A skoro w ramach Daj Się Poznać 2017 chcę zdefiniować na nowo
-[timbercode.pl]( http://timbercode.pl ), to i ja powinienem coś zaprojektować.
+[timbercode.pl]( http://timbercode.pl ){:target="blank"}, to i ja powinienem
+coś zaprojektować.
 
 # Aktualny design
 
 Na aktualny design nie narzekam jakoś szczególnie. Jest to dostępny na licencji MIT
-motyw [Hagura]( https://github.com/sharu725/hagura ) przygotowany przez
-[WebJeda]( https://blog.webjeda.com/ ). Po kilku modyfikacjach na mojej stronie wygląda
-on tak:
+motyw [Hagura]( https://github.com/sharu725/hagura ){:target="blank"}
+przygotowany przez [WebJeda]( https://blog.webjeda.com/ ){:target="blank"}.
+Po kilku modyfikacjach na mojej stronie wygląda on tak:
 
 ![Aktualny design - strona główna]( /images/content/dsp17-zmagania-z-designem/current_design_home.png ){: .post__image }
 
@@ -46,12 +47,12 @@ niż od razu zaprzęgać do pracy ciężkie (lub lżejsze, bo w chmurze&hellip; 
 oprogramowani. Tak też zrobiłem! A do tej kartki coś do rysowania:
 
 * dopiero co kupione w tym celu dwa **markery
-  [Winsor & Newton ProMarker]( http://www.winsornewton.com/row/shop/graphic-markers/promarker )
+  [Winsor & Newton ProMarker]( http://www.winsornewton.com/row/shop/graphic-markers/promarker ){:target="blank"}
   w kolorach XB Black oraz R866 Orange** (miał być O547 Honeycomb, ale dopiero teraz
   przy okazji pisania tego wpisu zorientowałem się, że zbyt mocny odcień pomarańczu
   wynika z pomyłki sprzedawcy ☹️ )
 * zawsze wierne i niezawodne **cienkopisy
-  [Stabilo point 88]( https://www.stabilo.com/uk/product/1560/writing/stabilo-point-88 )**
+  [Stabilo point 88]( https://www.stabilo.com/uk/product/1560/writing/stabilo-point-88 ){:target="blank"}**
 
 Kolor Honeycomb (tzn. Orange, wrrr) ma być drugim (po czerni) kolorem na stronie.
 Ni to brązowy nie to pomarańczowy: coś pomiędzy drewnem z nazwy firmy a moją żywą
@@ -121,7 +122,7 @@ Trzecia próba to powiew zmian:
 
 Kategorie! Przecież będę ich potrzebował: chcę dać możliwość oddzielenia wpisów 
 z poradami od, dajmy na to, wpisów o tym, że testowanie jest dobre
-([TDD]( https://en.wikipedia.org/wiki/Test-driven_development ) rządzi!).
+([TDD]( https://en.wikipedia.org/wiki/Test-driven_development ){:target="blank"} rządzi!).
 **Linki do podstron z kategoriami umieściłem pod nagłówkiem.**
 O ile dla podstron "blog" i "o autorze" (coś to "whoami" mi nie leżało&hellip;)
 osobny wiersz był zbyt obszerny, to dla kategorii może w nim nawet brakować miejsca.
@@ -140,8 +141,8 @@ na prawym brzegu strony.** Pod nią także **przyciski social media**. Warto zau
 że przy okazji tych przycisków przemyciłem **link do formularza kontaktowego** (o ile
 taki utworzę). To zbyt nieistotny "temat", aby zasługiwał na osobne miejsce
 w głównej nawigacji, a w sam raz, aby przedstawić go za pomocą ikony poczty obok
-[Twittera]( https://twitter.com/timbercodepl ) czy
-[Facebooka]( https://www.facebook.com/timbercode ).
+[Twittera]( https://twitter.com/timbercodepl ){:target="blank"} czy
+[Facebooka]( https://www.facebook.com/timbercode ){:target="blank"}.
  
 W drugim rysunku irytowały mnie zbyt szerokie separatory. Dlatego tym razem
 **separatory są delikatnymi kreskami zajmującymi tylko część szerokości kolumny
@@ -189,7 +190,7 @@ wyszukiwanie", jakim jest kategoria.
 Jest to zawiłe? Spróbuję wyjaśnić na przykładzie 🙂
 
 Załóżmy, że szukasz
-[wpisu o uruchamianiu testów ze wszystkich modułów w IntelliJ IDEA]( /blog/2017/03/08/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow/ ),
+[wpisu o uruchamianiu testów ze wszystkich modułów w IntelliJ IDEA]( /blog/2017/03/08/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow/ ){:target="blank"},
 który zamieściłem kiedyś w kategorii "Tips&Tricks" (ale o tym nie pamiętasz).
 Wpisujesz więc `intellij` w wyszukiwarkę. Jednak wpisu nie widać na liście. Czemu?
 Ponieważ przedtem wszedłeś w kategorię "Biblioteki", a w niej nie ma takiego wpisu.
@@ -223,4 +224,4 @@ zaś część moich wątpliwości uda mi się rozwiązać dopiero podczas pracy
 z HTML i CSS na statycznej treści.
 
 Mam nadzieję, że już za kilka tygodni zobaczycie nowe
-[timbercode.pl]( http://timbercode.pl ) 🙂
+[timbercode.pl]( http://timbercode.pl ){:target="blank"} 🙂

@@ -12,16 +12,16 @@ tags:       ["jvm-bloggers", git", "intellij-idea", "gradle", "java"]
 
 Dzisiaj przedstawię Ci dwie sztuczki w `.gitignore`, które stosuję
 w praktycznie każdym projekcie: ścieżki absolutne
-oraz [whitelista]( https://en.wikipedia.org/wiki/Whitelist ).
+oraz [whitelista]( https://en.wikipedia.org/wiki/Whitelist ){:target="blank"}.
 
 Czym jest `.gitignore` tłumaczył nie będę,
-bo albo korzystasz z [Gita]( https://git-scm.com/ ) i doskonale wiesz,
+bo albo korzystasz z [Gita]( https://git-scm.com/ ){:target="blank"} i doskonale wiesz,
 do czego służy ten plik albo nie korzystasz i poniższa wiedza do
 niczego Ci się nie przyda 🙂
   
 # Sztuczka nr 1: ścieżki absolutne
 
-Piszesz projekt skonfigurowany na [Gradle]( https://gradle.org/ ).
+Piszesz projekt skonfigurowany na [Gradle]( https://gradle.org/ ){:target="blank"}.
 To narzędzie "wypluwa" zbudowaną apkę do katalogu `build`, toteż 
 na 99% w swoim `.gitignore` masz fragment podobny do tego:
 ```
@@ -48,7 +48,7 @@ Ano na przykład `com.superfirma.fajnyprojekt.domain.build`&hellip; Już wiesz
 do czego zmierzam? Otóż taki pakiet odpowiada w drzewie katalogów ścieżce
 `src/main/java/com/superfirma/fajnyprojekt/domain/build/`. Dopiero po
 jakimś czasie, gdy zajrzałem do statusu naszego
-[Continuous Integration]( https://en.wikipedia.org/wiki/Continuous_integration)
+[Continuous Integration]( https://en.wikipedia.org/wiki/Continuous_integration){:target="blank"}
 zorientowałem się, że brakuje wszystkich plików, które dodałem
 we wspomnianym katalogu. Wszak `.gitignore` miał wyraźnie napisane,
 aby takie katalogi ignorować 😉
@@ -120,10 +120,10 @@ w każdym z podprojektów, każdy z osobnym wpisem `/build/`:
 
 # Sztuczka nr 2: whitelista
 
-`.gitignore` to zazwyczaj typowa [blacklista]( https://en.wikipedia.org/wiki/Blacklisting ):
+`.gitignore` to zazwyczaj typowa [blacklista]( https://en.wikipedia.org/wiki/Blacklisting ){:target="blank"}:
 mówimy, co ma zostać pominięte przez Gita. Jednak czasami (bardzo rzadko,
 ale jednak) wolelibyśmy powiedzieć, co *nie* ma być zignorowane, czyli
-interesuje nas zdefiniowanie [whitelisty]( https://en.wikipedia.org/wiki/Whitelist ).
+interesuje nas zdefiniowanie [whitelisty]( https://en.wikipedia.org/wiki/Whitelist ){:target="blank"}.
 
 Jak utworzyć taką w `.gitignore`? Poprzez zignorowanie wszystkiego, co
 znajduje się w danym katalogu za pomocą znaku `*`, a następnie utworzeniu
@@ -136,7 +136,7 @@ to w praktyce? Na przykład tak:
 
 ## Przykład z życia
 
-Większość projektów piszę w IDE [IntelliJ IDEA]( https://www.jetbrains.com/idea/ ).
+Większość projektów piszę w IDE [IntelliJ IDEA]( https://www.jetbrains.com/idea/ ){:target="blank"}.
 W trakcie pracy z kodem modyfikuję niektóre ustawienia dotyczące spójnego 
 stylu kodowania czy też włączam lub wyłączam poszczególne inspekcje
 statycznej analizy kodu. Zależy mi na tym, abym dokładnie te same 
