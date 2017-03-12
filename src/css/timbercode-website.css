@@ -1,43 +1,17 @@
-.main-page {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
+.post__image {
 
-@media (min-width: 600px) {
-    .logo-367 {
-        display: none;
-    }
+    /* separate images with whit background from white background of the site */
+    border: 1px solid #60c17d;
 
-    .logo-184 {
-        display: none;
-    }
-}
+    /* do not allow vertical images to take too much space */
+    max-height: 600px;
 
-@media (min-width: 400px) and (max-width: 600px) {
-    .logo-535 {
-        display: none;
-    }
+    /* center this element inside <p> */
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 
-    .logo-184 {
-        display: none;
-    }
-}
-
-@media (max-width: 399px) {
-    .logo-535 {
-        display: none;
-    }
-
-    .logo-367 {
-        display: none;
-    }
+    /* gap between elements */
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
