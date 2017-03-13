@@ -94,7 +94,7 @@ Oto druga próba. Jest poprawa:
 
 ![Druga wersja projektu strony]( /images/content/dsp17-zmagania-z-designem/concept2.jpeg ){: .post__image }
 
-*Zrezygnowałem z dużego logotypu.* Dzięki temu nawigacja pomiędzy dwoma stronami mieści się
+*Zrezygnowałem z dużego logotypu.* Dzięki temu nawigacja pomiędzy dwiema stronami mieści się
 w tej samej poziomej przestrzeni. A logotyp w dużym rozmiarze może się jeszcze kiedyś
 pojawi; np. gdy na landing page zamieszczę stronę "dla biznesu" z chwytliwymi hasłami
 i przekonującymi obrazkami 😉 
