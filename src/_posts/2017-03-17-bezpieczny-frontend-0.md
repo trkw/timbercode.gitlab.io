@@ -7,7 +7,7 @@ description: >
     aplikacji frontendowej. 
 image:      "/images/covers/bezpieczny-frontend-0.png"
 categories: ["security"]
-tags:       ["daj-sie-poznac-2017", "bezpieczny-frontend", "security", "frontend", "web", "http", "csrf", "xss"]
+tags:       ["daj-sie-poznac-2017", "jvm-bloggers", "bezpieczny-frontend", "security", "frontend", "web", "http", "csrf", "xss"]
 ---
 
 ![Obrazek wpisu "{{page.title}}"]( /images/covers/bezpieczny-frontend-0.png )
