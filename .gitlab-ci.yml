@@ -13,12 +13,12 @@
 
 test:
   except:
-    - master
+    - production
   <<: *build_and_test_website
 
 pages:
   only:
-    - master
+    - production
   <<: *build_and_test_website
   artifacts:
     paths:
