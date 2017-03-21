@@ -60,7 +60,7 @@ This site is based on [Hagura theme]( https://github.com/sharu725/hagura )
 * update google analytics code, if needed
 * update disqus code, if needed
 * tags/categories
-* replacement of `...` to `&hellip;`, `--` to `&mdash'` etc.
+* replacement of `...` to `…`, `--` to `&mdash'` etc.
 * extracts from posts
 * syntax highlighting
 * polish publication dates in posts

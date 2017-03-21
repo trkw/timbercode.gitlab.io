@@ -38,13 +38,13 @@ na początku linijki. Wraz z nim plik wyglądałby tak:
 Czemu to istotne? Ponieważ bez niego zignorowany będzie *każdy* katalog
 `build`, nieważne czy znajduje się on w głównym katalogu projektu
 czy gdzieś głębiej w drzewie. Nadal nie brzmi to przekonująco?
-Już biegnę z przykładem&hellip;
+Już biegnę z przykładem…
 
 ## Przykład z życia
 
 W domenie jednego z projektów, który współtworzyłem, istnieje pojęcie `Build`.
 Jak może nazywać się pakiet Java z klasami dotyczącymi tej części domeny?
-Ano na przykład `com.superfirma.fajnyprojekt.domain.build`&hellip; Już wiesz
+Ano na przykład `com.superfirma.fajnyprojekt.domain.build`… Już wiesz
 do czego zmierzam? Otóż taki pakiet odpowiada w drzewie katalogów ścieżce
 `src/main/java/com/superfirma/fajnyprojekt/domain/build/`. Dopiero po
 jakimś czasie, gdy zajrzałem do statusu naszego
@@ -53,7 +53,7 @@ zorientowałem się, że brakuje wszystkich plików, które dodałem
 we wspomnianym katalogu. Wszak `.gitignore` miał wyraźnie napisane,
 aby takie katalogi ignorować 😉
 
-## A co, jeśli&hellip;
+## A co, jeśli…
 
 A co, jeśli mój projekt ma zdefiniowanych wiele podprojektów Gradle?
 Czyli gdy jego struktura wygląda mniej więcej tak:

@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "DSP'17 &mdash; zmagania z designem na kartce papieru"
+title:      "DSP'17 — zmagania z designem na kartce papieru"
 description: >
     Dodawanie designu do gotowej apki czy strony to prosta droga do porażki.
     Ogólny zarys jest konieczny już od samego początku. A skoro w ramach Daj Się Poznać
@@ -44,7 +44,7 @@ społecznościowych.
 # Przygotowanie
  
 Podobno *najlepiej zacząć od czystej kartki papieru*. Podobno tak jest taniej,
-niż od razu zaprzęgać do pracy ciężkie (lub lżejsze, bo w chmurze&hellip; 🍞 )
+niż od razu zaprzęgać do pracy ciężkie (lub lżejsze, bo w chmurze… 🍞 )
 oprogramowanie. Tak też zrobiłem! A do tej kartki coś do rysowania:
 
 * dopiero co kupione w tym celu dwa *markery
@@ -86,7 +86,7 @@ po najechaniu na niego myszą (stan `hover` w CSS).
 A co to ta linia po prawej? To *oś czasu wraz z datami wpisów*. Coś podobnego już
 gdzieś widziałem i chciałem spróbować, jak by to wyglądało u mnie.
 
-Efekt: na rysunku jest tłok, a ja nie jestem ani trochę przekonany&hellip;
+Efekt: na rysunku jest tłok, a ja nie jestem ani trochę przekonany…
 
 # Podejście drugie
 
@@ -102,8 +102,8 @@ i przekonującymi obrazkami 😉
 Chciałem rozwiązać problem łączenia obrazków z tytułami wpisów, dlatego *wprowadziłem
 poziomie separatory*: najpierw szare kreski pomiędzy wpisami, ale potem też
 linię z cieniem pod nagłówkiem strony. Bez tego nagłówek zlał by się w jeden element 
-z pierwszym wpisem. Niestety nie podoba mi się to, jak bardzo wpisy wyglądają na&hellip;
-kafle czy też paski. Wydaje mi się, że to z powodu szerokości separatorów &ndash; zajmują
+z pierwszym wpisem. Niestety nie podoba mi się to, jak bardzo wpisy wyglądają na…
+kafle czy też paski. Wydaje mi się, że to z powodu szerokości separatorów – zajmują
 całą szerokość strony.
 
 *Przeniosłem oś czasu na lewą stronę* i wyrównałem jej treść do prawej. Chciałem w ten
@@ -125,7 +125,7 @@ Kategorie! Przecież będę ich potrzebował: chcę dać możliwość oddzieleni
 z poradami od, dajmy na to, wpisów o tym, że testowanie jest dobre
 ([TDD]( https://en.wikipedia.org/wiki/Test-driven_development ){:target="blank"} rządzi!).
 *Linki do podstron z kategoriami umieściłem pod nagłówkiem.*
-O ile dla podstron "blog" i "o autorze" (coś to "whoami" mi nie leżało&hellip;)
+O ile dla podstron "blog" i "o autorze" (coś to "whoami" mi nie leżało…)
 osobny wiersz był zbyt obszerny, to dla kategorii może w nim nawet brakować miejsca.
 
 Wraz z kategoriami przyszło mi do głowy, aby widoczne były też tagi, które definiuję
@@ -133,8 +133,8 @@ dla każdego wpisu (ale nie ma jak się do nich dostać). *Tagi umieściłem jed
 drugiego pod każdym wpisem, w kolorze i poprzedzone znakiem `#`.* Mam nadzieję, że to
 wystarczająco pokazuje, że:
 
-* tagi są klikalne &ndash; kliknięcie w tag ma otworzyć stronę z tagami danego wpisu,
-* tagi są&hellip; tagami 😉
+* tagi są klikalne – kliknięcie w tag ma otworzyć stronę z tagami danego wpisu,
+* tagi są… tagami 😉
 
 Skoro kliknięcie w tag pozwala przefiltrować wpisy, to może warto wprowadzić ogólny
 mechanizm filtrowania? *Wyszukiwarka znalazła swoje miejsce w osobnej kolumnie
@@ -155,8 +155,8 @@ Czy widzisz oś czasu? Dokładnie! *Zrezygnowałem z osi czasu na rzecz typowych
 dat pisanych w osobnej linii przy wpisie* (tak jak tytuł czy tagi). Tutaj
 konkretnie ponad cover photo.
 
-Jedna rzecz w tym projekcie nie daje mi spokoju &ndash; *nadmiar pustej przestrzeni
-po prawej stronie*. Jest wyszukiwanie, są ikony social media&hellip; i tyle, dalej
+Jedna rzecz w tym projekcie nie daje mi spokoju – *nadmiar pustej przestrzeni
+po prawej stronie*. Jest wyszukiwanie, są ikony social media… i tyle, dalej
 pustka. Czym ją zapełnić?
 
 # Podejście czwarte
@@ -202,7 +202,7 @@ Spróbujmy raz jeszcze: wpisujesz `intellij`, a wśród wyników widać szukany 
 Ciebie wpis. Jednocześnie znika podświetlenie kategorii "Biblioteki", a podświetloną
 staje się wyszukiwarka 🤓
 
-Niestety&hellip; takie umieszczenie kategorii co prawda zmniejsza ilość białej pustki
+Niestety… takie umieszczenie kategorii co prawda zmniejsza ilość białej pustki
 w prawej kolumnie, ale nie usuwa jej wystarczająco.
 
 # Co dalej?

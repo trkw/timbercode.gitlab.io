@@ -17,13 +17,13 @@ Napisanie swojej pierwszej webaplikacji jest bardzo proste: zaglądasz do
  [Vue]( https://vuejs.org/v2/guide/ ){:target="blank"} czy innego 
  [Angulara]( https://angular.io/docs/ts/latest/quickstart.html ){:target="blank"}
  i po chwili masz już kilka widoków i szczyptę logiki. Przyda Ci się backend do zestawu?
- Proszę bardzo &ndash; skorzystaj z 
+ Proszę bardzo – skorzystaj z 
  [Node'a]( https://nodejs.org/en/ ){:target="blank"}
  i [Expressa]( https://expressjs.com/en/starter/installing.html ){:target="blank"}
  w celu szybkiego zdefiniowania API.
  
 Mija kolejna chwila, a Twoje obydwie aplikacje komunikują się ze sobą po HTTP! Pięknie,
- ale&hellip; czy ta komunikacja jest bezpieczna? *Czy możesz spokojnie wypuścić kod tej
+ ale… czy ta komunikacja jest bezpieczna? *Czy możesz spokojnie wypuścić kod tej
  nowiutkiej strony wprost do przeglądarek użytkowników i zagwarantować im chociaż
  podstawowe bezpieczeństwo?* OK, może dbanie o security to nie jest to,
  na czym powinieneś się skupić na początku projektu. Jednak życie pokazało mi,

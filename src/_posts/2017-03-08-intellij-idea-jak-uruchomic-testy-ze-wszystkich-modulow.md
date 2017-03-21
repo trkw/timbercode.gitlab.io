@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "IntelliJ IDEA &mdash; jak uruchomić testy ze wszystkich modułów"
+title:      "IntelliJ IDEA — jak uruchomić testy ze wszystkich modułów"
 description: >
     Jak uruchomić testy ze wszystkich modułów projektu Gradle z poziomu
     IntelliJ IDEA.
@@ -20,7 +20,7 @@ i żałuję, że dopiero teraz 🙂
 
 Przyjmuję następujące założenia dotyczące projektu i sposobu pracy:
 
-* projekt posiada wiele modułów &ndash; są to na przykład podprojekty Gradle,
+* projekt posiada wiele modułów – są to na przykład podprojekty Gradle,
 * więcej niż jeden z tych modułów posiada testy, które da się łatwo uruchomić
   w IntelliJ IDEA
 * uruchomienie testów w IntelliJ IDEA oznacza integrację IDE z testami, np. możliwość
@@ -79,7 +79,7 @@ Po sesji googlania i eksperymentowania z IDE dotarłem do następującego rozwi�
 1. W sekcji `Before launch` dodaj kroki, które mają wykonać się przed uruchomieniem
    aktualnie edytowanej konfiguracji. Są to kroki typu `Add Another Configuration`.
    W ten sposób możesz dodać po kolei wszystkie konfiguracje z testami z innych modułów.
-   Istotne, abyś nie dodał testów modułu, którego konfigurację właśnie edytujesz &ndash;
+   Istotne, abyś nie dodał testów modułu, którego konfigurację właśnie edytujesz –
    raczej nie chcesz czekać na ich wykonanie dwa razy dłużej 😉
 1. Przypilnuj, aby dopiero co dodane kroki występowały *po* kroku `Build`, a nie przed
    nim.
@@ -87,7 +87,7 @@ Po sesji googlania i eksperymentowania z IDE dotarłem do następującego rozwi�
    znaczenie, np. `ALL TESTS`.
 
 Uruchomienie tak przygotowana konfiguracji zaowocuje uruchomieniem jedna po drugiej
-konfiguracji zdefiniowanych w sekcji `Before launch`, a po nich &ndash; tej ostatniej.
+konfiguracji zdefiniowanych w sekcji `Before launch`, a po nich – tej ostatniej.
 
 W przypadku mojego projektu lista konfiguracji wygląda tak:
 

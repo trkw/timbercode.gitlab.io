@@ -1,11 +1,11 @@
 ---
 layout:      post
-title:       "DSP'17 &mdash; Nuxt.js nowym fundamentem timbercode.pl"
+title:       "DSP'17 — Nuxt.js nowym fundamentem timbercode.pl"
 date:        2017-03-21T02:13:00+01:00
 description: >
     Przewidując problemy z rozwojem timbercode.pl zdecydowałem zmienić
     bazową technologię. Po długich rozważaniach wybór padł nad Nuxt.js
-    &ndash; narzędzie wspomagające budowanie statycznych stron opartych
+    – narzędzie wspomagające budowanie statycznych stron opartych
     na Vue.js.
 image:      "/images/covers/dsp17-nuxt-nowym-fundamentem-timbercode-pl.png"
 categories: ["timbercode"]
@@ -41,7 +41,7 @@ Problem, który zaczął dostrzegać podczas pracy nad designem, to
 
 # Alternatywy
 
-*Rozważyłem dwie ścieżki* &ndash; napisać całą stronę zgodnie z trendami, tworząc
+*Rozważyłem dwie ścieżki* – napisać całą stronę zgodnie z trendami, tworząc
  [Single-Page Application]( https://en.wikipedia.org/wiki/Single-page_application ){:target="blank"}
  opartą na jednym z popularnych frameworków lub dać sobie maksimum władzy nad
  zachowaniem aplikacji, serwując z ją "klasycznie" z backendu (np. napisanego w 
@@ -54,7 +54,7 @@ Utworzenie bloga jako SPA brzmi kusząco: strona internetowa jako *jedna spójna
  od struktury plików kodu źródłowego. Strona, na której *przejście z jednego miejsca
  w drugie nie skutkuje irytującym przeładowaniem karty przeglądarki* (mignięcie białego
  tła). Technologia, którą sobie upatrzyłem w tym celu to
- [Vue.js]( https://vuejs.org/ ){:target="blank"} &ndash; framework, który jest podobno
+ [Vue.js]( https://vuejs.org/ ){:target="blank"} – framework, który jest podobno
  równie sexy co [React]( https://facebook.github.io/react/ ){:target="blank"},
  zapewniając jednocześnie łatwiejsze rozpoczęcie pracy z pomocą przejrzystej
  dokumentacji. Co istotne, jest duża szansa, że Vue.js nie działa
@@ -63,9 +63,9 @@ Utworzenie bloga jako SPA brzmi kusząco: strona internetowa jako *jedna spójna
 Niestety głównym problemem związanym ze SPA są *kłopoty z
  [SEO]( https://en.wikipedia.org/wiki/Search_engine_optimization ){:target="blank"}*.
  Taka webaplikacja zazwyczaj ładuje swoją treść asynchronicznie i jest w ogóle
- tak bardzo "dynamiczna" w swej istocie, że&hellip; crawlery nie będą w stanie
+ tak bardzo "dynamiczna" w swej istocie, że… crawlery nie będą w stanie
  wykryć na niej wpisów blogowych i podpowiadać ich w wynikach wyszukiwania Google 🙁
- Są na to rozwiązania, ale&hellip; to raczej obejścia niż rozwiązania leżące u podstaw
+ Są na to rozwiązania, ale… to raczej obejścia niż rozwiązania leżące u podstaw
  danej technologii.
  
 ## Backend serwujący frontend
@@ -76,20 +76,20 @@ Gdybym wybrał drugie rozwiązanie, to *uzyskałbym większą swobodę pisania k
  wyszukiwania, zamiast ładować na start wszystkie wpisy, które istnieją.
  Treści przyszłych wpisów mogłyby czekać cierpliwie poza przeglądarką użytkownika
  (w podejściu bez backendu mógłbym je ukrywać, ale i tak byłyby już pobrane przez
- klienta). No a także security&hellip; Jak ukryć tokeny dostępowe do innych serwisów
+ klienta). No a także security… Jak ukryć tokeny dostępowe do innych serwisów
  bez możliwości "schowania" kodu na serwerze?
  
 Niestety *dodanie backendu to generowanie kosztów*. Backend utrzymywany
  na [Heroku]( https://www.heroku.com ){:target="blank"} to przynajmniej
- $7 miesięcznie. Darmowy plan też wchodzi w grę, ale&hellip; skutkuje on usypianiem
+ $7 miesięcznie. Darmowy plan też wchodzi w grę, ale… skutkuje on usypianiem
  backendu co jakiś czas. Efekt? Użytkownikowi strona internetowa ładuje się kilka 
  dłuuugich sekund (bo "Heroku wstaje").
  
-## Nuxt.js &ndash; niespodziewany zwycięzca
+## Nuxt.js – niespodziewany zwycięzca
 
 I tak oto docieramy do zwycięzcy, którym jest [Nuxt.js]( https://nuxtjs.org/ ){:target="blank"}.
  *Jest to narzędzie oparte na Vue.js, które łączy w sobie cechy przyjemnie pisanej
- nowoczesnej webaplikacji z zaletami&hellip; statycznie generowanych stron.*
+ nowoczesnej webaplikacji z zaletami… statycznie generowanych stron.*
  Otóż jedną z głównych funkcji Nuxt.js jest możliwość wygenerowania strony statycznej
  za pomocą komendy `nuxt generate`. Tak przygotowany blog nie sprawia problemów
  crawlerom i można go hostować bez wykorzystania własnego backendu.
