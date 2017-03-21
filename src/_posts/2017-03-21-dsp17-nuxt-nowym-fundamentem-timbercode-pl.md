@@ -1,10 +1,10 @@
 ---
 layout:      post
-title:       "DSP'17 &mdash; NUXT nowym fundamentem timbercode.pl"
+title:       "DSP'17 &mdash; Nuxt.js nowym fundamentem timbercode.pl"
 date:        2017-03-21T02:13:00+01:00
 description: >
     Przewidując problemy z rozwojem timbercode.pl zdecydowałem zmienić
-    bazową technologię. Po długich rozważaniach wybór padł nad NUXT
+    bazową technologię. Po długich rozważaniach wybór padł nad Nuxt.js
     &ndash; narzędzie wspomagające budowanie statycznych stron opartych
     na Vue.js.
 image:      "/images/covers/dsp17-nuxt-nowym-fundamentem-timbercode-pl.png"
@@ -85,17 +85,17 @@ Niestety *dodanie backendu to generowanie kosztów*. Backend utrzymywany
  backendu co jakiś czas. Efekt? Użytkownikowi strona internetowa ładuje się kilka 
  dłuuugich sekund (bo "Heroku wstaje").
  
-## NUXT &ndash; niespodziewany zwycięzca
+## Nuxt.js &ndash; niespodziewany zwycięzca
 
-I tak oto docieramy do zwycięzcy, którym jest [NUXT]( https://nuxtjs.org/ ){:target="blank"}.
+I tak oto docieramy do zwycięzcy, którym jest [Nuxt.js]( https://nuxtjs.org/ ){:target="blank"}.
  *Jest to narzędzie oparte na Vue.js, które łączy w sobie cechy przyjemnie pisanej
  nowoczesnej webaplikacji z zaletami&hellip; statycznie generowanych stron.*
- Otóż jedną z głównych funkcji NUXT jest możliwość wygenerowania strony statycznej
+ Otóż jedną z głównych funkcji Nuxt.js jest możliwość wygenerowania strony statycznej
  za pomocą komendy `nuxt generate`. Tak przygotowany blog nie sprawia problemów
  crawlerom i można go hostować bez wykorzystania własnego backendu.
  
 Nie dość, że będę mógł wygodnie oskryptować stronę, to jeszcze nie będę musiał
- pisać boilerplate'u związanego z routingiem czy budowaniem aplikacji. NUXT dostarcza
+ pisać boilerplate'u związanego z routingiem czy budowaniem aplikacji. Nuxt.js dostarcza
  oparty na [Webpacku]( https://webpack.js.org/ ){:target="blank"} proces budowania
  (można go łatwo dokonfigurować na swoje potrzeby), generuje routing
  (na bazie struktury katalogów), a także wykorzystuje wygodną składnię
@@ -109,7 +109,7 @@ Jakże się cieszę, że trafiłem na to narzędzie! 🙂
 
 Przewidując problemy z rozwojem [timbercode.pl]( http://timbercode.pl ){:target="blank"}
  zdecydowałem zmienić technologię bazową. Po długiej rozterce odkryłem
- [NUXT]( https://nuxtjs.org/ ){:target="blank"},
+ [Nuxt.js]( https://nuxtjs.org/ ){:target="blank"},
  który chwilę później stał się moim wyborem. Rozpocząłem migrację bloga, którą możesz
  obserwować na
  [gałęzi `migration_to_nuxt` repozytorium kodu strony]( https://github.com/nkoder/timbercode.gitlab.io/tree/migration_to_nuxt ){:target="blank"}.
