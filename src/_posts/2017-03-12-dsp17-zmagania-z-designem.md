@@ -58,7 +58,7 @@ oprogramowanie. Tak też zrobiłem! A do tej kartki coś do rysowania:
 Kolor Honeycomb (tzn. Orange, wrrr) ma być drugim (po czerni) kolorem na stronie.
 Ni to brązowy ni to pomarańczowy: coś pomiędzy drewnem z nazwy firmy a moją żywą
 naturą. Kolor zielony mnie odpychał, niebieski wydawał się zbyt oklepany, odcienie
-różu są zbyt modne, a fiolet... nie, zbyt wzniośle i profesjonalnie (w patetycznym
+różu są zbyt modne, a fiolet… nie, zbyt wzniośle i profesjonalnie (w patetycznym
 tego słowa znaczeniu).
 
 Tak zaopatrzony przystąpiłem do rysowania! 🎨
