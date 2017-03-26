@@ -151,3 +151,5 @@ Jeśli nic się po drodze nie zepsuło, zobaczysz taką wiadomość na swoim Sla
 Teraz, gdy umiesz już wysłać wiadomość na Slacka za pomocą funkcji 
  AWS Lambda, mogę pokazać Ci, jak dodać do zestawu periodyczny
  health-check wybranego serwisu. O tym opowiem w kolejnym wpisie z serii 🙂
+ Jeśli chcesz dowiedzieć się o nim, jak tylko się pojawi, możesz wykorzystać
+ [kanał RSS serii]( /blog/tag/lambda-slack/feed.xml )
