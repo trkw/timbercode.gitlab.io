@@ -66,7 +66,8 @@ Zacznijmy więc od tego, co proste i przyjemne, czyli od skonfigurowania
    na Slacku.
    ![Aplikacje i integracje w menu teamu na Slacku]( /images/content/lambda-slack-health-check-1/slack-team-menu-apps.png ){: .post__image }
    
-3. Znajdź integrację "Incoming WebHooks" i wybierz "Add Configuration".
+3. Znajdź integrację "Incoming WebHooks" i wybierz "Add Configuration":
+   ![Wyszukiwanie aplikacji "Incoming WebHooks"]( /images/content/lambda-slack-health-check-1/slack-apps-incoming-webhooks.png ){: .post__image }
 
 4. Jako "Post to Channel" wskaż ten kanał, który utworzyłeś na początku,
    np. `#hello-from-lambda`. Kliknij "Add Incoming WebHooks integration"
@@ -105,9 +106,12 @@ Teraz czas na tę bardziej skomplikowaną część… choć też powinno obyć s
 1. W webowej konsoli AWS przejdź do
    [AWS Lambda (link dla regionu `eu-central-1`)]( https://eu-central-1.console.aws.amazon.com/lambda ){:target="blank"}
    i kliknij w "Get Started Now". W ten sposób znajdziesz się na stronie
-   tworzenia Twojej pierwszej funkcji.
+   tworzenia Twojej pierwszej funkcji. W przypadku kolejnej funkcji
+   proces wygląda inaczej: link prowadzi Cię na dashboard AWS Lambda,
+   gdzie klikasz w "Create a Lambda function".
    
 2. Jako blueprint wybierz "Blank Function". Na tym etapie nie potrzebujemy "gotowca".
+   ![Wybór "Blank Function" jako blueprint dla funkcji AWS Lambda]( /images/content/lambda-slack-health-check-1/aws-blank-function-blueprint.png ){: .post__image }
 
 3. Na stronie "Configure triggers" przejdź dalej bez wybierania żadnego triggera.
    Swoja pierwszą funkcję będziesz uruchamiał ręcznie.
