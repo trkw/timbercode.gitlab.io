@@ -1,9 +1,6 @@
 # Build directory
 /public/
 
-# Jekyll
-/.sass-cache/
-
 # IntelliJ IDEA
 /*.iml
 /.idea/*

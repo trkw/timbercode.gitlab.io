@@ -1,2 +1,2 @@
-#!/usr/bin/env bash
-bundle exec jekyll serve --drafts --unpublished --future --port 4321 --open-url --watch
+#!/usr/bin/env sh
+harp server public/ --port 9876

@@ -1,25 +1,41 @@
 # GitLab variables are described here: http://docs.gitlab.com/ce/ci/variables/README.html
 # Linter for this file is available here: https://gitlab.com/ci/lint
 
-.template_build_and_test_website: &build_and_test_website
+.template_node_job_configuration: &node_job_configuration
   tags:
     - docker
-  image: ruby:2.4.0
+  image: node:7.7.4-alpine
+
+stages:
+  - test
+  - build
+  - deploy
+
+"site:test":
+  stage: test
+  <<: *node_job_configuration
+  before_script:
+    - ./setup.sh
+  script:
+    - ./test.sh
+
+"site:build":
+  stage: build
+  <<: *node_job_configuration
   before_script:
     - ./setup.sh
   script:
     - ./build.sh
-    - ./test.sh
-
-test:
-  except:
-    - production
-  <<: *build_and_test_website
+  artifacts:
+    paths:
+      - public
 
 pages:
   only:
     - production
-  <<: *build_and_test_website
+  <<: *node_job_configuration
+  script:
+    - echo "Just pass artifacts further =_="
   artifacts:
     paths:
       - public
