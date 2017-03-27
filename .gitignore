@@ -1,6 +1,9 @@
 # Build directory
 /public/
 
+# Node.js/Yarn dependencies
+/node_modules/
+
 # IntelliJ IDEA
 /*.iml
 /.idea/*

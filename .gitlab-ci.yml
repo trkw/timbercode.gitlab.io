@@ -4,38 +4,102 @@
 .template_node_job_configuration: &node_job_configuration
   tags:
     - docker
-  image: node:7.7.4-alpine
+  image: node:6.10.1-alpine
+
+.template_shell_job_configuration: &shell_job_configuration
+  tags:
+    - docker
+  image: alpine:3.5
+
+.template_aws_deployment_before_script: &aws_deployment_before_script
+  before_script:
+    - mkdir ${HOME}/.aws
+    - touch ${HOME}/.aws/credentials
+    - echo "[deployment]" >> ${HOME}/.aws/credentials
+    - echo "aws_access_key_id = ${AWS_ACCESS_KEY_ID}" >> ${HOME}/.aws/credentials
+    - echo "aws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}" >> ${HOME}/.aws/credentials
+    - yarn install
 
 stages:
-  - test
-  - build
   - deploy
+  - check-health
+  - run-demo
 
-"site:test":
-  stage: test
-  <<: *node_job_configuration
-  before_script:
-    - ./setup.sh
-  script:
-    - ./test.sh
-
-"site:build":
-  stage: build
-  <<: *node_job_configuration
-  before_script:
-    - ./setup.sh
-  script:
-    - ./build.sh
-  artifacts:
-    paths:
-      - public
-
-pages:
+"site:testing:deploy":
+  stage: deploy
   only:
-    - production
+    # TODO change to `production` after merge to `master`
+    - server
+  # TODO change to `testing` after merge to `master`
+  environment: "tmp_testing"
   <<: *node_job_configuration
+  <<: *aws_deployment_before_script
   script:
-    - echo "Just pass artifacts further =_="
-  artifacts:
-    paths:
-      - public
+    - yarn run deploy-testing
+
+"site:production:deploy":
+  when: manual
+  stage: deploy
+  only:
+    # TODO change to `production` after merge to `master`
+    - server
+  # TODO change to `production` after merge to `master`
+  environment: "tmp_production"
+  <<: *node_job_configuration
+  <<: *aws_deployment_before_script
+  script:
+    - yarn run deploy-production
+
+"site:testing:health":
+  stage: check-health
+  only:
+    # TODO change to `production` after merge to `master`
+    - server
+  <<: *shell_job_configuration
+  variables:
+    API_VERSION: testing
+  before_script:
+    - apk --update add 'curl=7.52.1-r2' 'jq=1.5-r3'
+  script:
+    - ./check-health.sh
+
+"site:production:health":
+  when: manual
+  stage: check-health
+  only:
+    # TODO change to `production` after merge to `master`
+    - server
+  <<: *shell_job_configuration
+  variables:
+    API_VERSION: production
+  before_script:
+    - apk --update add 'curl=7.52.1-r2' 'jq=1.5-r3'
+  script:
+    - ./check-health.sh
+
+"site:testing:demo":
+  stage: run-demo
+  only:
+    # TODO change to `production` after merge to `master`
+    - server
+  <<: *shell_job_configuration
+  variables:
+    API_VERSION: testing
+  before_script:
+    - apk --update add 'curl=7.52.1-r2' 'jq=1.5-r3'
+  script:
+    - ./run-demo.sh
+
+"site:production:demo":
+  when: manual
+  stage: run-demo
+  only:
+    # TODO change to `production` after merge to `master`
+    - server
+  <<: *shell_job_configuration
+  variables:
+    API_VERSION: production
+  before_script:
+    - apk --update add 'curl=7.52.1-r2' 'jq=1.5-r3'
+  script:
+    - ./run-demo.sh
