@@ -1,0 +1,34 @@
+{
+  "name": "timbercode.gitlab.io",
+  "version": "2.0.0",
+  "license": "MIT",
+  "description": "Website of Timbercode company",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No test specified\""
+  },
+  "engines": {
+    "node": ">=7.7.4"
+  },
+  "author": {
+    "name": "Paweł Barszcz",
+    "email": "pawelbarszcz@gmail.com",
+    "url": "http://timbercode.pl"
+  },
+  "homepage": "https://gitlab.com/timbercode/timbercode.gitlab.io#README",
+  "bugs": {
+    "url": "https://gitlab.com/timbercode/timbercode.gitlab.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/timbercode/timbercode.gitlab.io.git"
+  },
+  "keywords": [
+    "Timbercode",
+    "IT",
+    "quality",
+    "aesthetics",
+    "clean code"
+  ]
+}
