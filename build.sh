@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-rm -r ./public/
+rm -rf ./public/
 bundle exec jekyll build
