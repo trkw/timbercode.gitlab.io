@@ -12,11 +12,13 @@
     - ./test.sh
 
 test:
+  stage: test
   except:
     - production
   <<: *build_and_test_website
 
 pages:
+  stage: deploy
   only:
     - production
   <<: *build_and_test_website

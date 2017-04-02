@@ -29,3 +29,7 @@ strong {
 .posts_list .posts_list__post_title {
     margin-bottom: 0.3em;
 }
+
+.post-headline {
+    font-size: 2.4em;
+}

@@ -22,12 +22,13 @@ Być może słyszałeś o *[AWS Lambda]( https://aws.amazon.com/lambda ){:target
  Tak czy siak dobrze trafiłeś 🙂 
 
 Chcę Ci pokazać:
-* jak skonfigurować i zintegrować ze sobą AWS Lambda wraz z popularnym
-  komunikatorem [Slack]( https://slack.com/ )
+* jak skonfigurować i zintegrować ze sobą [AWS Lambda]( https://aws.amazon.com/lambda ){:target="blank"}
+  wraz z popularnym komunikatorem [Slack]( https://slack.com/ ){:target="blank"}
   ([wpis nr 1, który właśnie czytasz]( /blog/2017/03/25/lambda-slack-health-check-1/ ){:target="blank"}),
-* jak napisać funkcję w [node.js]( https://nodejs.org/en/ ){:target="blank"}),
-  która co 5 minut wykona health-check wskazanego serwisu (wpis nr 2),
-* jak podzielić funkcję na pliki i deploywać ja wraz z zewnętrznymi
+* jak napisać funkcję w [node.js]( https://nodejs.org/en/ ){:target="blank"},
+  która co 5 minut wykona health-check wskazanego serwisu
+   ([wpis nr 2]( /blog/2017/04/03/lambda-slack-health-check-2/ ){:target="blank"}),
+* jak podzielić funkcję na pliki i deploywać ją wraz z zewnętrznymi
   zależnościami (wpis nr 3).
   
 *Po przeczytaniu tego wpisu będziesz umiał utworzyć funkcję na AWS Lambda,
@@ -136,7 +137,7 @@ Teraz czas na tę bardziej skomplikowaną część… choć też powinno obyć s
    
 7. Teraz usuń kod przykładowej funkcji i wstaw, która wysyła wiadomość na Slacka.
    W tym celu wklej kod z pliku
-   [step-1/hello-to-slack.lambda.js]( https://gitlab.com/timbercode/lambda-slack-example/blob/master/step-1/hello-to-slack.lambda.js ){:target="blank"}.
+   [`step-1/hello-to-slack.lambda.js`]( https://gitlab.com/timbercode/lambda-slack-example/blob/master/step-1/hello-to-slack.lambda.js ){:target="blank"}.
    Następnie pod edytorem kodu znajdź sekcję, w której ustawia się zmienne
    środowiskowe. Tam zdefiniuj zmienną `SLACK_WEBHOOK`, której wartością
    jest URL Twojego slackowego webhooka.
