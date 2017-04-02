@@ -25,3 +25,7 @@ strong {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+
+.posts_list .posts_list__post_title {
+    margin-bottom: 0.3em;
+}

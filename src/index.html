@@ -6,10 +6,12 @@ layout: default
     {{ site.title }}
 </h1>
 
-{% for post in site.posts %}
-<h3>
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        {{post.title}}
-    </a>
-</h3>
-{% endfor %}
+<div class="posts_list">
+    {% for post in site.posts %}
+    <h3 class="posts_list__post_title">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+            {{post.title}}
+        </a>
+    </h3>
+    {% endfor %}
+</div>
