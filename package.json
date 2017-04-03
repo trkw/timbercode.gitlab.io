@@ -4,11 +4,15 @@
   "license": "MIT",
   "description": "Website of Timbercode company",
   "private": true,
-  "main": "app.js",
+  "main": "app/lambda.js",
+  "files": [
+    "app/",
+    "yarn.lock"
+  ],
   "scripts": {
-    "start": "ntl",
+    "start": "ntl --info",
     "test": "echo \"No test specified\"",
-    "configure-aws": "claudia create --region ${AWS_REGION} --api-module app --version testing",
+    "configure-aws": "claudia create --region ${AWS_REGION} --name claudia-hello-world --api-module app/lambda --version initial",
     "deploy-testing": "claudia update --version testing",
     "deploy-production": "claudia update --version production"
   },

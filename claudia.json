@@ -1,11 +1,11 @@
 {
   "lambda": {
-    "role": "timbercode_gitlab_io-executor",
-    "name": "timbercode_gitlab_io",
+    "role": "claudia-hello-world-executor",
+    "name": "claudia-hello-world",
     "region": "eu-central-1"
   },
   "api": {
-    "id": "zjf9zz11fk",
-    "module": "app"
+    "id": "as2xae6r35",
+    "module": "app/lambda"
   }
 }
