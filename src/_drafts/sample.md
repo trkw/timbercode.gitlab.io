@@ -13,7 +13,7 @@ tags:       ["daj-sie-poznac-2017", "jvm-bloggers", "aws", "lambda", "slack", "h
 
 ĄĆĘŁŃÓŚŹŻąćęłńóśźż
 
-🤓😀😉🙂🔥🍞🙁🎨😜
+🤓😀😉🙂🔥🍞🙁🎨😜🤔
 
 [Vue]( https://vuejs.org/v2/guide/ ){:target="blank"}
 

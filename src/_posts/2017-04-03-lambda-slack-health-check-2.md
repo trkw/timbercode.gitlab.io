@@ -13,7 +13,7 @@ tags:       ["lambda-slack", "daj-sie-poznac-2017", "jvm-bloggers", "aws", "lamb
 
 ![Obrazek wpisu "{{page.title}}"]( /images/covers/lambda-slack-health-check-2.png )
 
-Witaj ponownie! *Przed Tobą kolejny wpis z serii nt. "Lambda + Slack = health-check".*
+Witaj ponownie! *Przed Tobą kolejny wpis z serii "Lambda + Slack = health-check".*
 Moim celem jest pokazać Ci:
 * jak skonfigurować i zintegrować ze sobą [AWS Lambda]( https://aws.amazon.com/lambda ){:target="blank"}
   wraz z popularnym komunikatorem [Slack]( https://slack.com/ ){:target="blank"}

@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "DSP'17 — zmagania z designem na kartce papieru"
+title:      "DSP'17 — Zmagania z designem na kartce papieru"
 description: >
     Dodawanie designu do gotowej apki czy strony to prosta droga do porażki.
     Ogólny zarys jest konieczny już od samego początku. A skoro w ramach Daj Się Poznać
