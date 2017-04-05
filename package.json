@@ -4,21 +4,25 @@
   "license": "MIT",
   "description": "Website of Timbercode company",
   "private": true,
-  "main": "app/lambda.js",
+  "main": "app/timbercode.pl.js",
   "files": [
     "app/",
+    "lambda.js",
     "yarn.lock"
   ],
   "scripts": {
     "start": "ntl --info",
+    "serve": "node app/server.js",
     "test": "echo \"No test specified\"",
-    "configure-aws": "claudia create --region ${AWS_REGION} --name claudia-hello-world --api-module app/lambda --version initial",
+    "configure": "npm run configure-proxy-wrapper && npm run configure-aws",
+    "configure-proxy-wrapper": "claudia generate-serverless-express-proxy --express-module app/lambda-express-app --proxy-module-name lambda",
+    "configure-aws": "claudia create --region ${AWS_REGION} --name claudia-express-app --handler lambda.handler --deploy-proxy-api --version initial",
     "deploy-testing": "claudia update --version testing",
     "deploy-production": "claudia update --version production"
   },
   "dependencies": {
-    "claudia-api-builder": "2.4.1",
-    "superb": "1.3.0"
+    "aws-serverless-express": "^2.2.0",
+    "express": "4.15.2"
   },
   "devDependencies": {
     "claudia": "2.10.0",

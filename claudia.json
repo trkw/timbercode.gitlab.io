@@ -1,11 +1,10 @@
 {
   "lambda": {
-    "role": "claudia-hello-world-executor",
-    "name": "claudia-hello-world",
+    "role": "claudia-express-app-executor",
+    "name": "claudia-express-app",
     "region": "eu-central-1"
   },
   "api": {
-    "id": "as2xae6r35",
-    "module": "app/lambda"
+    "id": "70d99y3bgi"
   }
 }
