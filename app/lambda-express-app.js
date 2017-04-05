@@ -1,5 +1,5 @@
 'use strict';
 
-const SimpleExpressApp = require('./SimpleExpressApp');
+const TimbercodeWebsite = require('./timbercode-website');
 
-module.exports = SimpleExpressApp();
+module.exports = TimbercodeWebsite();

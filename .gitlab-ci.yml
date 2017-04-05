@@ -50,7 +50,7 @@ stages:
   script:
     - yarn run deploy-production
 
-"site:testing:health":
+"site:testing:version":
   stage: check-health
   only:
     # TODO change to `production` after merge to `master`
@@ -63,7 +63,7 @@ stages:
   script:
     - ./check-health.sh
 
-"site:production:health":
+"site:production:version":
   when: manual
   stage: check-health
   only:
@@ -76,30 +76,3 @@ stages:
     - apk --update add 'curl=7.52.1-r2' 'jq=1.5-r3'
   script:
     - ./check-health.sh
-
-"site:testing:demo":
-  stage: run-demo
-  only:
-    # TODO change to `production` after merge to `master`
-    - server
-  <<: *shell_job_configuration
-  variables:
-    API_VERSION: testing
-  before_script:
-    - apk --update add 'curl=7.52.1-r2' 'jq=1.5-r3'
-  script:
-    - ./run-demo.sh
-
-"site:production:demo":
-  when: manual
-  stage: run-demo
-  only:
-    # TODO change to `production` after merge to `master`
-    - server
-  <<: *shell_job_configuration
-  variables:
-    API_VERSION: production
-  before_script:
-    - apk --update add 'curl=7.52.1-r2' 'jq=1.5-r3'
-  script:
-    - ./run-demo.sh

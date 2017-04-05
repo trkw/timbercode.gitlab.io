@@ -1,8 +1,8 @@
 'use strict';
 
-const SimpleExpressApp = require('./SimpleExpressApp');
+const TimbercodeWebsite = require('./timbercode-website');
 
-const app = SimpleExpressApp();
+const app = TimbercodeWebsite();
 
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!')

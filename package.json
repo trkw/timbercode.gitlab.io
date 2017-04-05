@@ -16,12 +16,12 @@
     "test": "echo \"No test specified\"",
     "configure": "npm run configure-proxy-wrapper && npm run configure-aws",
     "configure-proxy-wrapper": "claudia generate-serverless-express-proxy --express-module app/lambda-express-app --proxy-module-name lambda",
-    "configure-aws": "claudia create --region ${AWS_REGION} --name claudia-express-app --handler lambda.handler --deploy-proxy-api --version initial",
+    "configure-aws": "claudia create --region ${AWS_REGION} --name timbercode-website --handler lambda.handler --deploy-proxy-api --version initial",
     "deploy-testing": "claudia update --version testing",
     "deploy-production": "claudia update --version production"
   },
   "dependencies": {
-    "aws-serverless-express": "^2.2.0",
+    "aws-serverless-express": "2.2.0",
     "express": "4.15.2"
   },
   "devDependencies": {

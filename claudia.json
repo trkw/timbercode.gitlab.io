@@ -1,10 +1,10 @@
 {
   "lambda": {
-    "role": "claudia-express-app-executor",
-    "name": "claudia-express-app",
+    "role": "timbercode-website-executor",
+    "name": "timbercode-website",
     "region": "eu-central-1"
   },
   "api": {
-    "id": "70d99y3bgi"
+    "id": "amxpbxwani"
   }
 }
