@@ -66,7 +66,7 @@ aws-sdk@^2.7.21:
     xml2js "0.4.15"
     xmlbuilder "2.6.2"
 
-aws-serverless-express@^2.2.0:
+aws-serverless-express@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/aws-serverless-express/-/aws-serverless-express-2.2.0.tgz#288e6915d44ff6866f9f1993237cc494808a3c36"
   dependencies:

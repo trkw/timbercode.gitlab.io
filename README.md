@@ -25,3 +25,13 @@ Deployment is done automatically GitLab, but for the first time
 You can check that deployed app:
 * works: `env API_VERSION=testing ./check-health.sh`
 * do fancy things: `env API_VERSION=testing ./run-demo.sh`
+
+## CDN
+
+Assets are stored in S3 Bucket `timbercode-website` and delivered
+with Amazon CloudFront CDN service.
+
+In order to upload asset to S3, use `aws` (installed with `brew install awscli` on macOS), eg.:
+```bash
+aws s3 cp assets/favicon-32x32.png s3://timbercode-website/assets/favicon-32x32.png --profile <profile> --region <region>
+```

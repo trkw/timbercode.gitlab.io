@@ -5,12 +5,12 @@ module.exports = TimbercodeWebsite;
 function TimbercodeWebsite() {
 
     const express = require('express');
-    const fs = require('fs');
+    const path = require('path');
 
     const app = express();
 
     app.get('/', (req, res) => {
-        res.sendFile(`${__dirname}/timbercode-website/index.html`)
+        res.sendFile(path.join(__dirname, 'index.html'));
     });
 
     app.get('/version', function (req, res) {

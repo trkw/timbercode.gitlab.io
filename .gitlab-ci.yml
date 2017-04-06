@@ -21,12 +21,13 @@
     - yarn install
 
 stages:
-  - deploy
-  - check-health
-  - run-demo
+  - testing-deploy
+  - testing-check
+  - production-deploy
+  - production-check
 
-"site:testing:deploy":
-  stage: deploy
+"deploy:testing":
+  stage: testing-deploy
   only:
     # TODO change to `production` after merge to `master`
     - server
@@ -37,9 +38,9 @@ stages:
   script:
     - yarn run deploy-testing
 
-"site:production:deploy":
+"deploy:production":
   when: manual
-  stage: deploy
+  stage: production-deploy
   only:
     # TODO change to `production` after merge to `master`
     - server
@@ -50,8 +51,8 @@ stages:
   script:
     - yarn run deploy-production
 
-"site:testing:version":
-  stage: check-health
+"check:testing":
+  stage: testing-check
   only:
     # TODO change to `production` after merge to `master`
     - server
@@ -63,9 +64,9 @@ stages:
   script:
     - ./check-health.sh
 
-"site:production:version":
+"check:production":
   when: manual
-  stage: check-health
+  stage: production-check
   only:
     # TODO change to `production` after merge to `master`
     - server
