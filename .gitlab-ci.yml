@@ -18,34 +18,47 @@
     - echo "[deployment]" >> ${HOME}/.aws/credentials
     - echo "aws_access_key_id = ${AWS_ACCESS_KEY_ID}" >> ${HOME}/.aws/credentials
     - echo "aws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}" >> ${HOME}/.aws/credentials
+    - echo 'cache-folder ".yarn-cache"' >> .yarnrc
     - yarn install
 
 stages:
-  - test
+  - lint
   - testing-deploy
   - testing-check
   - production-deploy
   - production-check
 
-"test:lint":
-  stage: test
+"lint":
+  stage: lint
   <<: *node_job__configuration
   before_script:
+    - echo 'cache-folder ".yarn-cache"' >> .yarnrc
     - yarn install
   script:
     - yarn test
+  cache:
+    key: "${CI_BUILD_NAME}"
+    paths:
+      # https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/issues/327#note_17810980
+      - health-service/.yarn-cache/
 
 "deploy:testing":
   stage: testing-deploy
   only:
     # TODO change to `production` after merge to `master`
     - server
+    - server_nuxt
   # TODO change to `testing` after merge to `master`
   environment: "tmp_testing"
   <<: *node_job__configuration
   <<: *aws_deployment__before_script
   script:
     - yarn run deploy-testing
+  cache:
+    key: "${CI_BUILD_NAME}"
+    paths:
+      # https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/issues/327#note_17810980
+      - health-service/.yarn-cache/
 
 "deploy:production":
   when: manual
@@ -53,18 +66,25 @@ stages:
   only:
     # TODO change to `production` after merge to `master`
     - server
+    - server_nuxt
   # TODO change to `production` after merge to `master`
   environment: "tmp_production"
   <<: *node_job__configuration
   <<: *aws_deployment__before_script
   script:
     - yarn run deploy-production
+  cache:
+    key: "${CI_BUILD_NAME}"
+    paths:
+      # https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/issues/327#note_17810980
+      - health-service/.yarn-cache/
 
 "check:testing":
   stage: testing-check
   only:
     # TODO change to `production` after merge to `master`
     - server
+    - server_nuxt
   <<: *shell_job__configuration
   variables:
     API_VERSION: testing
@@ -79,6 +99,7 @@ stages:
   only:
     # TODO change to `production` after merge to `master`
     - server
+    - server_nuxt
   <<: *shell_job__configuration
   variables:
     API_VERSION: production

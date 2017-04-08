@@ -1,5 +1,5 @@
-# Build directory
-/public/
+# Nuxt.js build directory
+/.nuxt/
 
 # Node.js/Yarn dependencies
 /node_modules/

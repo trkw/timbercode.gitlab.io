@@ -1,31 +1,38 @@
 'use strict'
 
+// TODO ???
+process.env.DEBUG = 'nuxt:*'
+
 module.exports = TimbercodeWebsite
 
 function TimbercodeWebsite () {
   const express = require('express')
-  const path = require('path')
+  const Nuxt = require('nuxt')
+  const nuxtConfig = require('../../nuxt.config.js')
+  nuxtConfig.dev = !(process.env.NODE_ENV === 'production')
 
   const app = express()
-
-  app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'))
-  })
+  const nuxt = new Nuxt(nuxtConfig)
 
   app.get('/version', function (req, res) {
-    const apiGatewayEventAsText = req.headers['x-apigateway-event'] || dummyGatewayEventAsText()
-    const apiGatewayEvent = JSON.parse(apiGatewayEventAsText)
-    res.send(apiGatewayEvent.requestContext.stage)
+    const apiGatewayEventAsText = req.headers['x-apigateway-event'] || undefined
+    if (apiGatewayEventAsText) {
+      const apiGatewayEvent = JSON.parse(apiGatewayEventAsText)
+      res.send(apiGatewayEvent.requestContext.stage)
+    } else {
+      res.send('(not defined)')
+    }
   })
 
-  return app
-}
+  app.use(nuxt.render)
 
-function dummyGatewayEventAsText () {
-  const dummyEvent = {
-    requestContext: {
-      stage: '(not defined)'
-    }
+  if (nuxtConfig.dev) {
+    nuxt.build()
+      .catch((error) => {
+        console.error(error) // eslint-disable-line no-console
+        process.exit(1)
+      })
   }
-  return JSON.stringify(dummyEvent)
+
+  return app
 }

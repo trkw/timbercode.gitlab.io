@@ -6,33 +6,51 @@
   "private": true,
   "main": "app/timbercode.pl.js",
   "files": [
+    ".nuxt/",
     "app/",
     "lambda.js",
+    "nuxt.config.js",
+    "pages/",
     "yarn.lock"
   ],
   "scripts": {
-    "start": "ntl --info",
-    "serve": "node app/server.js",
+    "start": "ntl",
+    "dev": "nodemon app/server.js",
     "test": "eslint ./",
+    "build": "rimraf .nuxt && nuxt build",
+    "serve": "cross-env NODE_ENV=production node app/server.js",
     "configure": "npm run configure-proxy-wrapper && npm run configure-aws",
     "configure-proxy-wrapper": "claudia generate-serverless-express-proxy --express-module app/lambda-express-app --proxy-module-name lambda",
-    "configure-aws": "claudia create --region ${AWS_REGION} --name timbercode-website --handler lambda.handler --deploy-proxy-api --version initial",
-    "deploy-testing": "claudia update --version testing",
-    "deploy-production": "claudia update --version production"
+    "configure-aws": "claudia create --region ${AWS_REGION} --name timbercode-website --handler lambda.handler --deploy-proxy-api --version initial --set-env NODE_ENV=production,BASE_PATH='/initial'",
+    "predeploy-testing": "cross-env BASE_PATH='/testing' npm run build",
+    "deploy-testing": "claudia update --version testing --set-env NODE_ENV=production,BASE_PATH='/testing'",
+    "predeploy-production": "cross-env BASE_PATH='/production' npm run build",
+    "deploy-production": "claudia update --version production --set-env NODE_ENV=production,BASE_PATH='/production'"
   },
   "dependencies": {
     "aws-serverless-express": "2.2.0",
-    "express": "4.15.2"
+    "express": "4.15.2",
+    "highlight.js": "9.10.0",
+    "normalize.css": "6.0.0",
+    "nuxt": "0.9.9"
   },
   "devDependencies": {
     "claudia": "2.10.0",
+    "cross-env": "4.0.0",
     "eslint": "3.19.0",
     "eslint-config-standard": "10.2.0",
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-node": "4.2.2",
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-standard": "3.0.1",
-    "ntl": "1.2.0"
+    "front-matter": "2.1.2",
+    "loader-utils": "1.1.0",
+    "markdown-it": "8.3.1",
+    "markdown-it-replace-link": "1.0.1",
+    "nodemon": "1.4.1",
+    "ntl": "1.2.0",
+    "object-assign": "4.1.1",
+    "rimraf": "2.6.1"
   },
   "engines": {
     "node": "6.10.1"
