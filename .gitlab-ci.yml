@@ -1,17 +1,17 @@
 # GitLab variables are described here: http://docs.gitlab.com/ce/ci/variables/README.html
 # Linter for this file is available here: https://gitlab.com/ci/lint
 
-.template_node_job_configuration: &node_job_configuration
+.template__node_job__configuration: &node_job__configuration
   tags:
     - docker
   image: node:6.10.1-alpine
 
-.template_shell_job_configuration: &shell_job_configuration
+.template__shell_job__configuration: &shell_job__configuration
   tags:
     - docker
   image: alpine:3.5
 
-.template_aws_deployment_before_script: &aws_deployment_before_script
+.template__aws_deployment__before_script: &aws_deployment__before_script
   before_script:
     - mkdir ${HOME}/.aws
     - touch ${HOME}/.aws/credentials
@@ -21,10 +21,19 @@
     - yarn install
 
 stages:
+  - test
   - testing-deploy
   - testing-check
   - production-deploy
   - production-check
+
+"test:lint":
+  stage: test
+  <<: *node_job__configuration
+  before_script:
+    - yarn install
+  script:
+    - yarn test
 
 "deploy:testing":
   stage: testing-deploy
@@ -33,8 +42,8 @@ stages:
     - server
   # TODO change to `testing` after merge to `master`
   environment: "tmp_testing"
-  <<: *node_job_configuration
-  <<: *aws_deployment_before_script
+  <<: *node_job__configuration
+  <<: *aws_deployment__before_script
   script:
     - yarn run deploy-testing
 
@@ -46,8 +55,8 @@ stages:
     - server
   # TODO change to `production` after merge to `master`
   environment: "tmp_production"
-  <<: *node_job_configuration
-  <<: *aws_deployment_before_script
+  <<: *node_job__configuration
+  <<: *aws_deployment__before_script
   script:
     - yarn run deploy-production
 
@@ -56,7 +65,7 @@ stages:
   only:
     # TODO change to `production` after merge to `master`
     - server
-  <<: *shell_job_configuration
+  <<: *shell_job__configuration
   variables:
     API_VERSION: testing
   before_script:
@@ -70,7 +79,7 @@ stages:
   only:
     # TODO change to `production` after merge to `master`
     - server
-  <<: *shell_job_configuration
+  <<: *shell_job__configuration
   variables:
     API_VERSION: production
   before_script:

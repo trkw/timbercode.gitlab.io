@@ -1,5 +1,5 @@
-'use strict';
+'use strict'
 
-const TimbercodeWebsite = require('./timbercode-website');
+const TimbercodeWebsite = require('./timbercode-website')
 
-module.exports = TimbercodeWebsite();
+module.exports = TimbercodeWebsite()

@@ -13,7 +13,7 @@
   "scripts": {
     "start": "ntl --info",
     "serve": "node app/server.js",
-    "test": "echo \"No test specified\"",
+    "test": "eslint ./",
     "configure": "npm run configure-proxy-wrapper && npm run configure-aws",
     "configure-proxy-wrapper": "claudia generate-serverless-express-proxy --express-module app/lambda-express-app --proxy-module-name lambda",
     "configure-aws": "claudia create --region ${AWS_REGION} --name timbercode-website --handler lambda.handler --deploy-proxy-api --version initial",
@@ -26,6 +26,12 @@
   },
   "devDependencies": {
     "claudia": "2.10.0",
+    "eslint": "3.19.0",
+    "eslint-config-standard": "10.2.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-node": "4.2.2",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "3.0.1",
     "ntl": "1.2.0"
   },
   "engines": {
