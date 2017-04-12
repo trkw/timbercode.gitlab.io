@@ -10,7 +10,7 @@ const markdownIt = require('markdown-it')
 const hljs = require('highlight.js')
 const objectAssign = require('object-assign')
 const path = require('path')
-const loaderUtils = require('loader-utils')
+// const loaderUtils = require('loader-utils')
 
 const highlight = (str, lang) => {
   if ((lang !== null) && hljs.getLanguage(lang)) {
@@ -53,9 +53,12 @@ module.exports = function (content) {
   const shouldPrefix = query.shouldPrefix
 
   const meta = frontMatter(content)
-  const body = md(linkPrefix, shouldPrefix).render(meta.body)
+  const shouldUseCdn = process.env.NODE_ENV === 'production'
+  const imagesBaseUrl = shouldUseCdn ? 'https://static.timbercode.pl' : ''
+  const markdownBody = meta.body.replace(/{{IMAGES_BASE_URL}}/g, imagesBaseUrl)
+  const htmlBody = md(linkPrefix, shouldPrefix).render(markdownBody)
   const result = objectAssign({}, meta.attributes, {
-    body
+    body: htmlBody
   })
   loader.value = result
   result.route = loader.resourcePath.substring(loader.resourcePath.search('pages/') + 5, loader.resourcePath.length - 3)

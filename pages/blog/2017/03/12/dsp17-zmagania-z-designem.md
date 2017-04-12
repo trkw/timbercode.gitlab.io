@@ -11,7 +11,7 @@ categories: ["timbercode"]
 tags:       ["daj-sie-poznac-2017", "pen-and-paper", "design"]
 ---
 
-![Obrazek wpisu "{{page.title}}"]( /images/covers/dsp17-zmagania-z-designem.png )
+![Obrazek wpisu "{{page.title}}"]( {{IMAGES_BASE_URL}}/images/covers/dsp17-zmagania-z-designem.png )
 
 Dodawanie designu do gotowej apki czy strony to prosta droga do porażki.
 Tak słyszałem. Widziałem też projekty, w których jakikolwiek UX/design nie mógł
@@ -29,9 +29,9 @@ motyw [Hagura]( https://github.com/sharu725/hagura ){:target="blank"}
 przygotowany przez [WebJeda]( https://blog.webjeda.com/ ){:target="blank"}.
 Po kilku modyfikacjach na mojej stronie wygląda on tak:
 
-![Aktualny design - strona główna]( /images/content/dsp17-zmagania-z-designem/current_design_home.png ){: .post__image }
+![Aktualny design - strona główna]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/current_design_home.png ){: .post__image }
 
-![Aktualny design - wpis na blogu]( /images/content/dsp17-zmagania-z-designem/current_design_post.png ){: .post__image }
+![Aktualny design - wpis na blogu]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/current_design_post.png ){: .post__image }
 
 Na szybki start jest on dokładnie w sam raz: posiada czytelny layout bez niepotrzebnego
 szumu, nie atakuje feerią barw, oraz, co istotne, wygląda równie dobrze na ekranach
@@ -67,7 +67,7 @@ Tak zaopatrzony przystąpiłem do rysowania! 🎨
 
 Poniżej widzisz efekt mojej pierwszej próby:
 
-![Pierwsza wersja projektu strony]( /images/content/dsp17-zmagania-z-designem/concept1.jpeg ){: .post__image }
+![Pierwsza wersja projektu strony]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/concept1.jpeg ){: .post__image }
 
 Jak dotąd na timbercode.pl nie uświadczysz nic innego niż moje wpisy. Skąd zaś masz
 dowiedzieć się, jak nazywa się autor lub kim ja w ogóle jestem? Dlatego *dodałem
@@ -92,7 +92,7 @@ Efekt: na rysunku jest tłok, a ja nie jestem ani trochę przekonany&hellip;
 
 Oto druga próba. Jest poprawa:
 
-![Druga wersja projektu strony]( /images/content/dsp17-zmagania-z-designem/concept2.jpeg ){: .post__image }
+![Druga wersja projektu strony]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/concept2.jpeg ){: .post__image }
 
 *Zrezygnowałem z dużego logotypu.* Dzięki temu nawigacja pomiędzy dwiema stronami mieści się
 w tej samej poziomej przestrzeni. A logotyp w dużym rozmiarze może się jeszcze kiedyś
@@ -119,7 +119,7 @@ Jeszcze jeden szczegół: "firma" zmieniła się we "whoami". Mniej powagi, wię
 
 Trzecia próba to powiew zmian:
 
-![Trzecia wersja projektu strony]( /images/content/dsp17-zmagania-z-designem/concept3.jpeg ){: .post__image }
+![Trzecia wersja projektu strony]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/concept3.jpeg ){: .post__image }
 
 Kategorie! Przecież będę ich potrzebował: chcę dać możliwość oddzielenia wpisów 
 z poradami od, dajmy na to, wpisów o tym, że testowanie jest dobre
@@ -164,7 +164,7 @@ pustka. Czym ją zapełnić?
 Czwarta próba okazała się ostatnią. Choć na pewno nie jest ona ostatecznym designem!
 Oto i ona:
 
-![Czwarta wersja projektu strony]( /images/content/dsp17-zmagania-z-designem/concept4.jpeg ){: .post__image }
+![Czwarta wersja projektu strony]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/concept4.jpeg ){: .post__image }
 
 Zacznę od zmian kosmetycznych: *tagi przybrały formę "chmurek", a daty powędrowały
 pod tytuł wpisu*.

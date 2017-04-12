@@ -2,7 +2,7 @@ module.exports = {
   head: {
     title: 'Timbercode',
     link: [
-      {rel: 'icon', type: 'image/x-icon', href: 'https://d2u9zklnus5had.cloudfront.net/favicon-32x32.png'}
+      {rel: 'icon', type: 'image/x-icon', href: 'https://static.timbercode.pl/favicon-32x32.png'}
     ]
   },
   css: [

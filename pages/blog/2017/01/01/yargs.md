@@ -13,7 +13,7 @@ categories: ["tools"]
 tags:       ["node", "JavaScript", "yargs"]
 ---
 
-![Obrazek wpisu "{{page.title}}"]( /images/covers/yargs.png )
+![Obrazek wpisu "{{page.title}}"]( {{IMAGES_BASE_URL}}/images/covers/yargs.png )
 
 Na co dzień fruwasz w obłokach czystego kodu, a parametryzacja skryptu
 to brudny i czasochłonny temat, który odpycha na kilometr?

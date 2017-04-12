@@ -9,7 +9,7 @@ categories: ["tips-and-tricks"]
 tags:       ["daj-sie-poznac-2017", "jvm-bloggers", "testing", "intellij-idea", "gradle"]
 ---
 
-![Obrazek wpisu "{{page.title}}"]( /images/covers/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow.png )
+![Obrazek wpisu "{{page.title}}"]( {{IMAGES_BASE_URL}}/images/covers/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow.png )
 
 Jeśli jesteś zwolennikiem pisania testów, to być może zdarzyła Ci się taka chęć:
 chciałbym uruchomić *wszystkie* testy zdefiniowane w projekcie. Czy wiesz jak to zrobić
@@ -91,12 +91,12 @@ konfiguracji zdefiniowanych w sekcji `Before launch`, a po nich &ndash; tej osta
 
 W przypadku mojego projektu lista konfiguracji wygląda tak:
 
-![Konfiguracje testowe wraz z konfiguracją zbiorczą "{{page.title}}"]( /images/content/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow/all-tests-edit.png ){: .post__image }
+![Konfiguracje testowe wraz z konfiguracją zbiorczą "{{page.title}}"]( {{IMAGES_BASE_URL}}/images/content/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow/all-tests-edit.png ){: .post__image }
 
 Konfiguracja `ALL TESTS` to de facto testy modułu
 `integration-tests` poprzedzone uruchomieniem innych konfiguracji: 
 
-![Szczegóły konfiguracji zbiorczej "{{page.title}}"]( /images/content/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow/all-tests-before-launch.png ){: .post__image }
+![Szczegóły konfiguracji zbiorczej "{{page.title}}"]( {{IMAGES_BASE_URL}}/images/content/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow/all-tests-before-launch.png ){: .post__image }
 
 Uruchomienie jej skutkuje wykonaniem sekwencji:
 
@@ -106,7 +106,7 @@ Uruchomienie jej skutkuje wykonaniem sekwencji:
 * `All in runner_test`
 * `ALL TESTS`
 
-![Uruchomiona sekwencja konfiguracji "{{page.title}}"]( /images/content/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow/all-tests-sequence.png ){: .post__image }
+![Uruchomiona sekwencja konfiguracji "{{page.title}}"]( {{IMAGES_BASE_URL}}/images/content/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow/all-tests-sequence.png ){: .post__image }
 
 # Podsumowanie
 
