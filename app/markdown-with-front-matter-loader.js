@@ -55,6 +55,9 @@ module.exports = function (content) {
   const meta = frontMatter(content)
   const shouldUseCdn = process.env.NODE_ENV === 'production'
   const imagesBaseUrl = shouldUseCdn ? 'https://static.timbercode.pl' : ''
+  if (meta.attributes.image) {
+    meta.attributes.image = meta.attributes.image.replace(/{{IMAGES_BASE_URL}}/g, imagesBaseUrl)
+  }
   const markdownBody = meta.body.replace(/{{IMAGES_BASE_URL}}/g, imagesBaseUrl)
   const htmlBody = md(linkPrefix, shouldPrefix).render(markdownBody)
   const result = objectAssign({}, meta.attributes, {

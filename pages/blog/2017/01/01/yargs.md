@@ -8,7 +8,7 @@ description: >
     dla Node.js, która uczyni Twój kod wygodnym
     w czytaniu i modyfikowaniu, a skrypt sam będzie podpowiadał,
     jak go użyć.
-image:      "/images/covers/yargs.png"
+image:      "{{IMAGES_BASE_URL}}/images/covers/yargs.png"
 categories: ["tools"]
 tags:       ["node", "JavaScript", "yargs"]
 ---

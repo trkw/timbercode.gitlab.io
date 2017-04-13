@@ -6,7 +6,7 @@ description: >
     Ogólny zarys jest konieczny już od samego początku. A skoro w ramach Daj Się Poznać
     2017 chcę zdefiniować na nowo timbercode.pl, to i ja powinienem coś zaprojektować.
     Z wątpliwym skutkiem 😉
-image:      "/images/covers/dsp17-zmagania-z-designem.png"
+image:      "{{IMAGES_BASE_URL}}/images/covers/dsp17-zmagania-z-designem.png"
 categories: ["timbercode"]
 tags:       ["daj-sie-poznac-2017", "pen-and-paper", "design"]
 ---
