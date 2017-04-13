@@ -22,8 +22,8 @@
     "configure": "npm run configure-proxy-wrapper && npm run configure-aws",
     "configure-proxy-wrapper": "claudia generate-serverless-express-proxy --express-module app/lambda-express-app --proxy-module-name lambda",
     "configure-aws": "claudia create --region ${AWS_REGION} --name timbercode-website --handler lambda.handler --deploy-proxy-api --version initial --set-env NODE_ENV=production,BASE_PATH='/initial'",
-    "predeploy-testing": "cross-env BASE_PATH='/testing' npm run build",
-    "deploy-testing": "claudia update --version testing --set-env NODE_ENV=production,BASE_PATH='/testing'",
+    "predeploy-testing": "cross-env BASE_PATH='' npm run build",
+    "deploy-testing": "claudia update --version testing --set-env NODE_ENV=production,BASE_PATH=''",
     "predeploy-production": "cross-env BASE_PATH='/production' npm run build",
     "deploy-production": "claudia update --version production --set-env NODE_ENV=production,BASE_PATH='/production'"
   },
