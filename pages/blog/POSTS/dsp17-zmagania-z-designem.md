@@ -1,5 +1,5 @@
 ---
-layout:     post
+permalink:  "/design/zmagania/"
 title:      "DSP'17 — zmagania z designem na kartce papieru"
 description: >
     Dodawanie designu do gotowej apki czy strony to prosta droga do porażki.

@@ -92,6 +92,5 @@ module.exports = function (content) {
     body: htmlBody
   })
   loader.value = result
-  result.route = loader.resourcePath.substring(loader.resourcePath.search('pages/') + 5, loader.resourcePath.length - 3)
   return `module.exports = ${JSON.stringify(result)}`
 }

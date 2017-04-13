@@ -4,6 +4,9 @@
 # Node.js/Yarn dependencies
 /node_modules/
 
+# Yarn cache
+/.yarn-cache2/
+
 # IntelliJ IDEA
 /*.iml
 /.idea/*

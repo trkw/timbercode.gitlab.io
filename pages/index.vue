@@ -10,7 +10,7 @@
                 <nuxt-link to="/about"> About </nuxt-link>
             </li>
             <li>
-                <nuxt-link to="/blog/2017/01/01/test"> test bezpośrednio </nuxt-link>
+                <nuxt-link to="/blog/test"> test bezpośrednio </nuxt-link>
             </li>
             <li>
                 <nuxt-link to="/blog/tag/jvm-bloggers"> tag: jvm-bloggers </nuxt-link>

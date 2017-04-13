@@ -1,5 +1,5 @@
 ---
-layout:     post
+permalink:  "/intellij-all-tests/"
 title:      "IntelliJ IDEA — jak uruchomić testy ze wszystkich modułów"
 description: >
     Jak uruchomić testy ze wszystkich modułów projektu Gradle z poziomu

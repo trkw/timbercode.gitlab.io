@@ -1,5 +1,5 @@
 ---
-layout:     post
+permalink:  "/yargs/"
 title:      "Yargs! Parametryzacjo skryptu, nie boję się ciebie!"
 description: >
     Na co dzień fruwasz w obłokach czystego kodu, a parametryzacja skryptu
@@ -15,7 +15,7 @@ tags:       ["node", "JavaScript", "yargs"]
 
 Na co dzień fruwasz w obłokach czystego kodu, a parametryzacja skryptu
 to brudny i czasochłonny temat, który odpycha na kilometr?
-Czas to zmienić wraz z [biblioteką Yargs]( http://yargs.js.org/ ),
+Czas to zmienić wraz z [biblioteką Yargs]( http://yargs.js.org/0001-yargs.md ),
 dla [Node.js]( https://nodejs.org ), która uczyni Twój kod wygodnym
 w czytaniu i modyfikowaniu, a skrypt sam będzie podpowiadał,
 jak go użyć 🤓
@@ -98,7 +98,7 @@ Rzeczywiście, szczyt wygody i czytelności to to nie jest.
 
 # Rozwiązanie — Yargs!
 
-[Yargs]( http://yargs.js.org/ ) to taka milusia biblioteka, która 
+[Yargs]( http://yargs.js.org/0001-yargs.md ) to taka milusia biblioteka, która 
 rozwiązuje opisany powyżej problem. To, co dostarcza, to
 [DSL (Domain-Specific Language)]( https://en.wikipedia.org/wiki/Domain-specific_language )
 do definiowania parametrów wywołania. Dzięki yargs mój skrypt mogę
@@ -198,7 +198,7 @@ będą z tego skryptu korzystali 😀
 
 W tym wpisie pokazałem Ci (mam nadzieję 😉), że parametryzacja skryptu w Node.js
 może być prosta i czytelna dzięki bibliotece Yargs. Jeśli chcesz dowiedzieć się 
-o niej więcej, zachęcam Cię do przeczytania [dokumentacji]( http://yargs.js.org/docs/ )
+o niej więcej, zachęcam Cię do przeczytania [dokumentacji]( http://yargs.js.org/docs/0001-yargs.md )
 (choć nie jest ona przykładem mistrzostwa w kategorii "klarowność"…).
 
 Kod, który wykorzystałem, udostępniłem w postaci
