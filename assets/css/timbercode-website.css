@@ -1,18 +1,25 @@
-/* Poor choice of selector… */
-pre {
+.post_code {
+    border: 1px solid #60c17d;
+    padding: 1em;
+}
 
+.post_code_inline {
+    border: 1px solid #60c17d;
+}
+
+.post_image {
     /* separate images with whit background from white background of the site */
     border: 1px solid #60c17d;
 
     /* do not allow vertical images to take too much space */
-    /*max-height: 600px;*/
+    max-height: 600px;
 
-    /* center this element inside <p> */
-    /*display: block;*/
-    /*margin-right: auto;*/
-    /*margin-left: auto;*/
+    /* center this element inside parent element */
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 
     /* gap between elements */
-    /*margin-top: 1em;*/
-    /*margin-bottom: 1em;*/
+    margin-top: 1em;
+    margin-bottom: 1em;
 }

@@ -13,22 +13,20 @@ categories: ["tools"]
 tags:       ["node", "JavaScript", "yargs"]
 ---
 
-![Obrazek wpisu "{{page.title}}"]( {{IMAGES_BASE_URL}}/images/covers/yargs.png )
-
 Na co dzień fruwasz w obłokach czystego kodu, a parametryzacja skryptu
 to brudny i czasochłonny temat, który odpycha na kilometr?
-Czas to zmienić wraz z [biblioteką Yargs]( http://yargs.js.org/ ){:target="blank"},
-dla [Node.js]( https://nodejs.org ){:target="blank"}, która uczyni Twój kod wygodnym
+Czas to zmienić wraz z [biblioteką Yargs]( http://yargs.js.org/ ),
+dla [Node.js]( https://nodejs.org ), która uczyni Twój kod wygodnym
 w czytaniu i modyfikowaniu, a skrypt sam będzie podpowiadał,
 jak go użyć 🤓
   
-# Zadanie &mdash; skrypt ładujący dane demo
+# Zadanie — skrypt ładujący dane demo
 
-Masz do napisania skrypt. Dajmy na to&hellip; klient chce pokazać
+Masz do napisania skrypt. Dajmy na to… klient chce pokazać
 pisaną przez Ciebie aplikację swojemu potencjalnemu klientowi
 i potrzebuje danych demo, więc przyda Ci się skrypt, który te dane
 wrzuci na serwer. Najlepiej za pomocą API, które wystawia napisany
-przez Ciebie backend &mdash; wszak to najlepszy sposób na zachowanie
+przez Ciebie backend — wszak to najlepszy sposób na zachowanie
 spójności danych, żadne tam inserty do bazy, omijające logikę
 biznesową.
 
@@ -40,7 +38,7 @@ o zmiany w danych, a może nawet o to, aby zależnie od potrzeby dało się
 wrócić do "tych starych" lub "tych nowych". A, i na niektórych
 prezentacjach będzie trzeba użyć danych z godzinami mającymi sens
 w strefie czasowej innej niż
-[GMT]( https://www.timeanddate.com/time/zones/gmt ){:target="blank"}.
+[GMT]( https://www.timeanddate.com/time/zones/gmt ).
 
 Nie oznacza to, że masz słabego klienta, który nie może zdecydować
 raz a dobrze. O nie. To oznacza, że masz do czynienia z Życiem
@@ -49,7 +47,7 @@ o zmiany, powiedzieć, "Spoko, jeszcze dziś po południu sprawdzisz,
 czy poprawione dane Ci odpowiadają, a jutro rano naniosę poprawki
 i wgram wszystko na czysto."
 
-# Problem &mdash; parametryzacja skryptu
+# Problem — parametryzacja skryptu
 
 Zabierasz się za napisanie skryptu. Jeśli ma być wygodny w użyciu,
 zapewne chcesz sparametryzować jego działanie. Mógłbyś zrobić to za pomocą stałych
@@ -71,7 +69,7 @@ const TIME_ZONE_OFFSET = -7;
 
 Skoro zdecydowałeś, że żonglerka stałymi i komentarzami to słabe rozwiązanie, możesz
 użyć parametrów wywołania. Odczytasz je z 
-[tablicy `process.argv`]( https://nodejs.org/docs/latest/api/process.html#process_process_argv ){:target="blank"}.
+[tablicy `process.argv`]( https://nodejs.org/docs/latest/api/process.html#process_process_argv ).
 
 OK, ale jak bardzo elastyczny i wygodny kod napiszesz? Czy będzie przyjmował 
 parametry w dowolnej kolejności? Czy będą one nazwane i opisane
@@ -98,11 +96,11 @@ node ./load-data_array.js staging ./data/geekit-conference.json
 Jak to mówią anglojęzyczni klienci, "I'm not a big fan of that".
 Rzeczywiście, szczyt wygody i czytelności to to nie jest.
 
-# Rozwiązanie &mdash; Yargs!
+# Rozwiązanie — Yargs!
 
-[Yargs]( http://yargs.js.org/ ){:target="blank"} to taka milusia biblioteka, która 
+[Yargs]( http://yargs.js.org/ ) to taka milusia biblioteka, która 
 rozwiązuje opisany powyżej problem. To, co dostarcza, to
-[DSL (Domain-Specific Language)]( https://en.wikipedia.org/wiki/Domain-specific_language ){:target="blank"}
+[DSL (Domain-Specific Language)]( https://en.wikipedia.org/wiki/Domain-specific_language )
 do definiowania parametrów wywołania. Dzięki yargs mój skrypt mogę
 wywołać w taki oto sposób:
 ```bash
@@ -113,7 +111,7 @@ node ./load-data_yargs.js \
 ```
 
 Wygląda zbyt rozwlekle? Ja bym się cieszył, gdybym zobaczył tak opisane wywołanie
-skryptu przez&hellip; inny skrypt. A jeśli chcę jedynie skupić się podanych wartościach
+skryptu przez… inny skrypt. A jeśli chcę jedynie skupić się podanych wartościach
 i sprawnie je podmieniać, mogę skorzystać z krótkich nazw:
 ```bash
 node ./load-data_yargs.js -e stage -d ./data/geekit-conference.json -z -7
@@ -128,7 +126,7 @@ node ./load-data_yargs.js -d ./data/geekit-conference.json -e staging
 Parametry mają określone typy. Można też ograniczyć ich wartości do określonego
 zestawu. Dzięki temu nie muszę obawiać się, że omyłkowe podanie środowiska
 `stage` zamiast `staging` zamiast przerwać działanie programu, doprowadzi
-do niespodziewanych efektów (np. do użycia innego, domyślnego środowiska&hellip;
+do niespodziewanych efektów (np. do użycia innego, domyślnego środowiska…
 byle nie była to produkcja!).
 
 Na koniec wspomnę o dwóch opcjach, które są moim zdaniem bardzo, ale to bardzo istotne.
@@ -200,13 +198,13 @@ będą z tego skryptu korzystali 😀
 
 W tym wpisie pokazałem Ci (mam nadzieję 😉), że parametryzacja skryptu w Node.js
 może być prosta i czytelna dzięki bibliotece Yargs. Jeśli chcesz dowiedzieć się 
-o niej więcej, zachęcam Cię do przeczytania [dokumentacji]( http://yargs.js.org/docs/ ){:target="blank"}
-(choć nie jest ona przykładem mistrzostwa w kategorii "klarowność"&hellip;).
+o niej więcej, zachęcam Cię do przeczytania [dokumentacji]( http://yargs.js.org/docs/ )
+(choć nie jest ona przykładem mistrzostwa w kategorii "klarowność"…).
 
 Kod, który wykorzystałem, udostępniłem w postaci
-[repozytorium]( https://gitlab.com/timbercode/yargs-example ){:target="blank"} wraz z
-[instrukcją, jak go uruchomić]( https://gitlab.com/timbercode/yargs-example/blob/master/README.md ){:target="blank"}.
+[repozytorium]( https://gitlab.com/timbercode/yargs-example ) wraz z
+[instrukcją, jak go uruchomić]( https://gitlab.com/timbercode/yargs-example/blob/master/README.md ).
 
-I jeszcze jedno&hellip; Totalnie nie zgadzasz się z tym, co napisałem? A może Yargs
+I jeszcze jedno… Totalnie nie zgadzasz się z tym, co napisałem? A może Yargs
 jest Twoim dzisiejszym objawieniem? Zostaw komentarz pod tym wpisem, a z chęcią
 go przeczytam i odpowiem 🙂

@@ -30,9 +30,15 @@
   "dependencies": {
     "aws-serverless-express": "2.2.0",
     "express": "4.15.2",
+    "front-matter": "2.1.2",
     "highlight.js": "9.10.0",
+    "loader-utils": "1.1.0",
+    "markdown-it": "8.3.1",
+    "markdown-it-modify-token": "1.0.2",
+    "markdown-it-replace-link": "1.0.1",
     "normalize.css": "6.0.0",
-    "nuxt": "0.9.9"
+    "nuxt": "0.9.9",
+    "object-assign": "4.1.1"
   },
   "devDependencies": {
     "claudia": "2.10.0",
@@ -44,13 +50,8 @@
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-standard": "3.0.1",
     "eslint-plugin-vue": "2.0.1",
-    "front-matter": "2.1.2",
-    "loader-utils": "1.1.0",
-    "markdown-it": "8.3.1",
-    "markdown-it-replace-link": "1.0.1",
     "nodemon": "1.4.1",
     "ntl": "1.2.0",
-    "object-assign": "4.1.1",
     "rimraf": "2.6.1"
   },
   "engines": {

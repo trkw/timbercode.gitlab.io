@@ -13,9 +13,11 @@ const path = require('path')
 // const loaderUtils = require('loader-utils')
 
 const highlight = (str, lang) => {
-  if ((lang !== null) && hljs.getLanguage(lang)) {
+  if (lang && hljs.getLanguage(lang)) {
     try {
-      return hljs.highlight(lang, str).value
+      return '<pre class="post_code"><code>' +
+        hljs.highlight(lang, str, true).value +
+        '</code></pre>'
     } catch (_error) {
       console.error(_error)
     }
@@ -32,15 +34,41 @@ const md = (linkPrefix, shouldPrefix) => markdownIt({
   html: true,
   linkify: true,
   typographer: true,
+  // https://pl.wikipedia.org/wiki/Cudzys%C5%82%C3%B3w
+  quotes: ['„', '”', '‚', '’'],
   highlight,
   replaceLink: (link) => {
     if (shouldPrefix && path.isAbsolute(link)) {
       return linkPrefix + link
     }
     return link
+  },
+  modifyToken: function (token, env) {
+    switch (token.type) {
+      case 'link_open':
+        token.attrObj.target = '_blank' // set all links to open in new window
+        break
+      case 'code_inline':
+        if (token.attrObj['class']) {
+          token.attrObj['class'] += ' '
+        } else {
+          token.attrObj['class'] = ''
+        }
+        token.attrObj['class'] += 'post_code_inline'
+        break
+      case 'image':
+        if (token.attrObj['class']) {
+          token.attrObj['class'] += ' '
+        } else {
+          token.attrObj['class'] = ''
+        }
+        token.attrObj['class'] += 'post_image'
+        break
+    }
   }
 })
   .use(require('markdown-it-replace-link'))
+  .use(require('markdown-it-modify-token'))
 
 module.exports = function (content) {
   const loader = this

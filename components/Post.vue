@@ -1,6 +1,7 @@
 <template>
     <div>
         <h1>{{ post.title }}</h1>
+        <img :src="post.image"/>
         <div v-html="htmlContent"></div>
     </div>
 </template>
