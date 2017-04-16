@@ -22,7 +22,8 @@ Moim celem jest pokazać Ci:
   która co 5 minut wykona health-check wskazanego serwisu
   ([wpis nr 2, który właśnie czytasz]( /blog/2017/04/03/lambda-slack-health-check-2/ ){:target="blank"}),
 * jak podzielić funkcję na pliki i deploywać ją wraz z zewnętrznymi
-  zależnościami (wpis nr 3).
+  zależnościami
+  ([wpis nr 3]( /blog/2017/04/18/lambda-slack-health-check-3/ ){:target="blank"}).
 
 W dzisiejszym wpisie:
 * pokażę Ci *kod, który wykonuje health-check zewnętrznego systemu*
