@@ -1,5 +1,5 @@
 ---
-permalink:  "/design/zmagania/"
+permalink:  "/design/zmagania"
 title:      "DSP'17 — zmagania z designem na kartce papieru"
 date:       2017-08-08T08:08:08+02:00
 description: >

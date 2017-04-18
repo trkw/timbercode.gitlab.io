@@ -2,6 +2,10 @@ const _ = require('lodash')
 const {BASE_URL, IMAGES_BASE_URL} = require('./config')
 
 module.exports = {
+  env: {
+    BASE_URL,
+    IMAGES_BASE_URL
+  },
   head: {
     htmlAttrs: {
       lang: 'pl-PL'
@@ -15,7 +19,7 @@ module.exports = {
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: `${IMAGES_BASE_URL}/favicon-32x32.png`},
-      {rel: 'alternate', type: 'application/atom+xml', title: 'Timbercode', href: `${BASE_URL}/blog/feed.xml`},
+      {rel: 'alternate', type: 'application/atom+xml', title: 'Timbercode', href: `${BASE_URL}/blog/feed.xml`}
     ]
   },
   css: [
@@ -28,15 +32,9 @@ module.exports = {
     extendRoutes (routes, resolve) {
       const loadPosts = require('./app/timbercode-website/load-posts')
       const posts = loadPosts()
-      routes = routes.map(route => {
-        if (typeof route === 'string') {
-          route = applyPermalinkOn(route, posts)
-        } else if (route.path !== undefined) {
-          route.path = applyPermalinkOn(route.path, posts)
-        }
-        return route
-      })
-      console.log(routes)
+      routes = adjustRoutes(routes, posts)
+      console.log('Generated routes:')
+      printRoutes(routes)
     }
   },
   build: {
@@ -55,10 +53,35 @@ module.exports = {
   }
 }
 
-function applyPermalinkOn (route, posts) {
-  const post = _(posts).find(p => p.originalRoute === route)
-  if (post && post.route) {
-    return post.route
-  }
-  return route
+function adjustRoutes (routes, posts) {
+  return routes.map(route => {
+    if (typeof route === 'string') {
+      const post = _(posts).find(p => p.originalRoute === route)
+      if (post) {
+        return adjustRoutePath(route, post)
+      }
+    } else if (route.path !== undefined) {
+      const post = _(posts).find(p => p.originalRoute === route.path)
+      if (post) {
+        route.path = adjustRoutePath(route.path, post)
+        route.name = adjustRouteName(route.name, post)
+        return route
+      }
+    }
+    return route
+  })
+}
+
+function adjustRoutePath (routePath, post) {
+  return post.route || routePath
+}
+
+function adjustRouteName (routeName, post) {
+  return post.uniqueId || routeName
+}
+
+function printRoutes (routes) {
+  routes.forEach(route => {
+    console.log(route)
+  })
 }

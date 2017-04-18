@@ -18,7 +18,8 @@ function loadPosts () {
       image: fm.attributes.image,
       categories: fm.attributes.categories,
       tags: fm.attributes.tags,
-      date: fm.attributes.date
+      date: fm.attributes.date,
+      uniqueId: `blog${fm.attributes.permalink}`
     }
   })
   return posts

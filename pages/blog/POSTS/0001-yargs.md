@@ -1,5 +1,5 @@
 ---
-permalink:  "/yargs/"
+permalink:  "/yarrrgs"
 title:      "Yargs! Parametryzacjo skryptu, nie boję się ciebie!"
 date:       2017-01-02T03:04:05+01:00
 description: >

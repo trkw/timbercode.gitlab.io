@@ -1,5 +1,5 @@
 ---
-permalink:  "/intellij-all-tests/"
+permalink:  "/intellij-all-tests"
 title:      "IntelliJ IDEA — jak uruchomić testy ze wszystkich modułów"
 date:       2017-04-01T01:01:02+02:00
 description: >

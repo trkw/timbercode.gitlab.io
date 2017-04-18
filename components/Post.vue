@@ -1,12 +1,19 @@
 <template>
     <div>
         <h1>{{ post.title }}</h1>
+        <h2>ID : {{ post.uniqueId }}</h2>
+        <h2>URL : {{ post.canonicalUrl }}</h2>
+        <pre>{{post}}</pre>
         <img :src="post.image"/>
         <div v-html="htmlContent"></div>
+        <div class="comments">
+            <vue-disqus shortname="timbercode" :identifier="post.uniqueId" :url="post.canonicalUrl"></vue-disqus>
+        </div>
     </div>
 </template>
 
 <script>
+  const VueDisqus = require('vue-disqus/VueDisqus.vue')
   export default {
     props: ['post'],
     data () {
@@ -25,6 +32,9 @@
           {hid: 'twitter:description', name: 'twitter:description', content: this.post.description}
         ]
       }
+    },
+    components: {
+      VueDisqus
     }
   }
 </script>

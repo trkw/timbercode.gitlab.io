@@ -19,7 +19,7 @@
     "dev": "cross-env NODE_ENV=development BASE_PATH='' BASE_URL='http://localhost:3000' nodemon app/server.js",
     "test": "eslint ./ --ext .vue --ext .js",
     "build": "rimraf .nuxt && nuxt build",
-    "serve": "cross-env NODE_ENV=production BASE_PATH='' BASE_URL='http://localhost:3000' node app/server.js",
+    "serve": "node app/server.js",
     "configure": "npm run configure-proxy-wrapper && npm run configure-aws",
     "configure-proxy-wrapper": "claudia generate-serverless-express-proxy --express-module app/lambda-express-app --proxy-module-name lambda",
     "configure-aws": "claudia create --region ${AWS_REGION} --name timbercode-website --handler lambda.handler --deploy-proxy-api --version initial --set-env NODE_ENV=production,BASE_PATH='/initial',BASE_URL='https://timbercode.pl'",
@@ -42,7 +42,8 @@
     "moment": "2.18.1",
     "normalize.css": "6.0.0",
     "nuxt": "0.9.9",
-    "object-assign": "4.1.1"
+    "object-assign": "4.1.1",
+    "vue-disqus": "2.0.3"
   },
   "devDependencies": {
     "claudia": "2.10.0",
