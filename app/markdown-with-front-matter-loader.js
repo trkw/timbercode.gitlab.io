@@ -11,6 +11,7 @@ const hljs = require('highlight.js')
 const objectAssign = require('object-assign')
 const path = require('path')
 // const loaderUtils = require('loader-utils')
+let config = require('../config')
 
 const highlight = (str, lang) => {
   if (lang && hljs.getLanguage(lang)) {
@@ -81,12 +82,10 @@ module.exports = function (content) {
   const shouldPrefix = query.shouldPrefix
 
   const meta = frontMatter(content)
-  const shouldUseCdn = process.env.NODE_ENV === 'production'
-  const imagesBaseUrl = shouldUseCdn ? 'https://static.timbercode.pl' : ''
   if (meta.attributes.image) {
-    meta.attributes.image = meta.attributes.image.replace(/{{IMAGES_BASE_URL}}/g, imagesBaseUrl)
+    meta.attributes.image = meta.attributes.image.replace(/{{IMAGES_BASE_URL}}/g, config.IMAGES_BASE_URL)
   }
-  const markdownBody = meta.body.replace(/{{IMAGES_BASE_URL}}/g, imagesBaseUrl)
+  const markdownBody = meta.body.replace(/{{IMAGES_BASE_URL}}/g, config.IMAGES_BASE_URL)
   const htmlBody = md(linkPrefix, shouldPrefix).render(markdownBody)
   const result = objectAssign({}, meta.attributes, {
     body: htmlBody

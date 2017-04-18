@@ -1,6 +1,7 @@
 ---
 permalink:  "/design/zmagania/"
 title:      "DSP'17 — zmagania z designem na kartce papieru"
+date:       2017-08-08T08:08:08+02:00
 description: >
     Dodawanie designu do gotowej apki czy strony to prosta droga do porażki.
     Ogólny zarys jest konieczny już od samego początku. A skoro w ramach Daj Się Poznać

@@ -3,6 +3,7 @@
   "verbose": true,
   "watch": [
     "app/",
+    "config.js",
     "nuxt.config.js"
   ],
   "env": {

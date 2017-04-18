@@ -8,6 +8,7 @@
   "files": [
     ".nuxt/",
     "app/",
+    "config.js",
     "lambda.js",
     "nuxt.config.js",
     "pages/",
@@ -15,21 +16,22 @@
   ],
   "scripts": {
     "start": "ntl",
-    "dev": "nodemon app/server.js",
+    "dev": "cross-env NODE_ENV=development BASE_PATH='' BASE_URL='http://localhost:3000' nodemon app/server.js",
     "test": "eslint ./ --ext .vue --ext .js",
     "build": "rimraf .nuxt && nuxt build",
-    "serve": "cross-env NODE_ENV=production node app/server.js",
+    "serve": "cross-env NODE_ENV=production BASE_PATH='' BASE_URL='http://localhost:3000' node app/server.js",
     "configure": "npm run configure-proxy-wrapper && npm run configure-aws",
     "configure-proxy-wrapper": "claudia generate-serverless-express-proxy --express-module app/lambda-express-app --proxy-module-name lambda",
-    "configure-aws": "claudia create --region ${AWS_REGION} --name timbercode-website --handler lambda.handler --deploy-proxy-api --version initial --set-env NODE_ENV=production,BASE_PATH='/initial'",
-    "predeploy-testing": "cross-env NODE_ENV=production BASE_PATH='' npm run build",
-    "deploy-testing": "claudia update --version testing --set-env NODE_ENV=production,BASE_PATH=''",
-    "predeploy-production": "cross-env NODE_ENV=production BASE_PATH='/production' npm run build",
-    "deploy-production": "claudia update --version production --set-env NODE_ENV=production,BASE_PATH='/production'"
+    "configure-aws": "claudia create --region ${AWS_REGION} --name timbercode-website --handler lambda.handler --deploy-proxy-api --version initial --set-env NODE_ENV=production,BASE_PATH='/initial',BASE_URL='https://timbercode.pl'",
+    "predeploy-testing": "cross-env NODE_ENV=production BASE_PATH='' BASE_URL='https://testing.timbercode.pl' npm run build",
+    "deploy-testing": "claudia update --version testing --set-env NODE_ENV=production,BASE_PATH='',BASE_URL='https://testing.timbercode.pl'",
+    "predeploy-production": "cross-env NODE_ENV=production BASE_PATH='/production' BASE_URL='https://timbercode.pl' npm run build",
+    "deploy-production": "claudia update --version production --set-env NODE_ENV=production,BASE_PATH='/production',BASE_URL='https://timbercode.pl'"
   },
   "dependencies": {
     "aws-serverless-express": "2.2.0",
     "express": "4.15.2",
+    "feed": "1.0.2",
     "front-matter": "2.1.2",
     "highlight.js": "9.10.0",
     "loader-utils": "1.1.0",
@@ -37,6 +39,7 @@
     "markdown-it": "8.3.1",
     "markdown-it-modify-token": "1.0.2",
     "markdown-it-replace-link": "1.0.1",
+    "moment": "2.18.1",
     "normalize.css": "6.0.0",
     "nuxt": "0.9.9",
     "object-assign": "4.1.1"

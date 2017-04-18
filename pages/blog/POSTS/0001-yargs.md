@@ -1,6 +1,7 @@
 ---
 permalink:  "/yargs/"
 title:      "Yargs! Parametryzacjo skryptu, nie boję się ciebie!"
+date:       2017-01-02T03:04:05+01:00
 description: >
     Na co dzień fruwasz w obłokach czystego kodu, a parametryzacja skryptu
     to brudny i czasochłonny temat, który odpycha na kilometr?

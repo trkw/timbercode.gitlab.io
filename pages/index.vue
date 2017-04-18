@@ -10,6 +10,9 @@
                 <nuxt-link to="/about"> About </nuxt-link>
             </li>
             <li>
+                <a :href="this.baseUrl + 'blog/feed.xml'"> main feed </a>
+            </li>
+            <li>
                 <nuxt-link to="/blog/test"> test bezpośrednio </nuxt-link>
             </li>
             <li>
