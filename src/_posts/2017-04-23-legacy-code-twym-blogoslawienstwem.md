@@ -23,7 +23,7 @@ biznesowy i jest nadal potrzebne 😉
 Ja jednak uważam, że *warto choć raz w życiu spędzić wiele czasu
 w projekcie legacy*. Postaram się na dwóch przykładach pokazać, dlaczego.
 
-> Warty, abym wyjaśnił, czym jest "legacy code" w kontekście
+> Warto, abym wyjaśnił, czym jest "legacy code" w kontekście
 tego wpisu. Chodzi mi na przykład o projekt, który był już rozwijany
 dobre kilka lat, prawdopodobnie nie przez Ciebie. Zaglądasz do kodu
 i widzisz, że "tak już się teraz nie pisze", a Ty niestety masz dopisać
