@@ -2,9 +2,11 @@
   "restartable": "rs",
   "verbose": true,
   "watch": [
-    "app/",
-    "config.js",
-    "nuxt.config.js"
+    "dev-server.js",
+    "timbercode-website/config.js",
+    "timbercode-website/load-posts.js",
+    "timbercode-website/markdown-with-front-matter-loader.js",
+    "timbercode-website/server.js"
   ],
   "env": {
     "NODE_ENV": "development"

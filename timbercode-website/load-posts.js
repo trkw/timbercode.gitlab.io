@@ -4,9 +4,9 @@ const frontMatter = require('front-matter')
 module.exports = loadPosts
 
 function loadPosts () {
-  const pagesDir = './pages'
+  const pagesDir = './timbercode-website/pages'
   const paths = findPosts(`${pagesDir}/blog/POSTS`)
-  const posts = paths.map(path => {
+  return paths.map(path => {
     const post = fs.readFileSync(path, 'utf8')
     const fm = frontMatter(post)
     let pathWithoutPagesDir = path.substring(pagesDir.length)
@@ -22,7 +22,6 @@ function loadPosts () {
       uniqueId: `blog${fm.attributes.permalink}`
     }
   })
-  return posts
 }
 
 function findPosts (dir, accumulatedFiles) {

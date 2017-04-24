@@ -6,12 +6,12 @@ process.env.DEBUG = 'nuxt:*'
 module.exports = TimbercodeWebsite
 
 function TimbercodeWebsite () {
-  const {BASE_URL, IMAGES_BASE_URL} = require('../../config')
+  const {BASE_URL, IMAGES_BASE_URL} = require('./config')
   const express = require('express')
   const moment = require('moment')
   const _ = require('lodash')
   const Nuxt = require('nuxt')
-  const nuxtConfig = require('../../nuxt.config.js')
+  const nuxtConfig = require('../nuxt.config.js')
 
   const loadPosts = require('./load-posts')
   const posts = loadPosts()

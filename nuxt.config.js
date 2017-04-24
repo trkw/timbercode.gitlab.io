@@ -1,8 +1,9 @@
 const _ = require('lodash')
-const {BASE_URL, IMAGES_BASE_URL} = require('./config')
+const {BASE_URL, IMAGES_BASE_URL} = require('./timbercode-website/config')
 
 module.exports = {
   dev: process.env.NODE_ENV !== 'production',
+  srcDir: 'timbercode-website',
   env: {
     BASE_URL,
     IMAGES_BASE_URL
@@ -31,7 +32,7 @@ module.exports = {
   router: {
     base: (process.env.BASE_PATH || '') + '/',
     extendRoutes (routes, resolve) {
-      const loadPosts = require('./app/timbercode-website/load-posts')
+      const loadPosts = require('./timbercode-website/load-posts')
       const posts = loadPosts()
       routes = adjustRoutes(routes, posts)
       console.log('Generated routes:')
@@ -42,7 +43,7 @@ module.exports = {
     loaders: [
       {
         test: /\.md$/,
-        loader: './app/markdown-with-front-matter-loader.js',
+        loader: './timbercode-website/markdown-with-front-matter-loader.js',
         query: {
           config: {
             linkPrefix: process.env.BASE_PATH || ''

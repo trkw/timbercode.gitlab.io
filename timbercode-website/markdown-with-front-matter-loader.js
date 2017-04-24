@@ -11,7 +11,7 @@ const hljs = require('highlight.js')
 const objectAssign = require('object-assign')
 const path = require('path')
 // const loaderUtils = require('loader-utils')
-let {IMAGES_BASE_URL} = require('../config')
+let {IMAGES_BASE_URL} = require('./config')
 
 const highlight = (str, lang) => {
   if (lang && hljs.getLanguage(lang)) {
