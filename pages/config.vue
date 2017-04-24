@@ -6,6 +6,9 @@
         <ul>
             <li>BASE_URL: '{{BASE_URL}}'</li>
             <li>IMAGES_BASE_URL: '{{IMAGES_BASE_URL}}'</li>
+            <li>isDev: '{{isDev}}'</li>
+            <li>isClient: '{{isClient}}'</li>
+            <li>isServer: '{{isServer}}'</li>
         </ul>
         <ul>
             <li>
@@ -18,10 +21,13 @@
 <script>
   const {BASE_URL, IMAGES_BASE_URL} = require('../config')
   export default {
-    data (context) {
+    data ({isDev, isClient, isServer}) {
       return {
         BASE_URL,
-        IMAGES_BASE_URL
+        IMAGES_BASE_URL,
+        isDev,
+        isClient,
+        isServer
       }
     }
   }

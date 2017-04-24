@@ -2,6 +2,7 @@ const _ = require('lodash')
 const {BASE_URL, IMAGES_BASE_URL} = require('./config')
 
 module.exports = {
+  dev: process.env.NODE_ENV !== 'production',
   env: {
     BASE_URL,
     IMAGES_BASE_URL

@@ -12,7 +12,6 @@ function TimbercodeWebsite () {
   const _ = require('lodash')
   const Nuxt = require('nuxt')
   const nuxtConfig = require('../../nuxt.config.js')
-  nuxtConfig.dev = !(process.env.NODE_ENV === 'production')
 
   const loadPosts = require('./load-posts')
   const posts = loadPosts()
