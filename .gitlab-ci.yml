@@ -89,7 +89,7 @@ stages:
   variables:
     API_VERSION: testing
   before_script:
-    - apk --update add 'curl=7.52.1-r2' 'jq=1.5-r3'
+    - apk --update add 'curl=7.52.1-r3' 'jq=1.5-r3'
   script:
     - ./check-health.sh
 
@@ -104,6 +104,6 @@ stages:
   variables:
     API_VERSION: production
   before_script:
-    - apk --update add 'curl=7.52.1-r2' 'jq=1.5-r3'
+    - apk --update add 'curl=7.52.1-r3' 'jq=1.5-r3'
   script:
     - ./check-health.sh
