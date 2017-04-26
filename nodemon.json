@@ -3,6 +3,7 @@
   "verbose": true,
   "watch": [
     "dev-server.js",
+    "nuxt.config.js",
     "timbercode-website/config.js",
     "timbercode-website/load-posts.js",
     "timbercode-website/markdown-with-front-matter-loader.js",

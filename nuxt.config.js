@@ -1,7 +1,10 @@
 const _ = require('lodash')
-const {BASE_URL, IMAGES_BASE_URL} = require('./timbercode-website/config')
+const {BASE_URL, IMAGES_BASE_URL, GA_TRACKING_ID} = require('./timbercode-website/config')
 
 module.exports = {
+  plugins: [
+    {src: '~plugins/google-analytics.js', ssr: false}
+  ],
   performance: {
     gzip: false
   },
@@ -9,7 +12,8 @@ module.exports = {
   srcDir: 'timbercode-website',
   env: {
     BASE_URL,
-    IMAGES_BASE_URL
+    IMAGES_BASE_URL,
+    GA_TRACKING_ID
   },
   head: {
     htmlAttrs: {
