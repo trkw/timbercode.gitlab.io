@@ -4,8 +4,11 @@
             Config
         </h1>
         <ul>
-            <li>BASE_URL: '{{BASE_URL}}'</li>
-            <li>IMAGES_BASE_URL: '{{IMAGES_BASE_URL}}'</li>
+            <li>router base: '{{base}}'</li>
+            <li>C_BASE_URL: '{{C_BASE_URL}}'</li>
+            <li>C_IMAGES_BASE_URL: '{{C_IMAGES_BASE_URL}}'</li>
+            <li>N_BASE_URL: '{{N_BASE_URL}}'</li>
+            <li>N_IMAGES_BASE_URL: '{{N_IMAGES_BASE_URL}}'</li>
             <li>isDev: '{{isDev}}'</li>
             <li>isClient: '{{isClient}}'</li>
             <li>isServer: '{{isServer}}'</li>
@@ -21,10 +24,13 @@
 <script>
   const {BASE_URL, IMAGES_BASE_URL} = require('../config')
   export default {
-    data ({isDev, isClient, isServer}) {
+    asyncData ({base, env, isDev, isClient, isServer}) {
       return {
-        BASE_URL,
-        IMAGES_BASE_URL,
+        base,
+        C_BASE_URL: BASE_URL,
+        C_IMAGES_BASE_URL: IMAGES_BASE_URL,
+        N_BASE_URL: env.BASE_URL,
+        N_IMAGES_BASE_URL: env.IMAGES_BASE_URL,
         isDev,
         isClient,
         isServer

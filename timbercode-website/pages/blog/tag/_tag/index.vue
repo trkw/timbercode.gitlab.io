@@ -20,7 +20,7 @@
     validate ({params}) {
       return posts.filter(post => post.tags.indexOf(params.tag) >= 0).length > 0
     },
-    data ({params}) {
+    asyncData ({params}) {
       return {
         tag: params.tag,
         posts: posts.filter(post => post.tags.indexOf(params.tag) >= 0)

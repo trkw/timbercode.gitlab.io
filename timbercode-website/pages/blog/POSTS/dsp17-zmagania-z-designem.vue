@@ -6,7 +6,7 @@
   import post from './dsp17-zmagania-z-designem.md'
   import Post from '~components/Post.vue'
   export default {
-    data () {
+    asyncData () {
       return {
         post
       }

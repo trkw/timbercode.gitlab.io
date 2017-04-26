@@ -13,7 +13,7 @@
 
 <script>
   export default {
-    data ({isClient, isServer}) {
+    asyncData ({isClient, isServer}) {
       return {
         whichSide: isClient ? 'client' : (isServer ? 'server' : 'UNKNOWN')
       }

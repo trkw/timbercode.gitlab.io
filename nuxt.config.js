@@ -2,6 +2,9 @@ const _ = require('lodash')
 const {BASE_URL, IMAGES_BASE_URL} = require('./timbercode-website/config')
 
 module.exports = {
+  performance: {
+    gzip: false
+  },
   dev: process.env.NODE_ENV !== 'production',
   srcDir: 'timbercode-website',
   env: {

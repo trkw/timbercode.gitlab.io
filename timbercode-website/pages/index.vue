@@ -39,10 +39,10 @@
   const posts = require('~assets/js/posts')
 
   export default {
-    data (context) {
+    asyncData ({base}) {
       return {
         versionLabel: 'Version',
-        baseUrl: context.base,
+        baseUrl: base,
         posts
       }
     },
