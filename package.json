@@ -25,7 +25,8 @@
     "predeploy-testing": "cross-env NODE_ENV=production BASE_PATH='' BASE_URL='https://testing.timbercode.pl' npm run build",
     "deploy-testing": "claudia update --version testing --set-env NODE_ENV=production,BASE_PATH='',BASE_URL='https://testing.timbercode.pl'",
     "predeploy-production": "cross-env NODE_ENV=production BASE_PATH='/production' BASE_URL='https://timbercode.pl' npm run build",
-    "deploy-production": "claudia update --version production --set-env NODE_ENV=production,BASE_PATH='/production',BASE_URL='https://timbercode.pl'"
+    "deploy-production": "claudia update --version production --set-env NODE_ENV=production,BASE_PATH='/production',BASE_URL='https://timbercode.pl'",
+    "try": "claudia test-lambda --event test-event.api-gateway-aws-proxy.json"
   },
   "dependencies": {
     "aws-serverless-express": "2.2.0",
