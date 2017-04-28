@@ -6,7 +6,8 @@ const posts = requireFromDir.keys().map(path => {
     tags: post.tags || [],
     route: '/blog' + post.permalink,
     canonicalUrl: `https://timbercode.pl/blog${post.permalink}`,
-    uniqueId: `blog${post.permalink}`
+    uniqueId: `blog${post.permalink}`,
+    date: post.date
   }
 })
 

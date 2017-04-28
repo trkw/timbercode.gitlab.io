@@ -14,22 +14,32 @@
 </template>
 
 <script>
+  import moment from 'moment'
   const posts = require('~assets/js/posts')
 
   export default {
     validate ({params}) {
-      return posts.filter(post => post.tags.indexOf(params.tag) >= 0).length > 0
+      return published(posts.filter(post => post.tags.indexOf(params.tag) >= 0)).length > 0
     },
     asyncData ({params}) {
       return {
         tag: params.tag,
-        posts: posts.filter(post => post.tags.indexOf(params.tag) >= 0)
+        posts: published(posts.filter(post => post.tags.indexOf(params.tag) >= 0))
       }
     },
     head () {
       return {
         title: this.tag
       }
+    },
+    methods: {
+      published: published
     }
   }
+
+  function published (posts) {
+    const timeNow = moment()
+    return posts.filter(post => moment(post.date, moment.ISO_8601).isSameOrBefore(timeNow))
+  }
+
 </script>
