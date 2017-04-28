@@ -41,7 +41,7 @@ module.exports = {
     extendRoutes (routes, resolve) {
       const loadPosts = require('./timbercode-website/load-posts')
       const posts = loadPosts()
-      routes = adjustRoutes(routes, posts)
+      adjustRoutes(routes, posts)
       console.log('Generated routes:')
       printRoutes(routes)
     }
@@ -63,21 +63,15 @@ module.exports = {
 }
 
 function adjustRoutes (routes, posts) {
-  return routes.map(route => {
-    if (typeof route === 'string') {
-      const post = _(posts).find(p => p.originalRoute === route)
-      if (post) {
-        return adjustRoutePath(route, post)
-      }
-    } else if (route.path !== undefined) {
-      const post = _(posts).find(p => p.originalRoute === route.path)
-      if (post) {
-        route.path = adjustRoutePath(route.path, post)
-        route.name = adjustRouteName(route.name, post)
-        return route
-      }
+  return routes.forEach(route => {
+    const post = _(posts).find(p => p.originalRoute === route.path)
+    if (post) {
+      route.path = adjustRoutePath(route.path, post)
+      route.name = adjustRouteName(route.name, post)
     }
-    return route
+    if (route.children) {
+      adjustRoutes(route.children, posts)
+    }
   })
 }
 
