@@ -30,11 +30,11 @@
       return {
         title: this.post.title,
         meta: [
-          {hid: 'description', name: 'description', content: this.post.description},
-          {hid: 'description', name: 'description', content: 'Blog Timbercode.pl'},
-          {hid: 'twitter:title', name: 'twitter:title', content: this.post.title},
-          {hid: 'twitter:image', name: 'twitter:image', content: this.post.image},
-          {hid: 'twitter:description', name: 'twitter:description', content: this.post.description}
+          {hid: 'meta_description', name: 'description', content: this.post.description},
+          {hid: 'meta_description', name: 'description', content: 'Blog Timbercode.pl'},
+          {hid: 'meta_twitter:title', name: 'twitter:title', content: this.post.title},
+          {hid: 'meta_twitter:image', name: 'twitter:image', content: this.post.image},
+          {hid: 'meta_twitter:description', name: 'twitter:description', content: this.post.description}
         ]
       }
     },
