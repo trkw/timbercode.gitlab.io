@@ -9,6 +9,7 @@ description: >
 image:      "{{IMAGES_BASE_URL}}/images/covers/dsp17-prezentacja-o-migracji-bloga.png"
 categories: ["timbercode"]
 tags:       ["daj-sie-poznac-2017", "blog", "timbercode", "slides"]
+speakerDeckPresentationId: 4165806a0eaf4a3097d777d3c56df999
 ---
 
 Ostatni tydzień był pełen wrażeń i wydarzeń… we wszystkich aspektach, tylko nie
@@ -20,5 +21,3 @@ bloga na AWS Lambda podzielę się na wewnętrznym meetupie
 [w firmie, w której pracuję]( https://www.polidea.com/ ).
 Poniżej zamieszczam prezentację, która stanowiła tło dla mojej
 narracji 🙂 Miłego oglądania! 📽
-
-<script async class="speakerdeck-embed" data-id="4165806a0eaf4a3097d777d3c56df999" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>

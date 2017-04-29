@@ -6,6 +6,8 @@
         <pre>{{post}}</pre>
         <img :src="post.image"/>
         <div v-html="htmlContent"></div>
+        <embedded-speaker-deck v-if="post.speakerDeckPresentationId"
+                               :presentation-id="post.speakerDeckPresentationId"/>
         <div class="comments">
             <vue-disqus shortname="timbercode" :identifier="post.uniqueId" :url="post.canonicalUrl"></vue-disqus>
         </div>
@@ -13,9 +15,12 @@
 </template>
 
 <script>
+  import EmbeddedSpeakerDeck from '~components/EmbeddedSpeakerDeck.vue'
   const VueDisqus = require('vue-disqus/VueDisqus.vue')
   export default {
-    props: ['post'],
+    props: {
+      post: Object
+    },
     data () {
       return {
         htmlContent: this.post.body
@@ -34,7 +39,8 @@
       }
     },
     components: {
-      VueDisqus
+      VueDisqus,
+      EmbeddedSpeakerDeck
     }
   }
 </script>
