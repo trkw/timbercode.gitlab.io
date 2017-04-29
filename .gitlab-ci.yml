@@ -35,7 +35,7 @@ stages:
     - echo 'cache-folder ".yarn-cache"' >> .yarnrc
     - yarn install
   script:
-    - yarn test
+    - yarn lint
   cache:
     key: "${CI_BUILD_NAME}"
     paths:
@@ -45,11 +45,9 @@ stages:
 "deploy:testing":
   stage: testing-deploy
   only:
-    # TODO change to `production` after merge to `master`
+    # TODO change to `release` after merge to `master`
     - server
-    - server_nuxt
-  # TODO change to `testing` after merge to `master`
-  environment: "tmp_testing"
+  environment: "testing"
   <<: *node_job__configuration
   <<: *aws_deployment__before_script
   script:
@@ -64,11 +62,9 @@ stages:
   when: manual
   stage: production-deploy
   only:
-    # TODO change to `production` after merge to `master`
+    # TODO change to `release` after merge to `master`
     - server
-    - server_nuxt
-  # TODO change to `production` after merge to `master`
-  environment: "tmp_production"
+  environment: "production"
   <<: *node_job__configuration
   <<: *aws_deployment__before_script
   script:
@@ -82,9 +78,8 @@ stages:
 "check:testing":
   stage: testing-check
   only:
-    # TODO change to `production` after merge to `master`
+    # TODO change to `release` after merge to `master`
     - server
-    - server_nuxt
   <<: *shell_job__configuration
   variables:
     API_VERSION: testing
@@ -97,9 +92,8 @@ stages:
   when: manual
   stage: production-check
   only:
-    # TODO change to `production` after merge to `master`
+    # TODO change to `release` after merge to `master`
     - server
-    - server_nuxt
   <<: *shell_job__configuration
   variables:
     API_VERSION: production

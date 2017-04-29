@@ -44,11 +44,11 @@
     "Accept-Encoding": "gzip, deflate, sdch"
   },
   "pathParameters": {
-    "proxy": ""
+    "proxy": "blog"
   },
   "httpMethod": "GET",
   "stageVariables": {
     "baz": "qux"
   },
-  "path": "/"
+  "path": "/blog"
 }
