@@ -18,7 +18,7 @@
             <vue-disqus v-if="isProduction"
                         :shortname="DISQUS_SHORTNAME"
                         :identifier="post.uniqueId"
-                        :url="post.canonicalUrl"/>
+                        :url="post.url"/>
         </section>
     </div>
 </template>
