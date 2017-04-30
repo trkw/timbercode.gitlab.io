@@ -11,12 +11,13 @@ const hljs = require('highlight.js')
 const objectAssign = require('object-assign')
 const path = require('path')
 // const loaderUtils = require('loader-utils')
-let {IMAGES_BASE_URL} = require('./config')
+let {BASE_URL, IMAGES_BASE_URL} = require('./config')
 
 const highlight = (str, lang) => {
   if (lang && hljs.getLanguage(lang)) {
     try {
-      return '<pre class="post_code"><code>' +
+      // TODO how to tell highlight.js that `test` is a valid language, which just have no keyword nor comments?
+      return '<pre class="post__content__code"><code>' +
         hljs.highlight(lang, str, true).value +
         '</code></pre>'
     } catch (_error) {
@@ -55,7 +56,7 @@ const md = (linkPrefix, shouldPrefix) => markdownIt({
         } else {
           token.attrObj['class'] = ''
         }
-        token.attrObj['class'] += 'post_code_inline'
+        token.attrObj['class'] += 'post__content__code_inline'
         break
       case 'image':
         if (token.attrObj['class']) {
@@ -63,7 +64,7 @@ const md = (linkPrefix, shouldPrefix) => markdownIt({
         } else {
           token.attrObj['class'] = ''
         }
-        token.attrObj['class'] += 'post_image'
+        token.attrObj['class'] += 'post__content__image'
         break
     }
   }
@@ -91,6 +92,7 @@ module.exports = function (content) {
     body: htmlBody
   })
   result.route = '/blog' + result.permalink
+  result.url = `${BASE_URL}/blog${result.permalink}`
   result.canonicalUrl = `https://timbercode.pl/blog${result.permalink}`
   result.uniqueId = `blog${result.permalink}`
   loader.value = result

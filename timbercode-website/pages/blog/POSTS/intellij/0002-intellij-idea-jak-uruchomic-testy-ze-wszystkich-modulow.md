@@ -1,6 +1,6 @@
 ---
 permalink:  "/intellij-all-tests"
-title:      "IntelliJ IDEA — jak uruchomić testy ze wszystkich modułów"
+title:      "DELETE IntelliJ IDEA — jak uruchomić testy ze wszystkich modułów"
 date:       2017-04-01T01:01:02+02:00
 description: >
     Jak uruchomić testy ze wszystkich modułów projektu Gradle z poziomu

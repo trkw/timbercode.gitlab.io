@@ -26,7 +26,6 @@ module.exports = {
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {hid: 'meta_description', name: 'description', content: 'Blog Timbercode.pl'},
       // Twitter
-      // TODO what changes here on other subpages?
       {hid: 'meta_twitter:card', name: 'twitter:card', content: 'summary_large_image'},
       {hid: 'meta_twitter:site', name: 'twitter:site', content: '@timbercodepl'},
       {hid: 'meta_twitter:title', name: 'twitter:title', content: 'Timbercode'},
@@ -34,16 +33,14 @@ module.exports = {
       {hid: 'meta_twitter:image', name: 'twitter:image', content: `${IMAGES_BASE_URL}/favicon-32x32.png`},
       {hid: 'meta_twitter:description', name: 'twitter:description', content: 'Blog Timbercode.pl'},
       // Facebook
-      // TODO what changes here on other subpages?
       {hid: 'meta_og:title', name: 'og:title', content: 'Timbercode'},
-      {hid: 'meta_og:description', name: 'og:description', content: 'Blog Timbercode.pl'},
       {hid: 'meta_og:url', name: 'og:url', content: BASE_URL},
+      {hid: 'meta_og:description', name: 'og:description', content: 'Blog Timbercode.pl'},
+      {hid: 'meta_og:image', name: 'og:image', content: `${IMAGES_BASE_URL}/favicon-32x32.png`},
       {hid: 'meta_og:site_name', name: 'og:site_name', content: 'Timbercode'},
       {hid: 'meta_article:publisher', name: 'article:publisher', content: 'https://www.facebook.com/timbercode'}
     ],
     link: [
-      // TODO what changes here on other subpages?
-      // TODO set proper canonical URL on each page, even /blog/
       {hid: 'link_canonical', rel: 'canonical', href: 'http://timbercode.pl'},
       {rel: 'icon', type: 'image/x-icon', href: `${IMAGES_BASE_URL}/favicon-32x32.png`},
       {rel: 'shortcut icon', type: 'image/x-icon', href: `${IMAGES_BASE_URL}/favicon-32x32.png`},
@@ -68,6 +65,7 @@ module.exports = {
         `"url": "${IMAGES_BASE_URL}/favicon-32x32.png"` +
         '}' +
         '}, ' +
+        // TODO canonical URL or regular one?
         `"url": "${BASE_URL}"` +
         '}'
       }
@@ -78,8 +76,10 @@ module.exports = {
     ]
   },
   css: [
+    // TODO replace with reset.css ?
     'normalize.css/normalize.css',
-    'highlight.js/styles/default.css',
+    // TODO which syntax-highlighting style to choose? Or even do not style it to not rely on lack of languages like Kotlin?
+    // 'highlight.js/styles/default.css',
     '~assets/css/timbercode-website.css'
   ],
   router: {

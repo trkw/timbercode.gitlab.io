@@ -1,6 +1,6 @@
 ---
 permalink:  "/design/zmagania"
-title:      "DSP'17 — zmagania z designem na kartce papieru"
+title:      "DELETE DSP'17 — zmagania z designem na kartce papieru"
 date:       2017-08-08T08:08:08+02:00
 description: >
     Dodawanie designu do gotowej apki czy strony to prosta droga do porażki.

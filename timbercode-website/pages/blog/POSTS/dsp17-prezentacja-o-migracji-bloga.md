@@ -1,6 +1,6 @@
 ---
 permalink:  "/prezka/o/migracji"
-title:      "DSP'17 — Prezentacja o migracji bloga"
+title:      "DELETE DSP'17 — Prezentacja o migracji bloga"
 date:       2017-04-24T00:00:00+02:00
 description: >
     Jedyne, co mogę Ci pokazać z ostatniego pracy na migracją bloga
