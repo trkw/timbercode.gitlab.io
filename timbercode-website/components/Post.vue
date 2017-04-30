@@ -15,7 +15,6 @@
         </section>
         <section class="post__comments">
             <!-- TODO Pull Request to disable warning: missing required attribute, which is nor required -->
-            <!--suppress RequiredAttributes -->
             <vue-disqus shortname="timbercode"
                         :identifier="post.uniqueId"
                         :url="post.canonicalUrl"/>
@@ -27,7 +26,6 @@
   import moment from 'moment'
   import VueDisqus from 'vue-disqus/VueDisqus.vue'
   import EmbeddedSpeakerDeck from '~components/EmbeddedSpeakerDeck.vue'
-  import NuxtLink from 'nuxt/dist/app/components/nuxt-link'
 
   const {BASE_URL, IMAGES_BASE_URL} = require('../../timbercode-website/config')
 
@@ -111,7 +109,6 @@
       }
     },
     components: {
-      NuxtLink,
       VueDisqus,
       EmbeddedSpeakerDeck
     },
