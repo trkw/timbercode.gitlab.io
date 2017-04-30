@@ -29,14 +29,17 @@ module.exports = {
       {hid: 'meta_twitter:card', name: 'twitter:card', content: 'summary_large_image'},
       {hid: 'meta_twitter:site', name: 'twitter:site', content: '@timbercodepl'},
       {hid: 'meta_twitter:title', name: 'twitter:title', content: 'Timbercode'},
-      // TODO use bigger image for main Twitter Card image
-      {hid: 'meta_twitter:image', name: 'twitter:image', content: `${IMAGES_BASE_URL}/favicon-32x32.png`},
+      {
+        hid: 'meta_twitter:image',
+        name: 'twitter:image',
+        content: `${IMAGES_BASE_URL}/timbercode_sygnet_v1_512x512.png`
+      },
       {hid: 'meta_twitter:description', name: 'twitter:description', content: 'Blog Timbercode.pl'},
       // Facebook
       {hid: 'meta_og:title', name: 'og:title', content: 'Timbercode'},
       {hid: 'meta_og:url', name: 'og:url', content: BASE_URL},
       {hid: 'meta_og:description', name: 'og:description', content: 'Blog Timbercode.pl'},
-      {hid: 'meta_og:image', name: 'og:image', content: `${IMAGES_BASE_URL}/favicon-32x32.png`},
+      {hid: 'meta_og:image', name: 'og:image', content: `${IMAGES_BASE_URL}/timbercode_sygnet_v1_512x512.png`},
       {hid: 'meta_og:site_name', name: 'og:site_name', content: 'Timbercode'},
       {hid: 'meta_article:publisher', name: 'article:publisher', content: 'https://www.facebook.com/timbercode'}
     ],
@@ -49,7 +52,6 @@ module.exports = {
     ],
     script: [
       {
-        // TODO what changes here on other subpages?
         type: 'application/ld+json',
         innerHTML: '{' +
         '"@context": "http://schema.org", ' +
@@ -61,8 +63,7 @@ module.exports = {
         '"@type": "Organization", ' +
         '"logo": {' +
         '"@type": "ImageObject", ' +
-        // TODO use bigger image for logo
-        `"url": "${IMAGES_BASE_URL}/favicon-32x32.png"` +
+        `"url": "${IMAGES_BASE_URL}/timbercode_sygnet_v1_512x512.png"` +
         '}' +
         '}, ' +
         // TODO canonical URL or regular one?

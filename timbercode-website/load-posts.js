@@ -1,12 +1,14 @@
 const fs = require('fs')
 const frontMatter = require('front-matter')
+// TODO `import` syntax?
+const moment = require('moment')
 
 module.exports = loadPosts
 
 function loadPosts () {
   const pagesDir = './timbercode-website/pages'
   const paths = findPosts(`${pagesDir}/blog/POSTS`)
-  return paths.map(path => {
+  const posts = paths.map(path => {
     const post = fs.readFileSync(path, 'utf8')
     const fm = frontMatter(post)
     let pathWithoutPagesDir = path.substring(pagesDir.length)
@@ -18,10 +20,22 @@ function loadPosts () {
       image: fm.attributes.image,
       categories: fm.attributes.categories,
       tags: fm.attributes.tags,
+      // TODO use moment.js, starting here?
       date: fm.attributes.date,
       uniqueId: `blog${fm.attributes.permalink}`
     }
   })
+
+  posts.sort((post1, post2) => {
+    const date1 = moment(post1.date, moment.ISO_8601)
+    const date2 = moment(post2.date, moment.ISO_8601)
+    if (date1.isAfter(date2)) return -1
+    if (date1.isBefore(date2)) return 1
+    // TODO what about corner cases? Would two posts with same date be always in same order?
+    return 0
+  })
+
+  return posts
 }
 
 function findPosts (dir, accumulatedFiles) {

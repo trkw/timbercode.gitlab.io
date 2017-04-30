@@ -1,15 +1,15 @@
 ---
-permalink:  "/design/zmagania"
-title:      "DELETE DSP'17 — zmagania z designem na kartce papieru"
-date:       2017-08-08T08:08:08+02:00
+permalink:   "/2017/03/12/dsp17-zmagania-z-designem/"
+title:       "DSP'17 — Zmagania z designem na kartce papieru"
+date:        2017-03-12T00:00:00+01:00
 description: >
     Dodawanie designu do gotowej apki czy strony to prosta droga do porażki.
     Ogólny zarys jest konieczny już od samego początku. A skoro w ramach Daj Się Poznać
     2017 chcę zdefiniować na nowo timbercode.pl, to i ja powinienem coś zaprojektować.
     Z wątpliwym skutkiem 😉
-image:      "{{IMAGES_BASE_URL}}/images/covers/dsp17-zmagania-z-designem.png"
-categories: ["timbercode"]
-tags:       ["daj-sie-poznac-2017", "pen-and-paper", "design"]
+image:       "{{IMAGES_BASE_URL}}/images/covers/dsp17-zmagania-z-designem.png"
+categories:  ["timbercode"]
+tags:        ["daj-sie-poznac-2017", "pen-and-paper", "design"]
 ---
 
 Dodawanie designu do gotowej apki czy strony to prosta droga do porażki.
@@ -28,9 +28,9 @@ motyw [Hagura]( https://github.com/sharu725/hagura )
 przygotowany przez [WebJeda]( https://blog.webjeda.com/ ).
 Po kilku modyfikacjach na mojej stronie wygląda on tak:
 
-![Aktualny design - strona główna]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/current_design_home.png ){: .post__image }
+![Aktualny design - strona główna]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/current_design_home.png )
 
-![Aktualny design - wpis na blogu]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/current_design_post.png ){: .post__image }
+![Aktualny design - wpis na blogu]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/current_design_post.png )
 
 Na szybki start jest on dokładnie w sam raz: posiada czytelny layout bez niepotrzebnego
 szumu, nie atakuje feerią barw, oraz, co istotne, wygląda równie dobrze na ekranach
@@ -57,7 +57,7 @@ oprogramowanie. Tak też zrobiłem! A do tej kartki coś do rysowania:
 Kolor Honeycomb (tzn. Orange, wrrr) ma być drugim (po czerni) kolorem na stronie.
 Ni to brązowy ni to pomarańczowy: coś pomiędzy drewnem z nazwy firmy a moją żywą
 naturą. Kolor zielony mnie odpychał, niebieski wydawał się zbyt oklepany, odcienie
-różu są zbyt modne, a fiolet... nie, zbyt wzniośle i profesjonalnie (w patetycznym
+różu są zbyt modne, a fiolet… nie, zbyt wzniośle i profesjonalnie (w patetycznym
 tego słowa znaczeniu).
 
 Tak zaopatrzony przystąpiłem do rysowania! 🎨
@@ -66,7 +66,7 @@ Tak zaopatrzony przystąpiłem do rysowania! 🎨
 
 Poniżej widzisz efekt mojej pierwszej próby:
 
-![Pierwsza wersja projektu strony]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/concept1.jpeg ){: .post__image }
+![Pierwsza wersja projektu strony]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/concept1.jpeg )
 
 Jak dotąd na timbercode.pl nie uświadczysz nic innego niż moje wpisy. Skąd zaś masz
 dowiedzieć się, jak nazywa się autor lub kim ja w ogóle jestem? Dlatego *dodałem
@@ -91,7 +91,7 @@ Efekt: na rysunku jest tłok, a ja nie jestem ani trochę przekonany…
 
 Oto druga próba. Jest poprawa:
 
-![Druga wersja projektu strony]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/concept2.jpeg ){: .post__image }
+![Druga wersja projektu strony]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/concept2.jpeg )
 
 *Zrezygnowałem z dużego logotypu.* Dzięki temu nawigacja pomiędzy dwiema stronami mieści się
 w tej samej poziomej przestrzeni. A logotyp w dużym rozmiarze może się jeszcze kiedyś
@@ -118,7 +118,7 @@ Jeszcze jeden szczegół: "firma" zmieniła się we "whoami". Mniej powagi, wię
 
 Trzecia próba to powiew zmian:
 
-![Trzecia wersja projektu strony]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/concept3.jpeg ){: .post__image }
+![Trzecia wersja projektu strony]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/concept3.jpeg )
 
 Kategorie! Przecież będę ich potrzebował: chcę dać możliwość oddzielenia wpisów 
 z poradami od, dajmy na to, wpisów o tym, że testowanie jest dobre
@@ -163,7 +163,7 @@ pustka. Czym ją zapełnić?
 Czwarta próba okazała się ostatnią. Choć na pewno nie jest ona ostatecznym designem!
 Oto i ona:
 
-![Czwarta wersja projektu strony]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/concept4.jpeg ){: .post__image }
+![Czwarta wersja projektu strony]( {{IMAGES_BASE_URL}}/images/content/dsp17-zmagania-z-designem/concept4.jpeg )
 
 Zacznę od zmian kosmetycznych: *tagi przybrały formę "chmurek", a daty powędrowały
 pod tytuł wpisu*.

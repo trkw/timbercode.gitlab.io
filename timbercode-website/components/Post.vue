@@ -100,8 +100,7 @@
             '"@type": "Organization", ' +
             '"logo": {' +
             '"@type": "ImageObject", ' +
-            // TODO use bigger image for logo
-            `"url": "${IMAGES_BASE_URL}/favicon-32x32.png"` +
+            `"url": "${IMAGES_BASE_URL}/timbercode_sygnet_v1_512x512.png"` +
             '}' +
             '}, ' +
             // TODO canonical URL or regular one?
@@ -146,7 +145,7 @@
 
     .post__header__date {
         /* TODO Why do I have to remove auto-magic top/bottom margin in nearly each element? */
-        margin: 1em 0 0;
+        margin: 1em 0;
     }
 
     @media all and (max-width: 600px) {
@@ -163,16 +162,18 @@
         line-height: 1.7;
     }
 
-    .post__content p {
+    .post__content p,
+    .post__content ul {
         margin: 1em 0;
     }
 
-    .post__content p em {
+    .post__content em,
+    .post__content em a {
         font-style: normal;
         font-weight: 700;
     }
 
-    .post__content p a {
+    .post__content a {
         text-decoration: none;
         /* TODO automate things like that: #85cf9b = lighten(#60c17d, 10%) */
         background: -webkit-linear-gradient(transparent 90%, #85cf9b 10%);
@@ -182,7 +183,7 @@
         transition: box-shadow ease 1s;
     }
 
-    .post__content p a:hover {
+    .post__content a:hover {
         color: #fff;
         /* TODO automate things like that: #85cf9b = lighten(#60c17d, 10%) */
         box-shadow: inset 0 -100px 0 0 #85cf9b;
@@ -190,7 +191,7 @@
 
     /* TODO Class applied in webpack loader. Can we make those styles below not marked as unused? */
     /*noinspection CssUnusedSymbol*/
-    .post__content p a:hover .post__content__code_inline {
+    .post__content a:hover .post__content__code_inline {
         color: #fff;
     }
 
@@ -198,6 +199,13 @@
         margin: 0;
         line-height: 1.7;
         font-weight: 700;
+    }
+
+    .post__content blockquote {
+        border-left: 2px solid #60c17d;
+        padding-left: 1em;
+        font-size: 0.9em;
+        font-style: italic;
     }
 
     /* TODO Class applied in webpack loader. Can we make those styles below not marked as unused? */
@@ -223,6 +231,9 @@
         border-radius: 3px;
         font-size: 0.7em;
         font-family: monospace;
+
+        /* Do not break inline code snippets into lines */
+        white-space: nowrap;
     }
 
     /* TODO Class applied in webpack loader. Can we make those styles below not marked as unused? */
@@ -231,6 +242,8 @@
         /* separate images with whit background from white background of the site */
         border: 1px solid #60c17d;
         border-radius: 3px;
+
+        max-width: 100%;
 
         /* do not allow vertical images to take too much space */
         max-height: 600px;

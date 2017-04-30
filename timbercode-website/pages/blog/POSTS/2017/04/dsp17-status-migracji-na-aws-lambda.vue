@@ -1,15 +1,13 @@
 <template>
-    <Post :post="post"></Post>
+    <post :post="post"></post>
 </template>
 
 <script>
-  import post from './dsp17-zmagania-z-designem.md'
   import Post from '~components/Post.vue'
+  import post from './dsp17-status-migracji-na-aws-lambda.md'
   export default {
     asyncData () {
-      return {
-        post
-      }
+      return {post}
     },
     components: {Post}
   }

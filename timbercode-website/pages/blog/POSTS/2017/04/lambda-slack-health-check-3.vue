@@ -1,15 +1,13 @@
 <template>
-    <Post :post="post"></Post>
+    <post :post="post"></post>
 </template>
 
 <script>
-  import post from './dsp17-prezentacja-o-migracji-bloga.md'
   import Post from '~components/Post.vue'
+  import post from './lambda-slack-health-check-3.md'
   export default {
     asyncData () {
-      return {
-        post
-      }
+      return {post}
     },
     components: {Post}
   }

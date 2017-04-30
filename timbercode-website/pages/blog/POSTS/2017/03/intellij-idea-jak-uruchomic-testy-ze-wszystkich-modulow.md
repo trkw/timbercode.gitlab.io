@@ -1,13 +1,13 @@
 ---
-permalink:  "/intellij-all-tests"
-title:      "DELETE IntelliJ IDEA — jak uruchomić testy ze wszystkich modułów"
-date:       2017-04-01T01:01:02+02:00
+permalink:   "/2017/03/08/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow/"
+title:       "IntelliJ IDEA — jak uruchomić testy ze wszystkich modułów"
+date:        2017-03-08T00:00:00+01:00
 description: >
     Jak uruchomić testy ze wszystkich modułów projektu Gradle z poziomu
     IntelliJ IDEA.
-image:      "{{IMAGES_BASE_URL}}/images/covers/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow.png"
-categories: ["tips-and-tricks"]
-tags:       ["daj-sie-poznac-2017", "jvm-bloggers", "testing", "intellij-idea", "gradle"]
+image:       "{{IMAGES_BASE_URL}}/images/covers/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow.png"
+categories:  ["tips-and-tricks"]
+tags:        ["daj-sie-poznac-2017", "jvm-bloggers", "testing", "intellij-idea", "gradle"]
 ---
 
 Jeśli jesteś zwolennikiem pisania testów, to być może zdarzyła Ci się taka chęć:
@@ -27,7 +27,7 @@ Przyjmuję następujące założenia dotyczące projektu i sposobu pracy:
   a nie jedynie podgląd logu wywołania `./gradlew test` .
   
 Przykładowa struktura takiego projektu:
-```
+```bash
 .
 ├── build/
 ├── build.gradle
@@ -90,12 +90,12 @@ konfiguracji zdefiniowanych w sekcji `Before launch`, a po nich – tej ostatnie
 
 W przypadku mojego projektu lista konfiguracji wygląda tak:
 
-![Konfiguracje testowe wraz z konfiguracją zbiorczą "{{page.title}}"]( {{IMAGES_BASE_URL}}/images/content/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow/all-tests-edit.png ){: .post__image }
+![Konfiguracje testowe wraz z konfiguracją zbiorczą "{{page.title}}"]( {{IMAGES_BASE_URL}}/images/content/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow/all-tests-edit.png )
 
 Konfiguracja `ALL TESTS` to de facto testy modułu
 `integration-tests` poprzedzone uruchomieniem innych konfiguracji: 
 
-![Szczegóły konfiguracji zbiorczej "{{page.title}}"]( {{IMAGES_BASE_URL}}/images/content/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow/all-tests-before-launch.png ){: .post__image }
+![Szczegóły konfiguracji zbiorczej "{{page.title}}"]( {{IMAGES_BASE_URL}}/images/content/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow/all-tests-before-launch.png )
 
 Uruchomienie jej skutkuje wykonaniem sekwencji:
 
@@ -105,7 +105,7 @@ Uruchomienie jej skutkuje wykonaniem sekwencji:
 * `All in runner_test`
 * `ALL TESTS`
 
-![Uruchomiona sekwencja konfiguracji "{{page.title}}"]( {{IMAGES_BASE_URL}}/images/content/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow/all-tests-sequence.png ){: .post__image }
+![Uruchomiona sekwencja konfiguracji "{{page.title}}"]( {{IMAGES_BASE_URL}}/images/content/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow/all-tests-sequence.png )
 
 # Podsumowanie
 

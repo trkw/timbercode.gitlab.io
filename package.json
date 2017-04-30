@@ -10,7 +10,15 @@
     "lambda.js",
     "lambda-server.js",
     "nuxt.config.js",
-    "timbercode-website/",
+    "timbercode-website/assets/",
+    "timbercode-website/components/",
+    "timbercode-website/layouts/",
+    "timbercode-website/pages/",
+    "timbercode-website/plugins/",
+    "timbercode-website/config.js",
+    "timbercode-website/load-posts.js",
+    "timbercode-website/markdown-with-front-matter-loader.js",
+    "timbercode-website/server.js",
     "yarn.lock"
   ],
   "scripts": {

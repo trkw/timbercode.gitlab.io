@@ -1,15 +1,13 @@
 <template>
-    <Post :post="post"></Post>
+    <post :post="post"></post>
 </template>
 
 <script>
-  import post from './0002-intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow.md'
   import Post from '~components/Post.vue'
+  import post from './lambda-slack-health-check-2.md'
   export default {
     asyncData () {
-      return {
-        post
-      }
+      return {post}
     },
     components: {Post}
   }

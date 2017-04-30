@@ -1,7 +1,7 @@
 ---
-permalink:  "/2017/01/01/yargs/"
-title:      "Yargs! Parametryzacjo skryptu, nie boję się ciebie!"
-date:       2017-01-01T00:00:00+01:00
+permalink:   "/2017/01/01/yargs/"
+title:       "Yargs! Parametryzacjo skryptu, nie boję się ciebie!"
+date:        2017-01-01T00:00:00+01:00
 description: >
     Na co dzień fruwasz w obłokach czystego kodu, a parametryzacja skryptu
     to brudny i czasochłonny temat, który odpycha na kilometr?
@@ -9,9 +9,9 @@ description: >
     dla Node.js, która uczyni Twój kod wygodnym
     w czytaniu i modyfikowaniu, a skrypt sam będzie podpowiadał,
     jak go użyć.
-image:      "{{IMAGES_BASE_URL}}/images/covers/yargs.png"
-categories: ["tools"]
-tags:       ["node", "JavaScript", "yargs"]
+image:       "{{IMAGES_BASE_URL}}/images/covers/yargs.png"
+categories:  ["tools"]
+tags:        ["node", "JavaScript", "yargs"]
 ---
 
 Na co dzień fruwasz w obłokach czystego kodu, a parametryzacja skryptu
