@@ -1,6 +1,5 @@
 <template>
-    <div>
-        <div> Navigation goes here… </div>
+    <div class="page__content">
         <nuxt/>
     </div>
 </template>

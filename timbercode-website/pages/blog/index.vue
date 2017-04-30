@@ -1,38 +1,13 @@
-<!-- ESLint/Standard for Vue Single-File Components -->
-
 <template>
     <div>
-        <h1>
+        <h1 class="post_list__header">
             Timbercode
         </h1>
-        <ul>
-            <li>
-                <nuxt-link to="/about"> About </nuxt-link>
-            </li>
-            <li>
-                <nuxt-link to="/config"> Config </nuxt-link>
-            </li>
-            <li>
-                <a :href="this.baseUrl + 'blog/feed.xml'"> main feed </a>
-            </li>
-            <li>
-                <nuxt-link to="/blog/test"> test bezpośrednio </nuxt-link>
-            </li>
-            <li>
-                <nuxt-link to="/blog/tag/jvm-bloggers"> tag: jvm-bloggers </nuxt-link>
-            </li>
-            <li>
-                <nuxt-link to="/blog/tag/pen-and-paper"> tag: pen-and-paper </nuxt-link>
-            </li>
-            <li>
-                <nuxt-link to="/blog/tag/inny"> tag, którego nie ma </nuxt-link>
-            </li>
-            <li>
-                <a :href="this.baseUrl + 'version'"> {{this.versionLabel}} </a>
-            </li>
-            <hr/>
-            <li v-for="post in published(posts)">
-                <nuxt-link :to="post.route"> {{post.title}} </nuxt-link>
+        <ul class="post_list__list">
+            <li v-for="post in published(posts)" class="post_list__post">
+                <nuxt-link :to="post.route">
+                    {{post.title}}
+                </nuxt-link>
             </li>
         </ul>
     </div>
