@@ -1,7 +1,7 @@
 /* eslint-disable */
 import router from '~router'
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.isProduction === 'production') {
 
   // https://developers.google.com/analytics/devguides/collection/analyticsjs/
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

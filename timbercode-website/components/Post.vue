@@ -15,7 +15,8 @@
         </section>
         <section class="post__comments">
             <!-- TODO Pull Request to disable warning: missing required attribute, which is nor required -->
-            <vue-disqus shortname="timbercode"
+            <vue-disqus v-if="isProduction"
+                        :shortname="DISQUS_SHORTNAME"
                         :identifier="post.uniqueId"
                         :url="post.canonicalUrl"/>
         </section>
@@ -27,7 +28,12 @@
   import VueDisqus from 'vue-disqus/VueDisqus.vue'
   import EmbeddedSpeakerDeck from '~components/EmbeddedSpeakerDeck.vue'
 
-  const {BASE_URL, IMAGES_BASE_URL} = require('../../timbercode-website/config')
+  const {
+    BASE_URL,
+    IMAGES_BASE_URL,
+    DISQUS_SHORTNAME,
+    isProduction
+  } = require('../../timbercode-website/config')
 
   const monthNumbersToText = {
     0: 'stycznia',
@@ -51,7 +57,9 @@
     data () {
       return {
         htmlContent: this.post.body,
-        baseUrl: BASE_URL
+        baseUrl: BASE_URL,
+        DISQUS_SHORTNAME,
+        isProduction
       }
     },
     head () {

@@ -30,9 +30,9 @@
     "configure:express-proxy": "claudia generate-serverless-express-proxy --express-module lambda-server --proxy-module-name lambda",
     "preconfigure:aws": "npm run clean && cross-env NODE_ENV=production BASE_PATH='' BASE_URL='https://testing.timbercode.pl' GA_TRACKING_ID='UA-89623087-2' nuxt build",
     "configure:aws": "claudia create --region ${AWS_REGION} --name timbercode-website --handler lambda.handler --deploy-proxy-api --runtime nodejs6.10 --memory 384 --timeout 5 --set-env-from-json env/testing.json",
-    "predeploy-testing": "npm run clean && cross-env NODE_ENV=production BASE_PATH='' BASE_URL='https://testing.timbercode.pl' GA_TRACKING_ID='UA-89623087-2' nuxt build",
+    "predeploy-testing": "npm run clean && cross-env NODE_ENV=production BASE_PATH='' BASE_URL='https://testing.timbercode.pl' GA_TRACKING_ID='UA-89623087-2' DISQUS_SHORTNAME='timbercode-tst' nuxt build",
     "deploy-testing": "claudia update --version testing --set-env-from-json env/testing.json",
-    "predeploy-production": "npm run clean && cross-env NODE_ENV=production BASE_PATH='/production' BASE_URL='https://timbercode.pl' GA_TRACKING_ID='UA-89623087-1' nuxt build",
+    "predeploy-production": "npm run clean && cross-env NODE_ENV=production BASE_PATH='/production' BASE_URL='https://timbercode.pl' GA_TRACKING_ID='UA-89623087-1' DISQUS_SHORTNAME='timbercode' nuxt build",
     "deploy-production": "claudia update --version production --set-env-from-json env/production.json",
     "try-lambda": "claudia test-lambda --event test/test-event.api-gateway-aws-proxy.json",
     "start": "ntl"

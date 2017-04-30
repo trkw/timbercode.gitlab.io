@@ -1,5 +1,11 @@
 const _ = require('lodash')
-const {BASE_URL, IMAGES_BASE_URL, GA_TRACKING_ID} = require('./timbercode-website/config')
+const {
+  BASE_URL,
+  IMAGES_BASE_URL,
+  GA_TRACKING_ID,
+  DISQUS_SHORTNAME,
+  isProduction
+} = require('./timbercode-website/config')
 
 module.exports = {
   plugins: [
@@ -13,7 +19,9 @@ module.exports = {
   env: {
     BASE_URL,
     IMAGES_BASE_URL,
-    GA_TRACKING_ID
+    GA_TRACKING_ID,
+    DISQUS_SHORTNAME,
+    isProduction
   },
   head: {
     htmlAttrs: {
