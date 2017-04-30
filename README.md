@@ -81,3 +81,7 @@ to AWS services:
 * CNAME from `timbercode.pl` to API production Gateway 
   under `some_id.cloudfront.net`
 
+## Acknowledgement
+
+This site is based on [Hagura theme]( https://github.com/sharu725/hagura )
+ from [Webjeda]( https://blog.webjeda.com/ ).

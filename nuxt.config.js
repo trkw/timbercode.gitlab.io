@@ -103,6 +103,14 @@ module.exports = {
           },
           shouldPrefix: true
         }
+      },
+      {
+        test: /\.svg/,
+        use: {
+          // TODO Is it a "good enough" loader? What is the industry standard for handling SVG?
+          loader: 'svg-url-loader',
+          options: {}
+        }
       }
     ]
   }

@@ -1,5 +1,8 @@
 <template>
     <div>
+        <header>
+            <nuxt-link to="/" class="navigation__back_home"></nuxt-link>
+        </header>
         <section class="post__header">
             <h1 class="post__header__title">{{ post.title }}</h1>
             <p class="post__header__date">{{ publicationDate() }}</p>
@@ -12,6 +15,7 @@
         </section>
         <section class="post__comments">
             <!-- TODO Pull Request to disable warning: missing required attribute, which is nor required -->
+            <!--suppress RequiredAttributes -->
             <vue-disqus shortname="timbercode"
                         :identifier="post.uniqueId"
                         :url="post.canonicalUrl"/>
@@ -23,8 +27,9 @@
   import moment from 'moment'
   import VueDisqus from 'vue-disqus/VueDisqus.vue'
   import EmbeddedSpeakerDeck from '~components/EmbeddedSpeakerDeck.vue'
+  import NuxtLink from 'nuxt/dist/app/components/nuxt-link'
 
-  const {IMAGES_BASE_URL} = require('../../timbercode-website/config')
+  const {BASE_URL, IMAGES_BASE_URL} = require('../../timbercode-website/config')
 
   const monthNumbersToText = {
     0: 'stycznia',
@@ -47,7 +52,8 @@
     },
     data () {
       return {
-        htmlContent: this.post.body
+        htmlContent: this.post.body,
+        baseUrl: BASE_URL
       }
     },
     head () {
@@ -106,6 +112,7 @@
       }
     },
     components: {
+      NuxtLink,
       VueDisqus,
       EmbeddedSpeakerDeck
     },
@@ -238,5 +245,32 @@
         margin-top: 1em;
         /*noinspection CssOptimizeSimilarProperties*/
         margin-bottom: 1em;
+    }
+
+    .navigation__back_home {
+        /*noinspection CssOptimizeSimilarProperties,CssUnknownTarget*/
+        background-image: url('~assets/svg/left-arrow.svg');
+        /*noinspection CssOptimizeSimilarProperties*/
+        background-repeat: no-repeat;
+        height: 40px;
+        width: 40px;
+        opacity: 0.9;
+        position: fixed;
+        top: 50px;
+        left: 50px;
+    }
+
+    .navigation__back_home:hover {
+        opacity: 1;
+    }
+
+    @media all and (max-width: 800px) {
+        .navigation__back_home {
+            top: 90%;
+            left: 90%;
+            height: 30px;
+            width: 30px;
+            opacity: 0.6;
+        }
     }
 </style>
