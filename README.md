@@ -70,6 +70,11 @@ the website fully configured:
       and create mapping from Path `/` to `timbercode-website` API
       with Stage `production` (available after first deployment to production)
     
+### Performance Notes
+
+When memory limit for Lambda was set to 128 MB, API Gateway was returning
+`502 Bad Gateway` quite often.
+    
 ## DNS setup for your domain
 
 You have to create DNS entries with mappings from "nice" URLs
