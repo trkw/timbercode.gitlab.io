@@ -16,7 +16,7 @@ W [poprzednim wpisie na temat rozwoju timbercode.pl]( /blog/2017/04/11/dsp17-w-p
 pisałem o tym, że *nie idzie mi zbyt dobrze migracja ze statycznej strony
 generowanej jekyllem na stronę serwowaną z AWS Lambda*. Że błądzę,
 wracam się, zmieniam decyzje, a co ma działać, nie chce działać.
-Zdecydowałem też, że dam sobie jeszce tydzień, zanim porzucę całkowicie
+Zdecydowałem też, że dam sobie jeszcze tydzień, zanim porzucę całkowicie
 temat migracji.
 
 Nie minęły dwa dni, a nagle wszystko zaczęło układać się
@@ -118,7 +118,7 @@ komponentu `<Post>`.
    
 # Problemy czekające na rozwiązanie
 
-Oczywiście niejeden problem czeka jeszce na swoje rozwiązanie. Oto
+Oczywiście niejeden problem czeka jeszcze na swoje rozwiązanie. Oto
 kilka z nich:
 
 1. *Automatyzacja wgrywania obrazków na CDN*
