@@ -1,0 +1,16 @@
+{
+  "restartable": "rs",
+  "verbose": true,
+  "watch": [
+    "dev-server.js",
+    "nuxt.config.js",
+    "timbercode-website/config.js",
+    "timbercode-website/load-posts.js",
+    "timbercode-website/markdown-with-front-matter-loader.js",
+    "timbercode-website/server.js"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js json"
+}

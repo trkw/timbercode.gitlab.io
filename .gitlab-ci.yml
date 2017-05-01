@@ -1,27 +1,97 @@
 # GitLab variables are described here: http://docs.gitlab.com/ce/ci/variables/README.html
 # Linter for this file is available here: https://gitlab.com/ci/lint
 
-.template_build_and_test_website: &build_and_test_website
+.template__node_job__configuration: &node_job__configuration
   tags:
     - docker
-  image: ruby:2.4.0
+  image: node:6.10.1-alpine
+
+.template__shell_job__configuration: &shell_job__configuration
+  tags:
+    - docker
+  image: alpine:3.5
+
+.template__aws_deployment__before_script: &aws_deployment__before_script
   before_script:
-    - ./setup.sh
+    - mkdir ${HOME}/.aws
+    - touch ${HOME}/.aws/credentials
+    - echo "[deployment]" >> ${HOME}/.aws/credentials
+    - echo "aws_access_key_id = ${AWS_ACCESS_KEY_ID}" >> ${HOME}/.aws/credentials
+    - echo "aws_secret_access_key = ${AWS_SECRET_ACCESS_KEY}" >> ${HOME}/.aws/credentials
+    - echo 'cache-folder ".yarn-cache"' >> .yarnrc
+    - yarn install
+
+stages:
+  - lint
+  - testing-deploy
+  - testing-check
+  - production-deploy
+  - production-check
+
+"lint":
+  stage: lint
+  <<: *node_job__configuration
+  before_script:
+    - echo 'cache-folder ".yarn-cache"' >> .yarnrc
+    - yarn install
   script:
-    - ./build.sh
-    - ./test.sh
+    - yarn lint
+  cache:
+    key: "${CI_BUILD_NAME}"
+    paths:
+      # https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/issues/327#note_17810980
+      - health-service/.yarn-cache/
 
-test:
-  stage: test
-  except:
-    - production
-  <<: *build_and_test_website
+"deploy:testing":
+  stage: testing-deploy
+  only:
+    - testing
+  environment: "testing"
+  <<: *node_job__configuration
+  <<: *aws_deployment__before_script
+  script:
+    - yarn run deploy-testing
+  cache:
+    key: "${CI_BUILD_NAME}"
+    paths:
+      # https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/issues/327#note_17810980
+      - health-service/.yarn-cache/
 
-pages:
-  stage: deploy
+"deploy:production":
+  stage: production-deploy
   only:
     - production
-  <<: *build_and_test_website
-  artifacts:
+  environment: "production"
+  <<: *node_job__configuration
+  <<: *aws_deployment__before_script
+  script:
+    - yarn run deploy-production
+  cache:
+    key: "${CI_BUILD_NAME}"
     paths:
-      - public
+      # https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/issues/327#note_17810980
+      - health-service/.yarn-cache/
+
+"check:testing":
+  stage: testing-check
+  only:
+    - testing
+  <<: *shell_job__configuration
+  variables:
+    API_VERSION: testing
+  before_script:
+    - apk --update add 'curl=7.52.1-r3' 'jq=1.5-r3'
+  script:
+    - ./check-health.sh
+
+"check:production":
+  stage: production-check
+  only:
+    - production
+  <<: *shell_job__configuration
+  variables:
+    API_VERSION: production
+  before_script:
+    - apk --update add 'curl=7.52.1-r3' 'jq=1.5-r3'
+  script:
+    - ./check-health.sh

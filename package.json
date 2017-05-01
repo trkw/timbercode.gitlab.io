@@ -1,0 +1,95 @@
+{
+  "name": "timbercode.gitlab.io",
+  "version": "2.0.0",
+  "license": "MIT",
+  "description": "Website of Timbercode company",
+  "private": true,
+  "main": "timbercode-website/server.js",
+  "files": [
+    ".nuxt/",
+    "lambda.js",
+    "lambda-server.js",
+    "nuxt.config.js",
+    "timbercode-website/assets/",
+    "timbercode-website/components/",
+    "timbercode-website/layouts/",
+    "timbercode-website/pages/",
+    "timbercode-website/plugins/",
+    "timbercode-website/config.js",
+    "timbercode-website/load-posts.js",
+    "timbercode-website/markdown-with-front-matter-loader.js",
+    "timbercode-website/server.js",
+    "yarn.lock"
+  ],
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development BASE_PATH='' BASE_URL='http://localhost:3000' nodemon dev-server.js",
+    "lint": "eslint ./ --ext .vue --ext .js",
+    "clean": "rimraf .nuxt",
+    "build": "cross-env NODE_ENV='production' nuxt build",
+    "serve": "cross-env NODE_ENV='production' node dev-server.js",
+    "configure:express-proxy": "claudia generate-serverless-express-proxy --express-module lambda-server --proxy-module-name lambda",
+    "preconfigure:aws": "npm run clean && cross-env NODE_ENV=production BASE_PATH='' BASE_URL='https://testing.timbercode.pl' GA_TRACKING_ID='UA-89623087-2' nuxt build",
+    "configure:aws": "claudia create --region ${AWS_REGION} --name timbercode-website --handler lambda.handler --deploy-proxy-api --runtime nodejs6.10 --memory 384 --timeout 5 --set-env-from-json env/testing.json",
+    "predeploy-testing": "npm run clean && cross-env NODE_ENV=production BASE_PATH='' BASE_URL='https://testing.timbercode.pl' GA_TRACKING_ID='UA-89623087-2' DISQUS_SHORTNAME='timbercode-tst' nuxt build",
+    "deploy-testing": "claudia update --version testing --set-env-from-json env/testing.json",
+    "predeploy-production": "npm run clean && cross-env NODE_ENV=production BASE_PATH='' BASE_URL='https://timbercode.pl' GA_TRACKING_ID='UA-89623087-1' DISQUS_SHORTNAME='timbercode' nuxt build",
+    "deploy-production": "claudia update --version production --set-env-from-json env/production.json",
+    "try-lambda": "claudia test-lambda --event test/test-event.api-gateway-aws-proxy.json",
+    "start": "ntl"
+  },
+  "dependencies": {
+    "aws-serverless-express": "^2.2.0",
+    "express": "4.15.2",
+    "feed": "1.0.2",
+    "front-matter": "2.1.2",
+    "highlight.js": "9.10.0",
+    "loader-utils": "1.1.0",
+    "lodash": "4.17.4",
+    "markdown-it": "8.3.1",
+    "markdown-it-modify-token": "1.0.2",
+    "markdown-it-replace-link": "1.0.1",
+    "moment": "2.18.1",
+    "normalize.css": "6.0.0",
+    "nuxt": "0.10.6",
+    "object-assign": "4.1.1",
+    "svg-url-loader": "2.0.2",
+    "vue-disqus": "2.0.3"
+  },
+  "devDependencies": {
+    "claudia": "2.12.0",
+    "cross-env": "4.0.0",
+    "eslint": "3.19.0",
+    "eslint-config-standard": "10.2.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-node": "4.2.2",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "3.0.1",
+    "eslint-plugin-vue": "2.0.1",
+    "nodemon": "1.4.1",
+    "ntl": "1.2.0",
+    "rimraf": "2.6.1"
+  },
+  "engines": {
+    "node": "6.10.1"
+  },
+  "author": {
+    "name": "Paweł Barszcz",
+    "email": "pawelbarszcz@gmail.com",
+    "url": "http://timbercode.pl"
+  },
+  "homepage": "https://gitlab.com/timbercode/timbercode.gitlab.io#README",
+  "bugs": {
+    "url": "https://gitlab.com/timbercode/timbercode.gitlab.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/timbercode/timbercode.gitlab.io.git"
+  },
+  "keywords": [
+    "Timbercode",
+    "IT",
+    "quality",
+    "aesthetics",
+    "clean code"
+  ]
+}

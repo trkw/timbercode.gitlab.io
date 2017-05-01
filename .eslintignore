@@ -1,0 +1,8 @@
+# playground
+/tmp/
+
+# files that are generated
+/lambda.js
+
+# files that are parsed improperly
+/timbercode-website/components/EmbeddedSpeakerDeck.vue

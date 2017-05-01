@@ -1,8 +1,11 @@
-# Build directory
-/public/
+# Nuxt.js build directory
+/.nuxt/
 
-# Jekyll
-/.sass-cache/
+# Node.js/Yarn dependencies
+/node_modules/
+
+# Yarn cache
+/.yarn-cache2/
 
 # IntelliJ IDEA
 /*.iml
