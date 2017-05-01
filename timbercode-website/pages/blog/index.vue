@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 class="post_list__header">
-            Timbercode
+            Timbercode <sup>2</sup>
         </h1>
         <ul class="post_list__list">
             <li v-for="post in published(posts)" class="post_list__post">
