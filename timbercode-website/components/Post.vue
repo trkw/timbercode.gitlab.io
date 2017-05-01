@@ -12,6 +12,8 @@
             <div v-html="htmlContent"></div>
             <embedded-speaker-deck v-if="post.speakerDeckPresentationId"
                                    :presentation-id="post.speakerDeckPresentationId"/>
+            <embedded-you-tube v-if="post.youTubeVideoUrl"
+                               :video-url="post.youTubeVideoUrl"/>
         </section>
         <section class="post__comments">
             <!-- TODO Pull Request to disable warning: missing required attribute, which is nor required -->
@@ -27,6 +29,7 @@
   import moment from 'moment'
   import VueDisqus from 'vue-disqus/VueDisqus.vue'
   import EmbeddedSpeakerDeck from '~components/EmbeddedSpeakerDeck.vue'
+  import EmbeddedYouTube from '~components/EmbeddedYouTube.vue'
 
   const {
     BASE_URL,
@@ -118,7 +121,8 @@
     },
     components: {
       VueDisqus,
-      EmbeddedSpeakerDeck
+      EmbeddedSpeakerDeck,
+      EmbeddedYouTube
     },
     methods: {
       // TODO what about local time vs time of publication in given timezone?

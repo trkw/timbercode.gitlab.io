@@ -34,6 +34,7 @@
     methods: {
       published (posts) {
         const timeNow = moment()
+        // TODO do not filter out non-published in dev mode?
         return posts.filter(post => moment(post.date, moment.ISO_8601).isSameOrBefore(timeNow))
       }
     }
