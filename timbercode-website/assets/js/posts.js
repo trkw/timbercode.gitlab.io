@@ -1,7 +1,10 @@
 // TODO `import` syntax?
+// TODO separate server part from client/server Nuxt part ?
 const moment = require('moment')
 const requireFromDir = require.context('~pages/blog', true, /\.md$/)
-const posts = requireFromDir.keys().map(path => {
+
+// TODO make it const
+let posts = requireFromDir.keys().map(path => {
   const post = requireFromDir(`${path}`)
   return {
     title: post.title,
@@ -22,5 +25,11 @@ posts.sort((post1, post2) => {
   // TODO what about corner cases? Would two posts with same date be always in same order?
   return 0
 })
+
+console.log(process.env.showFuturePosts)
+if (!process.env.showFuturePosts) {
+  const timeNow = moment()
+  posts = posts.filter(post => moment(post.date, moment.ISO_8601).isSameOrBefore(timeNow))
+}
 
 module.exports = posts

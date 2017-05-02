@@ -5,8 +5,13 @@ process.env.DEBUG = 'nuxt:*'
 
 module.exports = TimbercodeWebsite
 
+const {
+  BASE_URL,
+  IMAGES_BASE_URL,
+  showFuturePosts
+} = require('./config')
+
 function TimbercodeWebsite () {
-  const {BASE_URL, IMAGES_BASE_URL} = require('./config')
   const express = require('express')
   const moment = require('moment')
   const _ = require('lodash')
@@ -97,6 +102,9 @@ function generateFeedFrom ({
   })
   posts
     .filter(post => {
+      if (showFuturePosts) {
+        return true
+      }
       return moment(post.date, moment.ISO_8601).isSameOrBefore(timeNow)
     })
     .forEach(post => {

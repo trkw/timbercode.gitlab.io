@@ -9,6 +9,12 @@ yarn install
 yarn start
 ```
 
+## Blogging
+
+* Set `SHOW_FUTURE_POSTS` environment variable to `true` 
+  in order to see posts with future publication date 
+  (useful while writing such post).
+
 ## Deployment
 
 Deployment is done automatically GitLab, but for the first time

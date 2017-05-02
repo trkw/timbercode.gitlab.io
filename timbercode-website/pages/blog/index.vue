@@ -4,7 +4,7 @@
             Timbercode
         </h1>
         <ul class="post_list__list">
-            <li v-for="post in published(posts)" class="post_list__post">
+            <li v-for="post in posts" class="post_list__post">
                 <nuxt-link :to="post.route">
                     {{post.title}}
                 </nuxt-link>
@@ -14,9 +14,7 @@
 </template>
 
 <script>
-  import moment from 'moment'
-  const posts = require('~assets/js/posts')
-
+  import posts from '~assets/js/posts'
   export default {
     asyncData ({base}) {
       return {
@@ -29,13 +27,6 @@
       return {
         title: 'Timbercode',
         titleTemplate: null
-      }
-    },
-    methods: {
-      published (posts) {
-        const timeNow = moment()
-        // TODO do not filter out non-published in dev mode?
-        return posts.filter(post => moment(post.date, moment.ISO_8601).isSameOrBefore(timeNow))
       }
     }
   }

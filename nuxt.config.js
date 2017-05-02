@@ -4,7 +4,8 @@ const {
   IMAGES_BASE_URL,
   GA_TRACKING_ID,
   DISQUS_SHORTNAME,
-  isProduction
+  isProduction,
+  showFuturePosts
 } = require('./timbercode-website/config')
 
 module.exports = {
@@ -21,7 +22,8 @@ module.exports = {
     IMAGES_BASE_URL,
     GA_TRACKING_ID,
     DISQUS_SHORTNAME,
-    isProduction
+    isProduction,
+    showFuturePosts
   },
   head: {
     htmlAttrs: {
