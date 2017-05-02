@@ -12,14 +12,33 @@ function loadPosts () {
     const post = fs.readFileSync(path, 'utf8')
     const fm = frontMatter(post)
     let pathWithoutPagesDir = path.substring(pagesDir.length)
+    // TODO better way of requiring some attributes?
+    if (!fm.attributes.permalink) {
+      console.log(`Missing 'permalink' in '${path}'`)
+      process.exit(1)
+    }
+    if (!fm.attributes.title) {
+      console.log(`Missing 'title' in '${path}'`)
+      process.exit(1)
+    }
+    if (!fm.attributes.image) {
+      console.log(`Missing 'image' in '${path}'`)
+      process.exit(1)
+    }
+    if (!fm.attributes.date) {
+      console.log(`Missing 'date' in '${path}'`)
+      process.exit(1)
+    }
     return {
       originalRoute: pathWithoutPagesDir.substring(0, pathWithoutPagesDir.length - '.md'.length),
       route: '/blog' + fm.attributes.permalink,
       title: fm.attributes.title,
-      description: fm.attributes.description,
+      description: fm.attributes.description || '',
+      // TODO placeholder in case of lack of image?
       image: fm.attributes.image,
-      categories: fm.attributes.categories,
-      tags: fm.attributes.tags,
+      // TODO Make it possible to use only one category, not an array
+      categories: fm.attributes.categories || [],
+      tags: fm.attributes.tags || [],
       // TODO use moment.js, starting here?
       date: fm.attributes.date,
       uniqueId: `blog${fm.attributes.permalink}`

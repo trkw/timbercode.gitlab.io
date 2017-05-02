@@ -26,7 +26,6 @@ posts.sort((post1, post2) => {
   return 0
 })
 
-console.log(process.env.showFuturePosts)
 if (!process.env.showFuturePosts) {
   const timeNow = moment()
   posts = posts.filter(post => moment(post.date, moment.ISO_8601).isSameOrBefore(timeNow))
