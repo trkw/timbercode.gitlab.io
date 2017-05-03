@@ -2,12 +2,14 @@
 
 <template>
     <div>
-        <h1>
-            tag: {{ this.tag }}
+        <h1 class="post_list__header">
+            Tag: {{ this.tag }}
         </h1>
-        <ul>
-            <li v-for="post in posts">
-                <nuxt-link :to="post.route"> {{post.title}} </nuxt-link>
+        <ul class="post_list__list">
+            <li v-for="post in posts" class="post_list__post">
+                <nuxt-link :to="post.route">
+                    {{post.title}}
+                </nuxt-link>
             </li>
         </ul>
     </div>
