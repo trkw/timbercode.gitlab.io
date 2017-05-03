@@ -63,11 +63,12 @@ the website fully configured:
     * set `timbercode-website.s3.amazonaws.com/static.timbercode.pl`
       as Origin
     * set `static.timbercode.pl` as Alternate Domain Name (CNAME)
-* in *Certificate Manager for region `us-east-1`* request a certificate
-  for domain `*.timbercode.pl`
-    * you need to have an access to `admin@timbercode.pl` mail or
-      similar (`webmaster@...`, `hostmaster@...`, `postmaster@...`,
-      `administrator@...`) in order to confirm domain ownership
+* in *Certificate Manager for region `us-east-1`*
+    * request a certificate for domain `timbercode.pl` with `*.timbercode.pl`
+      as additional name
+        * you need to have an access to `admin@timbercode.pl` mail or
+          similar (`webmaster@...`, `hostmaster@...`, `postmaster@...`,
+          `administrator@...`) in order to confirm domain ownership
 * on *API Gateway* configure *Custom Domain Names*
     * for domain `testing.timbercode.pl` use your ACM certificate,
       and create mapping from Path `/` to `timbercode-website` API
@@ -75,6 +76,19 @@ the website fully configured:
     * for domain `timbercode.pl` use your ACM certificate,
       and create mapping from Path `/` to `timbercode-website` API
       with Stage `production` (available after first deployment to production)
+* in *Route 53 DNS* create Hosted Zone for `timbercode.pl.` domain
+    * for `timbercode.pl.` add `A` record with alias to production
+      CloudFront distribution
+    * for `testing.timbercode.pl.` add `A` record with alias to testing
+      CloudFront distribution
+    * for `static.timbercode.pl.` add `A` record with alias to CDN
+      CloudFront distribution
+    * do not change `NS` and `SOA` records
+    
+Moreover you have to configure your domain provider to use
+name servers from `SOA` record in AWS Route 53. Thanks to that
+it will be possible to access your API Gateway URLs with use of
+`timbercode.pl` domain.
     
 ### Performance Notes
 
