@@ -6,7 +6,7 @@ description: >
     Zapraszam Cię do obejrzenia półgodzinnej prezentacji 
     Hadi Hariri o tytule "IntelliJ IDEA - Tips and Tricks".
 image:       "{{IMAGES_BASE_URL}}/images/covers/jak-sprawnie-korzystac-z-intellij-idea.png"
-categories:  ["tools"]
+category:    "tools"
 tags:        ["daj-sie-poznac-2017", "jvm-bloggers", "intellij-idea", "productivity", "ide"]
 youTubeVideoUrl: "https://www.youtube.com/embed/P2MoObVeMX4"
 ---

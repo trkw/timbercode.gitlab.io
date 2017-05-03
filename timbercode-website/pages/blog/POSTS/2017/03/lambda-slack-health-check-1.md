@@ -8,7 +8,7 @@ description: >
     periodyczny health-check. W tym wpisie skonfigurujemy 
     wysyłanie wiadomości z AWS Lambda na Slacka.
 image:       "{{IMAGES_BASE_URL}}/images/covers/lambda-slack-health-check-1.png"
-categories:  ["tools"]
+category:    "tools"
 tags:        ["lambda-slack", "daj-sie-poznac-2017", "jvm-bloggers", "aws", "lambda", "slack", "health-check"]
 ---
 

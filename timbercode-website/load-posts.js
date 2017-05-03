@@ -29,6 +29,14 @@ function loadPosts () {
       console.log(`Missing 'date' in '${path}'`)
       process.exit(1)
     }
+    if (!fm.attributes.date) {
+      console.log(`Missing 'date' in '${path}'`)
+      process.exit(1)
+    }
+    if (!fm.attributes.category) {
+      console.log(`Missing 'category' in '${path}'`)
+      process.exit(1)
+    }
     return {
       originalRoute: pathWithoutPagesDir.substring(0, pathWithoutPagesDir.length - '.md'.length),
       route: '/blog' + fm.attributes.permalink,
@@ -36,8 +44,7 @@ function loadPosts () {
       description: fm.attributes.description || '',
       // TODO placeholder in case of lack of image?
       image: fm.attributes.image,
-      // TODO Make it possible to use only one category, not an array
-      categories: fm.attributes.categories || [],
+      category: fm.attributes.category,
       tags: fm.attributes.tags || [],
       // TODO use moment.js, starting here?
       date: fm.attributes.date,

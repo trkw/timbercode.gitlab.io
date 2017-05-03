@@ -8,7 +8,7 @@ description: >
     2017 chcę zdefiniować na nowo timbercode.pl, to i ja powinienem coś zaprojektować.
     Z wątpliwym skutkiem 😉
 image:       "{{IMAGES_BASE_URL}}/images/covers/dsp17-zmagania-z-designem.png"
-categories:  ["timbercode"]
+category:    "timbercode"
 tags:        ["daj-sie-poznac-2017", "pen-and-paper", "design"]
 ---
 

@@ -7,7 +7,7 @@ description: >
     to… prezentacja, którą przedstawiłem w firmie. Zapraszam do
     oglądania!
 image:       "{{IMAGES_BASE_URL}}/images/covers/dsp17-prezentacja-o-migracji-bloga.png"
-categories:  ["timbercode"]
+category:    "timbercode"
 tags:        ["daj-sie-poznac-2017", "blog", "timbercode", "slides"]
 speakerDeckPresentationId: 4165806a0eaf4a3097d777d3c56df999
 ---

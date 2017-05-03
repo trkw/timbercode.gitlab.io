@@ -7,7 +7,7 @@ description: >
     serwowany Nuxt.js, przypomniałem sobie o jednej funkcjonalności,
     która zmieniła moje plany. Cóż tot takiego? 
 image:       "{{IMAGES_BASE_URL}}/images/covers/dsp17-jeden-feature-ktory-zmienia-stos-technologiczny.png"
-categories:  ["timbercode"]
+category:    "timbercode"
 tags:        ["daj-sie-poznac-2017", "jvm-bloggers", "nuxt", "node", "rss", "xml", "JavaScript", "blog", "timbercode"]
 ---
 

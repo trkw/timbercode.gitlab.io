@@ -7,7 +7,7 @@ description: >
     rozwijać w postaci pełnowartościowego projektu i nie postradać
     przy tym zmysłów. Zapraszam!
 image:       "{{IMAGES_BASE_URL}}/images/covers/lambda-slack-health-check-3.png"
-categories:  ["tools"]
+category:    "tools"
 tags:        ["lambda-slack", "daj-sie-poznac-2017", "jvm-bloggers", "aws", "lambda", "slack", "health-check", "node", "claudia.js"]
 ---
 

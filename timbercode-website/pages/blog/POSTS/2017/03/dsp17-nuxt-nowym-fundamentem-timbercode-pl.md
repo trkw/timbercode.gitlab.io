@@ -8,7 +8,7 @@ description: >
     – narzędzie wspomagające budowanie statycznych stron opartych
     na Vue.js.
 image:       "{{IMAGES_BASE_URL}}/images/covers/dsp17-nuxt-nowym-fundamentem-timbercode-pl.png"
-categories:  ["timbercode"]
+category:    "timbercode"
 tags:        ["daj-sie-poznac-2017", "nuxt", "spa", "web", "node", "JavaScript", "blog", "timbercode"]
 ---
 

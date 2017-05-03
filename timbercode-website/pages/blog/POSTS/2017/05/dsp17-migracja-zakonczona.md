@@ -7,7 +7,7 @@ description: >
     dowiesz się, co się (nie) zmieniło, co się jeszcze zmieni,
     a także… po co to wszystko 😀
 image:       "{{IMAGES_BASE_URL}}/images/covers/dsp17-migracja-zakonczona.png"
-categories:  ["timbercode"]
+category:    "timbercode"
 tags:        ["daj-sie-poznac-2017", "blog", "timbercode", "express", "nuxt", "aws", "lambda"]
 ---
 

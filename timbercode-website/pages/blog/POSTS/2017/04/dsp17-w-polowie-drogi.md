@@ -7,7 +7,7 @@ description: >
     Daj Się Poznać 2017. Oto moje przemyślenia
     w połowie drogi.
 image:       "{{IMAGES_BASE_URL}}/images/covers/dsp17-w-polowie-drogi.png"
-categories:  ["timbercode"]
+category:    "timbercode"
 tags:        ["daj-sie-poznac-2017", "blog", "timbercode"]
 ---
 

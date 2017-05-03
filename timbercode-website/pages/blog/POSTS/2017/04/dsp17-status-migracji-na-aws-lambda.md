@@ -8,7 +8,7 @@ description: >
     w ramach Proof of Concept, a co jeszcze czeka na
     zaimplementowanie.
 image:       "{{IMAGES_BASE_URL}}/images/covers/dsp17-status-migracji-na-aws-lambda.png"
-categories:  ["timbercode"]
+category:    "timbercode"
 tags:        ["daj-sie-poznac-2017", "blog", "timbercode", "node.js", "express", "nuxt", "aws", "lambda", "claudia.js"]
 ---
 

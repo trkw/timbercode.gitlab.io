@@ -6,8 +6,34 @@ const requireFromDir = require.context('~pages/blog', true, /\.md$/)
 // TODO make it const
 let posts = requireFromDir.keys().map(path => {
   const post = requireFromDir(`${path}`)
+  if (!post.permalink) {
+    console.log(`Missing 'permalink' in '${path}'`)
+    process.exit(1)
+  }
+  if (!post.title) {
+    console.log(`Missing 'title' in '${path}'`)
+    process.exit(1)
+  }
+  if (!post.image) {
+    console.log(`Missing 'image' in '${path}'`)
+    process.exit(1)
+  }
+  if (!post.date) {
+    console.log(`Missing 'date' in '${path}'`)
+    process.exit(1)
+  }
+  if (!post.date) {
+    console.log(`Missing 'date' in '${path}'`)
+    process.exit(1)
+  }
+  if (!post.category) {
+    console.log(`Missing 'category' in '${path}'`)
+    process.exit(1)
+  }
   return {
+    permalink: post.permalink,
     title: post.title,
+    category: post.category,
     tags: post.tags || [],
     route: '/blog' + post.permalink,
     canonicalUrl: `https://timbercode.pl/blog${post.permalink}`,

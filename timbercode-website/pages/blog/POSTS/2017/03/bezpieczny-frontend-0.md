@@ -7,7 +7,7 @@ description: >
     wiedzy z tego zarkesu. Tym wpisem zaczynam serię tekstów na temat bezpieczeństwa
     aplikacji frontendowej. 
 image:       "{{IMAGES_BASE_URL}}/images/covers/bezpieczny-frontend-0.png"
-categories:  ["security"]
+category:    "security"
 tags:        ["daj-sie-poznac-2017", "jvm-bloggers", "bezpieczny-frontend", "security", "frontend", "web", "http", "csrf", "xss"]
 ---
 

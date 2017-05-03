@@ -6,7 +6,7 @@ description: >
     Dziś prezentuję ntl — narzędzie, które pozwala na
     interaktywny wybór skryptu npm. 
 image:       "{{IMAGES_BASE_URL}}/images/covers/ntl.png"
-categories:  ["tools"]
+category:    "tools"
 tags:        ["daj-sie-poznac-2017", "node", "npm", "ntl"]
 ---
 

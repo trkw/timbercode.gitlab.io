@@ -5,7 +5,7 @@ date:        2017-02-28T00:00:00+01:00
 description: >
     Daj Się Poznać 2017, czyli jak zmusić się do rozwijania własnej strony 🙂
 image:       "{{IMAGES_BASE_URL}}/images/covers/daj-sie-poznac-2017.png"
-categories:  ["timbercode"]
+category:    "timbercode"
 tags:        ["daj-sie-poznac-2017", "jvm-bloggers", "web", "blog", "timbercode"]
 ---
 

@@ -7,7 +7,7 @@ description: >
     Ci, jak na tych narzędziach oprzeć health-check systemu
     wykonywany co 5 minut. Zapraszam do lektury!
 image:       "{{IMAGES_BASE_URL}}/images/covers/lambda-slack-health-check-2.png"
-categories:  ["tools"]
+category:    "tools"
 tags:        ["lambda-slack", "daj-sie-poznac-2017", "jvm-bloggers", "aws", "lambda", "slack", "health-check", "node"]
 ---
 

@@ -10,7 +10,7 @@ description: >
     rozszerzyć swoje możliwości za pomocą sprawdzonych
     narzędzi!
 image:       "{{IMAGES_BASE_URL}}/images/covers/dsp17-narzedzia.png"
-categories:  ["timbercode"]
+category:    "timbercode"
 tags:        ["daj-sie-poznac-2017", "jvm-bloggers", "productivity", "git", "todoist", "nozbe", "intellij-idea", "gitlab", "trello", "blog", "timbercode"]
 ---
 

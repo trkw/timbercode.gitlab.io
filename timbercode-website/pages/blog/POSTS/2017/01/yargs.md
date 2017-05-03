@@ -10,7 +10,7 @@ description: >
     w czytaniu i modyfikowaniu, a skrypt sam będzie podpowiadał,
     jak go użyć.
 image:       "{{IMAGES_BASE_URL}}/images/covers/yargs.png"
-categories:  ["tools"]
+category:    "tools"
 tags:        ["node", "JavaScript", "yargs"]
 ---
 

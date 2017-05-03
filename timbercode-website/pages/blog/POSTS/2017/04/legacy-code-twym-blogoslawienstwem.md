@@ -9,7 +9,7 @@ description: >
     Przedstawiam dwa przykłady, jak wiele zyskałem
     dzięki pracy z legacy code.
 image:       "{{IMAGES_BASE_URL}}/images/covers/legacy-code-twym-blogoslawienstwem.png"
-categories:  ["soft"]
+category:    "soft"
 tags:        ["daj-sie-poznac-2017", "jvm-bloggers", "legacy-code", "self-development"]
 ---
 

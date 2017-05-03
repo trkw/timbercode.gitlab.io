@@ -6,7 +6,7 @@ description: >
     Jak uruchomić testy ze wszystkich modułów projektu Gradle z poziomu
     IntelliJ IDEA.
 image:       "{{IMAGES_BASE_URL}}/images/covers/intellij-idea-jak-uruchomic-testy-ze-wszystkich-modulow.png"
-categories:  ["tips-and-tricks"]
+category:    "tips-and-tricks"
 tags:        ["daj-sie-poznac-2017", "jvm-bloggers", "testing", "intellij-idea", "gradle"]
 ---
 
