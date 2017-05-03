@@ -15,7 +15,7 @@ Tak! W końcu! *Zmigrowałem [timbercode.pl]( https://timbercode.pl )
 na nowy stos technologiczny!* 😀
 
 Jeśli chcesz wiedzieć, o co w ogóle chodzi z tą migracją, to zajrzyj
-do [wpisów o rozwoju Timbercode]( http://localhost:3000/blog/category/timbercode ),
+do [wpisów o rozwoju Timbercode]( /blog/category/timbercode ),
 które przygotowałem w ramach [konkursu Daj Się Poznać 2017]( Daj Się Poznać 2017 ).
 
 Czy obyło się bez problemów? Oczywiście, że nie 🙂
