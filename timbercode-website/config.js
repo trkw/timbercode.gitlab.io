@@ -12,6 +12,7 @@ const IMAGES_BASE_URL = shouldUseCdn ? 'https://static.timbercode.pl' : ''
 const GA_TRACKING_ID = process.env.GA_TRACKING_ID
 const DISQUS_SHORTNAME = process.env.DISQUS_SHORTNAME
 const showFuturePosts = (process.env.SHOW_FUTURE_POSTS === 'true')
+const GOOGLE_SITE_VERIFICATION_TAG_CONTENT = process.env.GOOGLE_SITE_VERIFICATION_TAG_CONTENT
 
 if (isProduction && !GA_TRACKING_ID) {
   console.error('GA_TRACKING_ID should be set for production setup')
@@ -28,5 +29,6 @@ module.exports = {
   GA_TRACKING_ID,
   DISQUS_SHORTNAME,
   isProduction,
-  showFuturePosts
+  showFuturePosts,
+  GOOGLE_SITE_VERIFICATION_TAG_CONTENT
 }

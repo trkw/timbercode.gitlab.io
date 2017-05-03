@@ -5,8 +5,78 @@ const {
   GA_TRACKING_ID,
   DISQUS_SHORTNAME,
   isProduction,
-  showFuturePosts
+  showFuturePosts,
+  GOOGLE_SITE_VERIFICATION_TAG_CONTENT
 } = require('./timbercode-website/config')
+
+const head = {
+  htmlAttrs: {
+    lang: 'pl-PL'
+  },
+  titleTemplate: '%s | Timbercode',
+  meta: [
+    {charset: 'utf-8'},
+    {'http-equiv': 'X-UA-Compatible', content: 'IE=edge'},
+    {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+    {hid: 'meta_description', name: 'description', content: 'Blog Timbercode.pl'},
+    // Twitter
+    {hid: 'meta_twitter:card', name: 'twitter:card', content: 'summary_large_image'},
+    {hid: 'meta_twitter:site', name: 'twitter:site', content: '@timbercodepl'},
+    {hid: 'meta_twitter:title', name: 'twitter:title', content: 'Timbercode'},
+    {
+      hid: 'meta_twitter:image',
+      name: 'twitter:image',
+      content: `${IMAGES_BASE_URL}/timbercode_sygnet_v1_512x512.png`
+    },
+    {hid: 'meta_twitter:description', name: 'twitter:description', content: 'Blog Timbercode.pl'},
+    // Facebook
+    {hid: 'meta_og:title', name: 'og:title', content: 'Timbercode'},
+    {hid: 'meta_og:url', name: 'og:url', content: BASE_URL},
+    {hid: 'meta_og:description', name: 'og:description', content: 'Blog Timbercode.pl'},
+    {hid: 'meta_og:image', name: 'og:image', content: `${IMAGES_BASE_URL}/timbercode_sygnet_v1_512x512.png`},
+    {hid: 'meta_og:site_name', name: 'og:site_name', content: 'Timbercode'},
+    {hid: 'meta_article:publisher', name: 'article:publisher', content: 'https://www.facebook.com/timbercode'}
+  ],
+  link: [
+    {hid: 'link_canonical', rel: 'canonical', href: 'http://timbercode.pl'},
+    {rel: 'icon', type: 'image/x-icon', href: `${IMAGES_BASE_URL}/favicon-32x32.png`},
+    {rel: 'shortcut icon', type: 'image/x-icon', href: `${IMAGES_BASE_URL}/favicon-32x32.png`},
+    {rel: 'alternate', type: 'application/atom+xml', title: 'Timbercode', href: '/blog/feed.xml'},
+    {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:400,700'}
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: '{' +
+      '"@context": "http://schema.org", ' +
+      '"@type": "WebSite", ' +
+      '"name": "Timbercode", ' +
+      '"headline": "Timbercode", ' +
+      '"description": "Timbercode", ' +
+      '"publisher": {' +
+      '"@type": "Organization", ' +
+      '"logo": {' +
+      '"@type": "ImageObject", ' +
+      `"url": "${IMAGES_BASE_URL}/timbercode_sygnet_v1_512x512.png"` +
+      '}' +
+      '}, ' +
+      // TODO canonical URL or regular one?
+      `"url": "${BASE_URL}"` +
+      '}'
+    }
+  ],
+  __dangerouslyDisableSanitizers: [
+    // do not escape innerHTML of `<script type="'application/ld+json" ... >`
+    'script'
+  ]
+}
+
+if (GOOGLE_SITE_VERIFICATION_TAG_CONTENT) {
+  head.meta.push(
+    // Google Search Console verification tag (do not remove)
+    {name: 'google-site-verification', content: GOOGLE_SITE_VERIFICATION_TAG_CONTENT}
+  )
+}
 
 module.exports = {
   plugins: [
@@ -25,67 +95,7 @@ module.exports = {
     isProduction,
     showFuturePosts
   },
-  head: {
-    htmlAttrs: {
-      lang: 'pl-PL'
-    },
-    titleTemplate: '%s | Timbercode',
-    meta: [
-      {charset: 'utf-8'},
-      {'http-equiv': 'X-UA-Compatible', content: 'IE=edge'},
-      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'meta_description', name: 'description', content: 'Blog Timbercode.pl'},
-      // Twitter
-      {hid: 'meta_twitter:card', name: 'twitter:card', content: 'summary_large_image'},
-      {hid: 'meta_twitter:site', name: 'twitter:site', content: '@timbercodepl'},
-      {hid: 'meta_twitter:title', name: 'twitter:title', content: 'Timbercode'},
-      {
-        hid: 'meta_twitter:image',
-        name: 'twitter:image',
-        content: `${IMAGES_BASE_URL}/timbercode_sygnet_v1_512x512.png`
-      },
-      {hid: 'meta_twitter:description', name: 'twitter:description', content: 'Blog Timbercode.pl'},
-      // Facebook
-      {hid: 'meta_og:title', name: 'og:title', content: 'Timbercode'},
-      {hid: 'meta_og:url', name: 'og:url', content: BASE_URL},
-      {hid: 'meta_og:description', name: 'og:description', content: 'Blog Timbercode.pl'},
-      {hid: 'meta_og:image', name: 'og:image', content: `${IMAGES_BASE_URL}/timbercode_sygnet_v1_512x512.png`},
-      {hid: 'meta_og:site_name', name: 'og:site_name', content: 'Timbercode'},
-      {hid: 'meta_article:publisher', name: 'article:publisher', content: 'https://www.facebook.com/timbercode'}
-    ],
-    link: [
-      {hid: 'link_canonical', rel: 'canonical', href: 'http://timbercode.pl'},
-      {rel: 'icon', type: 'image/x-icon', href: `${IMAGES_BASE_URL}/favicon-32x32.png`},
-      {rel: 'shortcut icon', type: 'image/x-icon', href: `${IMAGES_BASE_URL}/favicon-32x32.png`},
-      {rel: 'alternate', type: 'application/atom+xml', title: 'Timbercode', href: '/blog/feed.xml'},
-      {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:400,700'}
-    ],
-    script: [
-      {
-        type: 'application/ld+json',
-        innerHTML: '{' +
-        '"@context": "http://schema.org", ' +
-        '"@type": "WebSite", ' +
-        '"name": "Timbercode", ' +
-        '"headline": "Timbercode", ' +
-        '"description": "Timbercode", ' +
-        '"publisher": {' +
-        '"@type": "Organization", ' +
-        '"logo": {' +
-        '"@type": "ImageObject", ' +
-        `"url": "${IMAGES_BASE_URL}/timbercode_sygnet_v1_512x512.png"` +
-        '}' +
-        '}, ' +
-        // TODO canonical URL or regular one?
-        `"url": "${BASE_URL}"` +
-        '}'
-      }
-    ],
-    __dangerouslyDisableSanitizers: [
-      // do not escape innerHTML of `<script type="'application/ld+json" ... >`
-      'script'
-    ]
-  },
+  head: head,
   css: [
     // TODO replace with reset.css ?
     'normalize.css/normalize.css',

@@ -3,5 +3,6 @@
   "BASE_URL": "https://testing.timbercode.pl",
   "BASE_PATH": "",
   "GA_TRACKING_ID": "UA-89623087-2",
-  "DISQUS_SHORTNAME": "timbercode-tst"
+  "DISQUS_SHORTNAME": "timbercode-tst",
+  "GOOGLE_SITE_VERIFICATION_TAG_CONTENT": "_vu81nMHx2GGG9Sq1XKWVYaSepJL7-bbXE3B_7Di1-U"
 }
