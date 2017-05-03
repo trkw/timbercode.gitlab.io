@@ -2,8 +2,8 @@
 
 <template>
     <div>
-        <h1 class="post_list_tag__header">
-            Tag: {{ this.tag }}
+        <h1 class="post_list_category__header">
+            Kategoria: {{ this.category }}
         </h1>
         <ul class="post_list__list">
             <li v-for="post in posts" class="post_list__post">
@@ -20,17 +20,17 @@
 
   export default {
     validate ({params}) {
-      return posts.filter(post => post.tags.indexOf(params.tag) >= 0).length > 0
+      return posts.filter(post => post.category === params.category).length > 0
     },
     asyncData ({params}) {
       return {
-        tag: params.tag,
-        posts: posts.filter(post => post.tags.indexOf(params.tag) >= 0)
+        category: params.category,
+        posts: posts.filter(post => post.category === params.category)
       }
     },
     head () {
       return {
-        title: `Tag: ${this.tag}`
+        title: `Kategoria: ${this.category}`
       }
     }
   }

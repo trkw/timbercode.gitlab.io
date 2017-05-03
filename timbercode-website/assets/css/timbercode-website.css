@@ -26,6 +26,14 @@ body {
     line-height: 1.8;
 }
 
+.post_list_tag__header,
+.post_list_category__header {
+    margin: 0;
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1.8;
+}
+
 @media all and (max-width: 600px) {
     .post_list__header {
         font-size: 2em;
