@@ -14,9 +14,9 @@ tags:        ["daj-sie-poznac-2017", "blog", "timbercode", "express", "nuxt", "a
 Tak! W końcu! *Zmigrowałem [timbercode.pl]( https://timbercode.pl )
 na nowy stos technologiczny!* 😀
 
-Jeśli chcesz wiedzieć, czemu w ogóle to robiłem, to odpowiedź znajdziesz w
-[jednym ze starszych wpisów]( /blog/2017/03/28/dsp17-jeden-feature-ktory-zmienia-stos-technologiczny/ ),
-ale jeszcze raz podsumuję to z innej perspektywy w tym wpisie na końcu.
+Jeśli chcesz wiedzieć, o co w ogóle chodzi z tą migracją, to zajrzyj
+do [wpisów o rozwoju Timbercode]( http://localhost:3000/blog/category/timbercode ),
+które przygotowałem w ramach [konkursu Daj Się Poznać 2017]( Daj Się Poznać 2017 ).
 
 Czy obyło się bez problemów? Oczywiście, że nie 🙂
 [Niedawno zamieściłem prezentację]( /blog/2017/04/24/dsp17-prezentacja-o-migracji-bloga/ ),
@@ -24,6 +24,9 @@ na której pod koniec przedstawiam wybrane 11 przeszkód w migracji.
 Przykładowo, na AWS Lambda blog potrafił się ładować nawet 6 sekund.
 Na szczęście nawet ten problem rozwiązałem. Jak można zgadnąć, 
 zwiększyłem dostępną pamięć i moc procesora dla mojej funkcji Lambda 💰
+
+Kod po migracji znajdziesz na gałęzi `master`
+[repozytorium kodu tego bloga]( https://gitlab.com/timbercode/timbercode.gitlab.io ).
 
 # Co się zmieniło
 
@@ -110,9 +113,12 @@ Miałem momenty zwątpienia oraz takie, w których ćwiczyłem
 pisanie "po łebkach", byle działało. Wykorzystałem technologie, o których przedtem
 jedynie co nieco słyszałem, a teraz znam je lepiej niż niejedna osoba, która
 zatrzymała sie na etapie Hello World. A także… *nie gubię się już tak bardzo
-w świecie usług AWS* 😜
+w świecie usług AWS*. Liczę też, że dzięki Lambda dostanę na koniec miesiąca 
+niższy rachunek niż w przypadku "tradycyjnego" hostingu 😜
 
-Jest jeszcze jeden powód, a jest nim… marka Timbercode. *W Timbercode nie chodzi
+Jest jeszcze jeden powód, dla którego blog wzbogacił się o własny serwer, dla
+którego porzuciłem framework blogowy z gotowymi rozwiązaniami. Ty powodem jest…
+przyszły kształt marki Timbercode. *W Timbercode nie chodzi
 tylko o to, aby szybko osiągnąć minimalny, wystarczający efekt.*
 Timbercode to także detale. Te niewidoczne drobne niuanse, które powodują,
 że produkt końcowy jest dopracowany. *To ten moment, gdy użytkownik
@@ -120,4 +126,3 @@ czuje się zrozumiany i widzi, że autor włożył serce, by zadbać nawet o to,
 co jeszcze nie zostało wyartykułowane.*
 
 Ups… zrobiło się poważnie. Rozluźniająca emotka na koniec podstawą sukcesu 😉
-

@@ -9,7 +9,7 @@ description: >
     Z wątpliwym skutkiem 😉
 image:       "{{IMAGES_BASE_URL}}/images/covers/dsp17-zmagania-z-designem.png"
 category:    "timbercode"
-tags:        ["daj-sie-poznac-2017", "pen-and-paper", "design"]
+tags:        ["daj-sie-poznac-2017", "timbercode", "pen-and-paper", "design"]
 ---
 
 Dodawanie designu do gotowej apki czy strony to prosta droga do porażki.
