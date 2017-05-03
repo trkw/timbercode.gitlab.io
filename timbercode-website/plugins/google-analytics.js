@@ -1,7 +1,7 @@
 /* eslint-disable */
 import router from '~router'
 
-if (process.env.isProduction === 'production') {
+if (process.env.isProduction) {
 
   // https://developers.google.com/analytics/devguides/collection/analyticsjs/
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -9,8 +9,11 @@ if (process.env.isProduction === 'production') {
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+  const trackingId = process.env.GA_TRACKING_ID
+  console.log(`Will track page for Google Analytics with Tracking ID '${trackingId}`)
+
   // Set the current page
-  ga('create', process.env.GA_TRACKING_ID, 'auto')
+  ga('create', trackingId, 'auto')
 
   // Every time the route changes (fired on initialization too)
   router.afterEach((to, from) => {
