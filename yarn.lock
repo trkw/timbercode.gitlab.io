@@ -286,7 +286,7 @@ babel-code-frame@^6.11.0, babel-code-frame@^6.16.0, babel-code-frame@^6.22.0:
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-babel-core@^6.24.0, babel-core@^6.24.1:
+babel-core@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.24.1.tgz#8c428564dce1e1f41fb337ec34f4c3b022b5ad83"
   dependencies:
@@ -723,7 +723,7 @@ babel-preset-env@^1.2.1:
     browserslist "^1.4.0"
     invariant "^2.2.2"
 
-babel-preset-es2015@^6.24.0:
+babel-preset-es2015@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-preset-es2015/-/babel-preset-es2015-6.24.1.tgz#d44050d6bc2c9feea702aaf38d727a0210538939"
   dependencies:
@@ -752,7 +752,7 @@ babel-preset-es2015@^6.24.0:
     babel-plugin-transform-es2015-unicode-regex "^6.24.1"
     babel-plugin-transform-regenerator "^6.24.1"
 
-babel-preset-vue-app@^1.1.1:
+babel-preset-vue-app@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/babel-preset-vue-app/-/babel-preset-vue-app-1.2.0.tgz#5ddfb7920020123a2482b12c6b36bdef9e3fb0ad"
   dependencies:
@@ -1540,7 +1540,7 @@ de-indent@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
 
-debug@2, debug@2.6.3, debug@^2.1.1, debug@^2.2.0, debug@^2.3.3, debug@^2.6.3:
+debug@2, debug@2.6.3, debug@^2.3.3, debug@^2.6.3:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.3.tgz#0f7eb8c30965ec08c72accfa0130c8b79984141d"
   dependencies:
@@ -1552,7 +1552,7 @@ debug@2.2.0, debug@~2.2.0:
   dependencies:
     ms "0.7.1"
 
-debug@2.6.1:
+debug@2.6.1, debug@^2.1.1, debug@^2.2.0:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.1.tgz#79855090ba2c4e3115cc7d8769491d58f0491351"
   dependencies:
@@ -2615,7 +2615,7 @@ html-entities@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-1.2.0.tgz#41948caf85ce82fed36e4e6a0ed371a6664379e2"
 
-html-minifier@^3.2.3, html-minifier@^3.4.2:
+html-minifier@^3.2.3, html-minifier@^3.4.3:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/html-minifier/-/html-minifier-3.4.3.tgz#eb3a7297c804611f470454eeebe0aacc427e424a"
   dependencies:
@@ -3155,18 +3155,9 @@ loader-runner@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.3.0.tgz#f482aea82d543e07921700d5a46ef26fdac6b8a2"
 
-loader-utils@0.2.16:
+loader-utils@0.2.16, loader-utils@0.2.x, loader-utils@^0.2.16, loader-utils@~0.2.5:
   version "0.2.16"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-0.2.16.tgz#f08632066ed8282835dff88dfb52704765adee6d"
-  dependencies:
-    big.js "^3.1.3"
-    emojis-list "^2.0.0"
-    json5 "^0.5.0"
-    object-assign "^4.0.1"
-
-loader-utils@0.2.x, loader-utils@^0.2.16, loader-utils@~0.2.5:
-  version "0.2.17"
-  resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-0.2.17.tgz#f86e6374d43205a6e6c60e9196f17c0299bfb348"
   dependencies:
     big.js "^3.1.3"
     emojis-list "^2.0.0"
@@ -3560,16 +3551,16 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt@0.10.6:
-  version "0.10.6"
-  resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-0.10.6.tgz#cdd261e9c234312ebd1dd58384c7c87d5c1bd60a"
+nuxt@0.10.7:
+  version "0.10.7"
+  resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-0.10.7.tgz#c49707e64ce27044f9bd347dc5e4600f999d33ff"
   dependencies:
     ansi-html "^0.0.7"
     autoprefixer "^6.7.7"
-    babel-core "^6.24.0"
+    babel-core "^6.24.1"
     babel-loader "^6.4.1"
-    babel-preset-es2015 "^6.24.0"
-    babel-preset-vue-app "^1.1.1"
+    babel-preset-es2015 "^6.24.1"
+    babel-preset-vue-app "^1.2.0"
     chokidar "^1.6.1"
     co "^4.6.0"
     compression "^1.6.2"
@@ -3580,12 +3571,12 @@ nuxt@0.10.6:
     fs-extra "^2.1.2"
     glob "^7.1.1"
     hash-sum "^1.0.2"
-    html-minifier "^3.4.2"
+    html-minifier "^3.4.3"
     html-webpack-plugin "^2.28.0"
     lodash "^4.17.4"
     lru-cache "^4.0.2"
     memory-fs "^0.4.1"
-    offline-plugin "^4.6.1"
+    offline-plugin "^4.7.0"
     pify "^2.3.0"
     post-compile-webpack-plugin "^0.1.1"
     preload-webpack-plugin "^1.2.2"
@@ -3594,17 +3585,17 @@ nuxt@0.10.6:
     serialize-javascript "^1.3.0"
     serve-static "^1.12.1"
     url-loader "^0.5.8"
-    vue "^2.2.6"
+    vue "~2.2.6"
     vue-loader "^11.3.4"
     vue-meta "^0.5.6"
-    vue-router "^2.3.1"
-    vue-server-renderer "^2.2.6"
+    vue-router "^2.4.0"
+    vue-server-renderer "~2.2.6"
     vue-ssr-html-stream "^2.2.0"
     vue-ssr-webpack-plugin "^3.0.0"
-    vue-template-compiler "^2.2.6"
-    vuex "^2.2.1"
-    webpack "^2.3.3"
-    webpack-bundle-analyzer "^2.3.1"
+    vue-template-compiler "~2.2.6"
+    vuex "^2.3.0"
+    webpack "^2.4.1"
+    webpack-bundle-analyzer "^2.4.0"
     webpack-dev-middleware "^1.10.1"
     webpack-hot-middleware "^2.18.0"
 
@@ -3643,7 +3634,7 @@ object.omit@^2.0.0:
     for-own "^0.1.4"
     is-extendable "^0.1.1"
 
-offline-plugin@^4.6.1:
+offline-plugin@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/offline-plugin/-/offline-plugin-4.7.0.tgz#4c2fca6cd46c6dd7f29fc94ade21e5f82a62c4df"
   dependencies:
@@ -5301,11 +5292,11 @@ vue-meta@^0.5.6:
     lodash.isplainobject "^4.0.6"
     object-assign "^4.1.0"
 
-vue-router@^2.3.1:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-2.5.2.tgz#870db3b63ead0aab4cd0bac63a7b81341c593f56"
+vue-router@^2.4.0:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-2.5.3.tgz#073783f564b6aece6c8a59c63e298dc2aabfb51b"
 
-vue-server-renderer@^2.2.6:
+vue-server-renderer@~2.2.6:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/vue-server-renderer/-/vue-server-renderer-2.2.6.tgz#0a20535544b6948bca076380d058e19bb1304eef"
   dependencies:
@@ -5335,7 +5326,7 @@ vue-style-loader@^2.0.0:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
-vue-template-compiler@^2.2.6:
+vue-template-compiler@~2.2.6:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.2.6.tgz#2e2928daf0cd0feca9dfc35a9729adeae173ec68"
   dependencies:
@@ -5346,11 +5337,11 @@ vue-template-es2015-compiler@^1.2.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.5.2.tgz#a0a6c50c941d2a4abda963f2f42c337ac450ee95"
 
-vue@^2.2.6:
+vue@~2.2.6:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.2.6.tgz#451714b394dd6d4eae7b773c40c2034a59621aed"
 
-vuex@^2.2.1:
+vuex@^2.3.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-2.3.1.tgz#cde8e997c1f9957719bc7dea154f9aa691d981a6"
 
@@ -5362,7 +5353,7 @@ watchpack@^1.3.1:
     chokidar "^1.4.3"
     graceful-fs "^4.1.2"
 
-webpack-bundle-analyzer@^2.3.1:
+webpack-bundle-analyzer@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-2.4.0.tgz#e406b016e7452bc864793848c79308782accba8e"
   dependencies:
@@ -5402,9 +5393,9 @@ webpack-sources@^0.2.3:
     source-list-map "^1.1.1"
     source-map "~0.5.3"
 
-webpack@^2.3.3:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-2.4.1.tgz#15a91dbe34966d8a4b99c7d656efd92a2e5a6f6a"
+webpack@^2.4.1:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-2.5.0.tgz#5a17089f8d0e43442e606d6cf9b2a146c8ed9911"
   dependencies:
     acorn "^5.0.0"
     acorn-dynamic-import "^2.0.0"

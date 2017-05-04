@@ -50,7 +50,7 @@
     "markdown-it-replace-link": "1.0.1",
     "moment": "2.18.1",
     "normalize.css": "6.0.0",
-    "nuxt": "0.10.6",
+    "nuxt": "0.10.7",
     "object-assign": "4.1.1",
     "svg-url-loader": "2.0.2",
     "vue-disqus": "2.0.3"
