@@ -1,3 +1,5 @@
+# TODO use Vue in Vue part only, not in scripts dir
+# TODO configure linter in a way that no newline is warning, not an error
 extends:
   - standard
 plugins:

@@ -69,6 +69,7 @@ function TimbercodeWebsite () {
   if (nuxtConfig.dev) {
     nuxt.build()
       .catch((error) => {
+        // TODO adjust ESLint rules?
         console.error(error) // eslint-disable-line no-console
         process.exit(1)
       })

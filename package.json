@@ -22,17 +22,15 @@
     "yarn.lock"
   ],
   "scripts": {
-    "dev": "cross-env NODE_ENV=development TITLE='Timbercode DEV' BASE_PATH='' BASE_URL='http://localhost:3000' nodemon dev-server.js",
+    "dev": "node scripts/dev",
     "lint": "eslint ./ --ext .vue --ext .js",
     "clean": "rimraf .nuxt",
-    "build": "cross-env NODE_ENV='production' TITLE='Timbercode DEV' nuxt build",
-    "serve": "cross-env NODE_ENV='production' TITLE='Timbercode DEV' node dev-server.js",
     "configure:express-proxy": "claudia generate-serverless-express-proxy --express-module lambda-server --proxy-module-name lambda",
-    "preconfigure:aws": "npm run clean && cross-env NODE_ENV=production TITLE='Timbercode' BASE_PATH='' BASE_URL='https://testing.timbercode.pl' GA_TRACKING_ID='UA-89623087-2' nuxt build",
+    "preconfigure:aws": "npm run clean && node scripts/build --env env/testing.json",
     "configure:aws": "claudia create --region ${AWS_REGION} --name timbercode-website --handler lambda.handler --deploy-proxy-api --runtime nodejs6.10 --memory 384 --timeout 5 --set-env-from-json env/testing.json",
-    "predeploy-testing": "npm run clean && cross-env NODE_ENV=production TITLE='Timbercode TST' BASE_PATH='' BASE_URL='https://testing.timbercode.pl' GA_TRACKING_ID='UA-89623087-2' DISQUS_SHORTNAME='timbercode-tst' GOOGLE_SITE_VERIFICATION_TAG_CONTENT='_vu81nMHx2GGG9Sq1XKWVYaSepJL7-bbXE3B_7Di1-U' nuxt build",
+    "predeploy-testing": "npm run clean && node scripts/build --env env/testing.json",
     "deploy-testing": "claudia update --version testing --set-env-from-json env/testing.json",
-    "predeploy-production": "npm run clean && cross-env NODE_ENV=production TITLE='Timbercode' BASE_PATH='' BASE_URL='https://timbercode.pl' GA_TRACKING_ID='UA-89623087-1' DISQUS_SHORTNAME='timbercode' GOOGLE_SITE_VERIFICATION_TAG_CONTENT='_vu81nMHx2GGG9Sq1XKWVYaSepJL7-bbXE3B_7Di1-U' nuxt build",
+    "predeploy-production": "npm run clean && node scripts/build --env env/production.json",
     "deploy-production": "claudia update --version production --set-env-from-json env/production.json",
     "try-lambda": "claudia test-lambda --event test/test-event.api-gateway-aws-proxy.json",
     "start": "ntl"
@@ -53,7 +51,8 @@
     "nuxt": "0.10.7",
     "object-assign": "4.1.1",
     "svg-url-loader": "2.0.2",
-    "vue-disqus": "2.0.3"
+    "vue-disqus": "2.0.3",
+    "yargs": "8.0.1"
   },
   "devDependencies": {
     "claudia": "2.12.0",
@@ -70,7 +69,7 @@
     "rimraf": "2.6.1"
   },
   "engines": {
-    "node": "6.10.1"
+    "node": "~6.10.0"
   },
   "author": {
     "name": "Paweł Barszcz",

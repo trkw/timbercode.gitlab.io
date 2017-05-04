@@ -106,6 +106,16 @@ to AWS services:
 * CNAME from `timbercode.pl` to API production Gateway 
   under `some_id.cloudfront.net`
 
+## Versioning
+
+Use one of following commands to increment app version and 
+create tagged git commit:
+```bash
+npm version patch
+npm version minor
+npm version major
+```
+
 ## Acknowledgement
 
 This site is based on [Hagura theme]( https://github.com/sharu725/hagura )
