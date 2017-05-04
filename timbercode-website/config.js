@@ -13,6 +13,7 @@ const GA_TRACKING_ID = process.env.GA_TRACKING_ID
 const DISQUS_SHORTNAME = process.env.DISQUS_SHORTNAME
 const showFuturePosts = (process.env.SHOW_FUTURE_POSTS === 'true')
 const GOOGLE_SITE_VERIFICATION_TAG_CONTENT = process.env.GOOGLE_SITE_VERIFICATION_TAG_CONTENT
+const TITLE = process.env.TITLE
 
 if (isProduction && !GA_TRACKING_ID) {
   console.error('GA_TRACKING_ID should be set for production setup')
@@ -20,6 +21,10 @@ if (isProduction && !GA_TRACKING_ID) {
 }
 if (isProduction && !DISQUS_SHORTNAME) {
   console.error('DISQUS_SHORTNAME should be set for production setup')
+  process.exit(1)
+}
+if (!TITLE) {
+  console.error('TITLE should be set')
   process.exit(1)
 }
 
@@ -30,5 +35,6 @@ module.exports = {
   DISQUS_SHORTNAME,
   isProduction,
   showFuturePosts,
-  GOOGLE_SITE_VERIFICATION_TAG_CONTENT
+  GOOGLE_SITE_VERIFICATION_TAG_CONTENT,
+  TITLE
 }

@@ -6,14 +6,15 @@ const {
   DISQUS_SHORTNAME,
   isProduction,
   showFuturePosts,
-  GOOGLE_SITE_VERIFICATION_TAG_CONTENT
+  GOOGLE_SITE_VERIFICATION_TAG_CONTENT,
+  TITLE
 } = require('./timbercode-website/config')
 
 const head = {
   htmlAttrs: {
     lang: 'pl-PL'
   },
-  titleTemplate: '%s | Timbercode',
+  titleTemplate: `%s | ${TITLE}`,
   meta: [
     {charset: 'utf-8'},
     {'http-equiv': 'X-UA-Compatible', content: 'IE=edge'},
@@ -93,7 +94,8 @@ module.exports = {
     GA_TRACKING_ID,
     DISQUS_SHORTNAME,
     isProduction,
-    showFuturePosts
+    showFuturePosts,
+    TITLE
   },
   head: head,
   css: [

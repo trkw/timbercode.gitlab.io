@@ -1,5 +1,6 @@
 {
   "NODE_ENV": "production",
+  "TITLE": "Timbercode",
   "BASE_URL": "https://timbercode.pl",
   "BASE_PATH": "",
   "GA_TRACKING_ID": "UA-89623087-1",

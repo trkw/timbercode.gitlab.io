@@ -25,7 +25,7 @@
     },
     head () {
       return {
-        title: 'Timbercode',
+        title: process.env.TITLE,
         titleTemplate: null
       }
     }

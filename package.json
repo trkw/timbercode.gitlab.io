@@ -22,17 +22,17 @@
     "yarn.lock"
   ],
   "scripts": {
-    "dev": "cross-env NODE_ENV=development BASE_PATH='' BASE_URL='http://localhost:3000' nodemon dev-server.js",
+    "dev": "cross-env NODE_ENV=development TITLE='Timbercode DEV' BASE_PATH='' BASE_URL='http://localhost:3000' nodemon dev-server.js",
     "lint": "eslint ./ --ext .vue --ext .js",
     "clean": "rimraf .nuxt",
-    "build": "cross-env NODE_ENV='production' nuxt build",
-    "serve": "cross-env NODE_ENV='production' node dev-server.js",
+    "build": "cross-env NODE_ENV='production' TITLE='Timbercode DEV' nuxt build",
+    "serve": "cross-env NODE_ENV='production' TITLE='Timbercode DEV' node dev-server.js",
     "configure:express-proxy": "claudia generate-serverless-express-proxy --express-module lambda-server --proxy-module-name lambda",
-    "preconfigure:aws": "npm run clean && cross-env NODE_ENV=production BASE_PATH='' BASE_URL='https://testing.timbercode.pl' GA_TRACKING_ID='UA-89623087-2' nuxt build",
+    "preconfigure:aws": "npm run clean && cross-env NODE_ENV=production TITLE='Timbercode' BASE_PATH='' BASE_URL='https://testing.timbercode.pl' GA_TRACKING_ID='UA-89623087-2' nuxt build",
     "configure:aws": "claudia create --region ${AWS_REGION} --name timbercode-website --handler lambda.handler --deploy-proxy-api --runtime nodejs6.10 --memory 384 --timeout 5 --set-env-from-json env/testing.json",
-    "predeploy-testing": "npm run clean && cross-env NODE_ENV=production BASE_PATH='' BASE_URL='https://testing.timbercode.pl' GA_TRACKING_ID='UA-89623087-2' DISQUS_SHORTNAME='timbercode-tst' GOOGLE_SITE_VERIFICATION_TAG_CONTENT='_vu81nMHx2GGG9Sq1XKWVYaSepJL7-bbXE3B_7Di1-U' nuxt build",
+    "predeploy-testing": "npm run clean && cross-env NODE_ENV=production TITLE='Timbercode TST' BASE_PATH='' BASE_URL='https://testing.timbercode.pl' GA_TRACKING_ID='UA-89623087-2' DISQUS_SHORTNAME='timbercode-tst' GOOGLE_SITE_VERIFICATION_TAG_CONTENT='_vu81nMHx2GGG9Sq1XKWVYaSepJL7-bbXE3B_7Di1-U' nuxt build",
     "deploy-testing": "claudia update --version testing --set-env-from-json env/testing.json",
-    "predeploy-production": "npm run clean && cross-env NODE_ENV=production BASE_PATH='' BASE_URL='https://timbercode.pl' GA_TRACKING_ID='UA-89623087-1' DISQUS_SHORTNAME='timbercode' GOOGLE_SITE_VERIFICATION_TAG_CONTENT='_vu81nMHx2GGG9Sq1XKWVYaSepJL7-bbXE3B_7Di1-U' nuxt build",
+    "predeploy-production": "npm run clean && cross-env NODE_ENV=production TITLE='Timbercode' BASE_PATH='' BASE_URL='https://timbercode.pl' GA_TRACKING_ID='UA-89623087-1' DISQUS_SHORTNAME='timbercode' GOOGLE_SITE_VERIFICATION_TAG_CONTENT='_vu81nMHx2GGG9Sq1XKWVYaSepJL7-bbXE3B_7Di1-U' nuxt build",
     "deploy-production": "claudia update --version production --set-env-from-json env/production.json",
     "try-lambda": "claudia test-lambda --event test/test-event.api-gateway-aws-proxy.json",
     "start": "ntl"
