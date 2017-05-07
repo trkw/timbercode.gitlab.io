@@ -78,7 +78,7 @@ stages:
     - testing
   <<: *shell_job__configuration
   variables:
-    API_VERSION: testing
+    AWS_ENVIRONMENT: testing
   before_script:
     - apk --update add 'curl=7.52.1-r3' 'jq=1.5-r3'
   script:
@@ -90,7 +90,7 @@ stages:
     - production
   <<: *shell_job__configuration
   variables:
-    API_VERSION: production
+    AWS_ENVIRONMENT: production
   before_script:
     - apk --update add 'curl=7.52.1-r3' 'jq=1.5-r3'
   script:

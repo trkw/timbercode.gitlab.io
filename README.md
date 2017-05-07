@@ -23,7 +23,7 @@ Deployment is done automatically GitLab, but for the first time
   AWS profile (because you need access to AWS from command line)
 * define `AWS_REGION` environment variable with AWS region
   you want to deploy to, eg. `eu-central-1`
-* remove `claudia.json` if there is any
+* remove `claudia.*.json` if there is any
 * run `yarn configure:express-proxy`
 * add generated `lambda.js` to repository
 * run `yarn install` to update `yarn.lock` after previous step
@@ -35,9 +35,17 @@ Deployment is done automatically GitLab, but for the first time
 * add generated `claudia.production.json` to repository
 * commit changes
 
-You can check that deployed app:
-* works: `env API_VERSION=testing ./check-health.sh`
-* do fancy things: `env API_VERSION=testing ./run-demo.sh`
+You can check that deployed app works:
+* with use of health-check:
+    ```bash
+    env AWS_ENVIRONMENT=testing ./check-health.sh
+    env AWS_ENVIRONMENT=production ./check-health.sh
+    ```
+* with use of test event:
+    ```bash
+    env AWS_PROFILE=<your_aws_profile> yarn try-lambda:testing
+    env AWS_PROFILE=<your_aws_profile> yarn try-lambda:production
+    ```
 
 ## CDN
 
