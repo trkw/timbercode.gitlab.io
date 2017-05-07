@@ -50,7 +50,7 @@ stages:
   <<: *node_job__configuration
   <<: *aws_deployment__before_script
   script:
-    - yarn run deploy-testing
+    - yarn run deploy:testing
   cache:
     key: "${CI_BUILD_NAME}"
     paths:
@@ -65,7 +65,7 @@ stages:
   <<: *node_job__configuration
   <<: *aws_deployment__before_script
   script:
-    - yarn run deploy-production
+    - yarn run deploy:production
   cache:
     key: "${CI_BUILD_NAME}"
     paths:

@@ -29,8 +29,10 @@ Deployment is done automatically GitLab, but for the first time
 * run `yarn install` to update `yarn.lock` after previous step
   (in which `aws-serverless-express` was reinstalled without
   use of yarn)
-* run `yarn configure:aws` with env variables defined above
-* add generated `claudia.json` to repository
+* run `yarn configure:aws:testing` with env variables defined above
+* add generated `claudia.testing.json` to repository
+* run `yarn configure:aws:production` with env variables defined above
+* add generated `claudia.production.json` to repository
 * commit changes
 
 You can check that deployed app:
@@ -71,11 +73,11 @@ the website fully configured:
           `administrator@...`) in order to confirm domain ownership
 * on *API Gateway* configure *Custom Domain Names*
     * for domain `testing.timbercode.pl` use your ACM certificate,
-      and create mapping from Path `/` to `timbercode-website` API
-      with Stage `testing` (available after first deployment to testing)
+      and create mapping from Path `/` to `timbercode-website-testing`
+      API with Stage `latest`
     * for domain `timbercode.pl` use your ACM certificate,
-      and create mapping from Path `/` to `timbercode-website` API
-      with Stage `production` (available after first deployment to production)
+      and create mapping from Path `/` to `timbercode-website`
+      API with Stage `latest`
 * in *Route 53 DNS* create Hosted Zone for `timbercode.pl.` domain
     * for `timbercode.pl.` add `A` record with alias to production
       CloudFront distribution

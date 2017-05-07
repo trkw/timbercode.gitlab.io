@@ -1,0 +1,10 @@
+{
+  "lambda": {
+    "role": "timbercode-website-testing-executor",
+    "name": "timbercode-website-testing",
+    "region": "eu-central-1"
+  },
+  "api": {
+    "id": "2pi6qlvwfk"
+  }
+}
