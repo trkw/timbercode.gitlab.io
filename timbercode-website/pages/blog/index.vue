@@ -18,7 +18,6 @@
   export default {
     asyncData ({base}) {
       return {
-        versionLabel: 'Version',
         baseUrl: base,
         posts
       }

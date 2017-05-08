@@ -99,7 +99,6 @@ module.exports = {
   },
   head: head,
   css: [
-    // TODO replace with reset.css ?
     'normalize.css/normalize.css',
     // TODO which syntax-highlighting style to choose? Or even do not style it to not rely on lack of languages like Kotlin?
     // 'highlight.js/styles/default.css',
@@ -111,8 +110,6 @@ module.exports = {
       const loadPosts = require('./timbercode-website/load-posts')
       const posts = loadPosts()
       adjustRoutes(routes, posts)
-      console.log('Generated routes:')
-      printRoutes(routes)
     }
   },
   build: {
@@ -158,10 +155,4 @@ function adjustRoutePath (routePath, post) {
 
 function adjustRouteName (routeName, post) {
   return post.uniqueId || routeName
-}
-
-function printRoutes (routes) {
-  routes.forEach(route => {
-    console.log(route)
-  })
 }
