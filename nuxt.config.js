@@ -65,10 +65,6 @@ const head = {
       `"url": "${BASE_URL}"` +
       '}'
     }
-  ],
-  __dangerouslyDisableSanitizers: [
-    // do not escape innerHTML of `<script type="'application/ld+json" ... >`
-    'script'
   ]
 }
 
