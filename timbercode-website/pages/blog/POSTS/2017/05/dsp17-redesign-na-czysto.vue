@@ -4,7 +4,7 @@
 
 <script>
   import Post from '~components/Post.vue'
-  import post from './to-nie-wiedza-ma-znaczenie.md'
+  import post from './dsp17-redesign-na-czysto.md'
   export default {
     asyncData () {
       return {post}
