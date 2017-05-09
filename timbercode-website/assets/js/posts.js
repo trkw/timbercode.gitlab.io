@@ -1,3 +1,8 @@
+// TODO CLEAN-UP, REFACTORING
+// TODO js --> scripts
+// TODO svg --> images?
+// TODO when can we remove left-arrow.svg ?
+
 // TODO `import` syntax?
 // TODO separate server part from client/server Nuxt part ?
 const moment = require('moment')

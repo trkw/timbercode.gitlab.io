@@ -2,7 +2,7 @@
 permalink:  "/lorem"
 title:      "Łoręm ipsum dolór sit amęt"
 date:       2345-01-01T00:00:00+00:00
-image:      "{{IMAGES_BASE_URL}}/redesign/lorem.png"
+image:      "{{IMAGES_BASE_URL}}/images/covers/lorem.png"
 category:   "ipsum"
 tags:       ["tamquam", "omnium", "ut-mei-amet"]
 description: >
@@ -10,7 +10,7 @@ description: >
     petentium expetęndis id veł? Ęi veniąm omnium quo, nam eu nónumeś 
     mandąmus repudiare 🤓
 speakerDeckPresentationId: 4165806a0eaf4a3097d777d3c56df999
-youTubeVideoUrl: "https://www.youtube.com/embed/P2MoObVeMX4"
+youtubeVideoUrl: "https://www.youtube.com/embed/P2MoObVeMX4"
 ---
 
 *No iriure consequąt nam.* Duo id tamquam aliquid, vix legimus nusquam ęa. 

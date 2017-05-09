@@ -1,3 +1,5 @@
+// TODO CLEAN-UP, REFACTORING
+
 /*
  * Copied from:
  *   https://github.com/gatsbyjs/gatsby/blob/7ce43ca62d001b30813483134239ebaa6cca085e/lib/loaders/markdown-loader/index.js

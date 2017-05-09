@@ -43,7 +43,8 @@ const head = {
     {rel: 'icon', type: 'image/x-icon', href: `${IMAGES_BASE_URL}/favicon-32x32.png`},
     {rel: 'shortcut icon', type: 'image/x-icon', href: `${IMAGES_BASE_URL}/favicon-32x32.png`},
     {rel: 'alternate', type: 'application/atom+xml', title: 'Timbercode', href: '/blog/feed.xml'},
-    {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:400,700'}
+    {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:400,700'},
+    {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Inconsolata:400,700'}
   ],
   script: [
     {
@@ -95,10 +96,9 @@ module.exports = {
   },
   head: head,
   css: [
-    'normalize.css/normalize.css',
+    'normalize.css/normalize.css'
     // TODO which syntax-highlighting style to choose? Or even do not style it to not rely on lack of languages like Kotlin?
-    // 'highlight.js/styles/default.css',
-    '~assets/css/timbercode-website.css'
+    // 'highlight.js/styles/default.css'
   ],
   router: {
     base: (process.env.BASE_PATH || '') + '/',
@@ -129,6 +129,11 @@ module.exports = {
         }
       }
     ]
+  },
+  loading: {
+    // TODO theme color reused here
+    color: '#f99f3e',
+    height: '2px'
   }
 }
 

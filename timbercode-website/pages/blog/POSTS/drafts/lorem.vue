@@ -3,16 +3,13 @@
 </template>
 
 <script>
-  import Post from '~components/Post.vue'
+  import Post from '../../../../components/post/Post.vue'
   import post from './lorem.md'
   export default {
-    components: {
-      Post
-    },
+    layout: 'post',
+    components: {Post},
     asyncData () {
-      return {
-        post
-      }
+      return {post}
     }
   }
 </script>

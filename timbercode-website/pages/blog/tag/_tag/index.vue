@@ -2,25 +2,22 @@
 
 <template>
     <div>
-        <h1 class="post_list_tag__header">
-            Tag: {{ this.tag }}
-        </h1>
-        <ul class="post_list__list">
-            <li v-for="post in posts" class="post_list__post">
-                <nuxt-link :to="post.route">
-                    {{post.title}}
-                </nuxt-link>
-            </li>
-        </ul>
+        <tag-header :tag="tag"></tag-header>
+        <posts-list :posts="posts"></posts-list>
     </div>
 </template>
 
 <script>
-  import posts from '~assets/js/posts'
-
+  import posts from '../../../../assets/js/posts'
+  import TagHeader from '../../../../components/blog/TagHeader.vue'
+  import PostsList from '../../../../components/blog/PostsList.vue'
   export default {
     validate ({params}) {
       return posts.filter(post => post.tags.indexOf(params.tag) >= 0).length > 0
+    },
+    components: {
+      TagHeader,
+      PostsList
     },
     asyncData ({params}) {
       return {
@@ -36,5 +33,3 @@
   }
 
 </script>
-
-<!-- TODO styling -->
