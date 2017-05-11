@@ -12,6 +12,7 @@
     "nuxt.config.js",
     "timbercode-website/assets/",
     "timbercode-website/components/",
+    "timbercode-website/feed/",
     "timbercode-website/layouts/",
     "timbercode-website/pages/",
     "timbercode-website/plugins/",

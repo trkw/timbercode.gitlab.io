@@ -13,12 +13,12 @@ const {
 
 function TimbercodeWebsite () {
   const express = require('express')
-  const moment = require('moment')
   const _ = require('lodash')
   const Nuxt = require('nuxt')
   const nuxtConfig = require('../nuxt.config.js')
 
   const loadPosts = require('./load-posts')
+  const Feed = require('./feed/feed')
   const posts = loadPosts()
 
   const app = express()
@@ -35,30 +35,39 @@ function TimbercodeWebsite () {
   })
 
   app.get('/blog/feed.xml', function (req, res) {
-    const feed = generateFeedFrom({
-      BASE_URL,
-      IMAGES_BASE_URL,
-      posts,
-      moment,
-      feedTitle: 'Timbercode',
-      feedDescription: 'wszystkie wpisy'
-    })
-    res.send(feed.atom1())
+    res.send(Feed.generateAtomFrom(generalFeedConfigurationFor(posts)))
+  })
+  app.get('/blog/feed.atom', function (req, res) {
+    res.send(Feed.generateAtomFrom(generalFeedConfigurationFor(posts)))
+  })
+  app.get('/blog/feed.rss', function (req, res) {
+    res.send(Feed.generateRssFrom(generalFeedConfigurationFor(posts)))
   })
 
   app.get('/blog/tag/:tag/feed.xml', function (req, res) {
     const tagToShow = req.params.tag
+    // TODO encapsulate in some `Posts` object
     let postsForTag = posts.filter(post => _(post.tags).includes(tagToShow))
     if (postsForTag.length > 0) {
-      const feed = generateFeedFrom({
-        BASE_URL,
-        IMAGES_BASE_URL,
-        posts: postsForTag,
-        moment,
-        feedTitle: `Timbercode - tag ${tagToShow}`,
-        feedDescription: `wpisy otagowane ${tagToShow}`
-      })
-      res.send(feed.atom1())
+      res.send(Feed.generateAtomFrom(tagFeedConfigurationFor(postsForTag, tagToShow)))
+    } else {
+      res.sendStatus(404)
+    }
+  })
+  app.get('/blog/tag/:tag/feed.atom', function (req, res) {
+    const tagToShow = req.params.tag
+    let postsForTag = posts.filter(post => _(post.tags).includes(tagToShow))
+    if (postsForTag.length > 0) {
+      res.send(Feed.generateAtomFrom(tagFeedConfigurationFor(postsForTag, tagToShow)))
+    } else {
+      res.sendStatus(404)
+    }
+  })
+  app.get('/blog/tag/:tag/feed.rss', function (req, res) {
+    const tagToShow = req.params.tag
+    let postsForTag = posts.filter(post => _(post.tags).includes(tagToShow))
+    if (postsForTag.length > 0) {
+      res.send(Feed.generateRssFrom(tagFeedConfigurationFor(postsForTag, tagToShow)))
     } else {
       res.sendStatus(404)
     }
@@ -78,50 +87,24 @@ function TimbercodeWebsite () {
   return app
 }
 
-function generateFeedFrom ({
-                             BASE_URL,
-                             IMAGES_BASE_URL,
-                             posts,
-                             moment,
-                             feedTitle,
-                             feedDescription
-                           }) {
-  const timeNow = moment()
-  const Feed = require('feed')
-  const feed = new Feed({
-    title: feedTitle,
-    description: feedDescription,
-    id: BASE_URL,
-    link: BASE_URL,
-    image: `${IMAGES_BASE_URL}/favicon-32x32.png`,
-    updated: timeNow.toDate(),
-    author: {
-      name: 'Paweł Barszcz',
-      email: 'pawelbarszcz@gmail.com',
-      link: BASE_URL
-    }
-  })
-  posts
-    .filter(post => {
-      if (showFuturePosts) {
-        return true
-      }
-      return moment(post.date, moment.ISO_8601).isSameOrBefore(timeNow)
-    })
-    .forEach(post => {
-      feed.addItem({
-        title: post.title,
-        id: `${BASE_URL}${post.route}`,
-        link: `${BASE_URL}${post.route}`,
-        description: post.description,
-        author: [{
-          name: 'Paweł Barszcz',
-          email: 'pawelbarszcz@gmail.com',
-          link: BASE_URL
-        }],
-        date: moment(post.date, moment.ISO_8601).toDate(),
-        image: post.image
-      })
-    })
-  return feed
+function generalFeedConfigurationFor (posts) {
+  return {
+    BASE_URL,
+    IMAGES_BASE_URL,
+    posts,
+    feedTitle: 'Timbercode',
+    feedDescription: 'wszystkie wpisy',
+    showFuturePosts
+  }
+}
+
+function tagFeedConfigurationFor (posts, tag) {
+  return {
+    BASE_URL,
+    IMAGES_BASE_URL,
+    posts,
+    feedTitle: `Timbercode - tag ${tag}`,
+    feedDescription: `wpisy otagowane ${tag}`,
+    showFuturePosts
+  }
 }
