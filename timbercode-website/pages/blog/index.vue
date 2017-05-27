@@ -1,24 +1,21 @@
 <template>
     <div>
-        <h1 class="post_list__header">
-            Timbercode
-        </h1>
-        <ul class="post_list__list">
-            <li v-for="post in posts" class="post_list__post">
-                <nuxt-link :to="post.route">
-                    {{post.title}}
-                </nuxt-link>
-            </li>
-        </ul>
+        <blog-header></blog-header>
+        <posts-list :posts="posts"></posts-list>
     </div>
 </template>
 
 <script>
-  import posts from '~assets/js/posts'
+  import posts from '../../assets/js/posts'
+  import BlogHeader from '../../components/blog/BlogHeader.vue'
+  import PostsList from '../../components/blog/PostsList.vue'
   export default {
+    components: {
+      BlogHeader,
+      PostsList
+    },
     asyncData ({base}) {
       return {
-        versionLabel: 'Version',
         baseUrl: base,
         posts
       }

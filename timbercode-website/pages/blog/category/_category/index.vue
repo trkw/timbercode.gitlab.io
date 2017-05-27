@@ -2,25 +2,22 @@
 
 <template>
     <div>
-        <h1 class="post_list_category__header">
-            Kategoria: {{ this.category }}
-        </h1>
-        <ul class="post_list__list">
-            <li v-for="post in posts" class="post_list__post">
-                <nuxt-link :to="post.route">
-                    {{post.title}}
-                </nuxt-link>
-            </li>
-        </ul>
+        <category-header :category="category"></category-header>
+        <posts-list :posts="posts"></posts-list>
     </div>
 </template>
 
 <script>
-  import posts from '~assets/js/posts'
-
+  import posts from '../../../../assets/js/posts'
+  import CategoryHeader from '../../../../components/blog/CategoryHeader.vue'
+  import PostsList from '../../../../components/blog/PostsList.vue'
   export default {
     validate ({params}) {
       return posts.filter(post => post.category === params.category).length > 0
+    },
+    components: {
+      CategoryHeader,
+      PostsList
     },
     asyncData ({params}) {
       return {
@@ -36,5 +33,3 @@
   }
 
 </script>
-
-<!-- TODO styling -->

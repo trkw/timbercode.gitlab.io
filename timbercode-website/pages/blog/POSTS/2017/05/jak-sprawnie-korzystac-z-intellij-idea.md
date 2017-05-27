@@ -8,7 +8,7 @@ description: >
 image:       "{{IMAGES_BASE_URL}}/images/covers/jak-sprawnie-korzystac-z-intellij-idea.png"
 category:    "tools"
 tags:        ["daj-sie-poznac-2017", "jvm-bloggers", "intellij-idea", "productivity", "ide"]
-youTubeVideoUrl: "https://www.youtube.com/embed/P2MoObVeMX4"
+youtubeVideoUrl: "https://www.youtube.com/embed/P2MoObVeMX4"
 ---
 
 Czy używasz [IntelliJ IDEA]( https://www.jetbrains.com/idea/ )

@@ -1,6 +1,6 @@
 <template>
-    <div class="wrapper">
-        <iframe class="youtube_player"
+    <div class="playerWrapper">
+        <iframe class="player"
                 width="800"
                 height="450"
                 :src="videoUrl"
@@ -13,23 +13,20 @@
 <script>
   export default {
     props: {
-      videoUrl: {
-        type: String,
-        required: true
-      }
+      videoUrl: {type: String, required: true}
     }
   }
 </script>
 
-<style scoped>
-    .wrapper {
+<style scoped lang="less">
+    .playerWrapper {
         position: relative;
         width: 100%;
         height: 0;
         padding-bottom: 56.25%;
     }
 
-    .youtube_player {
+    .player {
         position: absolute;
         top: 0;
         left: 0;

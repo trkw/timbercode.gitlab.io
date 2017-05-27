@@ -1,5 +1,7 @@
 'use strict'
 
+// TODO CLEAN-UP, REFACTORING
+
 // TODO ???
 process.env.DEBUG = 'nuxt:*'
 

@@ -3,12 +3,13 @@
 </template>
 
 <script>
-  import Post from '~components/Post.vue'
+  import Post from '../../../../../components/post/Post.vue'
   import post from './daj-sie-poznac-2017.md'
   export default {
+    layout: 'post',
+    components: {Post},
     asyncData () {
       return {post}
-    },
-    components: {Post}
+    }
   }
 </script>

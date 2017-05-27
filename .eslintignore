@@ -4,5 +4,7 @@
 # files that are generated
 /lambda.js
 
+# TODO clean-up after redesign finished
 # files that are parsed improperly
 /timbercode-website/components/EmbeddedSpeakerDeck.vue
+/timbercode-website/components/redesign/EmbeddedSpeakerDeck.vue

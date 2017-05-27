@@ -11,10 +11,7 @@
 <script>
   export default {
     props: {
-      presentationId: {
-        type: String,
-        required: true
-      }
+      presentationId: {type: String, required: true}
     }
   }
 </script>

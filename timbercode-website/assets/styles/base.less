@@ -1,0 +1,49 @@
+@import "./theme";
+
+body {
+  margin: 0;
+
+  /* TODO and what about  @font__headers__primary and @font__headers__fallback ? */
+  font-family: @font__text__primary, @font__text__fallback;
+
+  color: @color_font;
+  text-rendering: optimizeLegibility;
+}
+
+p, ul, li {
+  font-weight: @font__weight__regular;
+  font-size: @font__size__regular;
+  line-height: 1.7em;
+}
+
+code {
+  font-weight: @font__weight__regular;
+  font-size: @font__size__regular;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-weight: @font__weight__regular;
+  font-size: 2em;
+  line-height: 1.7em;
+}
+
+h2 {
+  font-weight: @font__weight__regular;
+  font-size: 1.7em;
+  line-height: 1.7em;
+}
+
+h3 {
+  font-weight: @font__weight__regular;
+  font-size: 1.4em;
+  line-height: 1.7em;
+}
+
+// Discus applies colors based on the global `a` styling. Without
+// rule below, Disqus had blue stripes below tabs, now it has
+// black stripes.
+a {
+  color: @color_font;
+  text-decoration: none;
+}

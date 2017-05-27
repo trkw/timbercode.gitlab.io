@@ -1,5 +1,7 @@
 'use strict'
 
+// TODO CLEAN-UP, REFACTORING
+
 const moment = require('moment')
 
 module.exports = {
